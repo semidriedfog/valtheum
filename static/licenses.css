@@ -1,0 +1,268 @@
+/* valtheum & valtheum-restore: 정보·라이선스 모달 스타일 */
+:root {
+    --bg-main: #121214;
+    --bg-sidebar: #18181b;
+    --bg-card: #222226;
+    --bg-card-hover: #2a2a30;
+    --bg-input: #1a1a1e;
+    --accent: #3b82f6;
+    --accent-hover: #2563eb;
+    --text-primary: #f4f4f5;
+    --text-secondary: #a1a1aa;
+    --text-muted: #71717a;
+    --border-color: #2e2e36;
+    --border-focus: #3b82f6;
+    --radius-md: 6px;
+    --radius-sm: 4px;
+}
+
+.licenses-dialog:not([open]) {
+    display: none !important;
+}
+
+.licenses-dialog[open] {
+    display: flex;
+    flex-direction: column;
+    width: min(960px, 94vw);
+    height: min(720px, 88vh);
+    max-width: 94vw;
+    max-height: 88vh;
+    margin: auto;
+    padding: 0;
+    border: 1px solid var(--border-color, #2e2e36);
+    border-radius: var(--radius-md, 6px);
+    background: var(--bg-sidebar, #18181b);
+    color: var(--text-primary, #f4f4f5);
+    box-sizing: border-box;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.75);
+    font: 13px/1.5 'Inter', system-ui, -apple-system, sans-serif;
+    overflow: hidden;
+}
+
+.licenses-dialog::backdrop {
+    background: rgba(0, 0, 0, 0.72);
+    backdrop-filter: blur(4px);
+}
+
+.licenses-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 12px 18px;
+    border-bottom: 1px solid var(--border-color, #2e2e36);
+    background: var(--bg-sidebar, #18181b);
+    flex-shrink: 0;
+}
+
+.licenses-header h2 {
+    margin: 0;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text-primary, #f4f4f5);
+    letter-spacing: -0.2px;
+}
+
+.licenses-header button {
+    flex-shrink: 0;
+    padding: 5px 13px;
+    font-size: 12px;
+    font-weight: 500;
+    border: 1px solid var(--border-color, #2e2e36);
+    border-radius: var(--radius-sm, 4px);
+    background: var(--bg-card, #222226);
+    color: var(--text-secondary, #a1a1aa);
+    cursor: pointer;
+    transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+.licenses-header button:hover {
+    background: var(--bg-card-hover, #2a2a30);
+    border-color: var(--accent, #3b82f6);
+    color: var(--text-primary, #f4f4f5);
+}
+
+.licenses-header button:focus-visible,
+.licenses-dialog input:focus-visible,
+.licenses-text:focus-visible {
+    outline: 2px solid var(--accent, #3b82f6);
+    outline-offset: 1px;
+}
+
+.licenses-explanation {
+    margin: 0;
+    padding: 12px 18px 0;
+    color: var(--text-muted, #71717a);
+    font-size: 11.5px;
+    line-height: 1.5;
+    flex-shrink: 0;
+}
+
+.licenses-dialog input[type="search"] {
+    display: block;
+    margin: 8px 18px 0;
+    width: calc(100% - 36px);
+    height: 32px;
+    padding: 6px 11px;
+    border: 1px solid var(--border-color, #2e2e36);
+    border-radius: var(--radius-sm, 4px);
+    background: var(--bg-input, #1a1a1e);
+    color: var(--text-primary, #f4f4f5);
+    font: inherit;
+    font-size: 12px;
+    box-sizing: border-box;
+    flex-shrink: 0;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.licenses-dialog input[type="search"]::placeholder {
+    color: var(--text-muted, #71717a);
+}
+
+.licenses-dialog input[type="search"]:focus {
+    border-color: var(--accent, #3b82f6);
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+    outline: none;
+}
+
+.licenses-status {
+    margin: 0;
+    padding: 5px 18px 0;
+    color: var(--text-secondary, #a1a1aa);
+    font-size: 11px;
+    min-height: 18px;
+    flex-shrink: 0;
+}
+
+.licenses-body {
+    display: grid;
+    grid-template-columns: minmax(210px, 30%) minmax(0, 1fr);
+    gap: 12px;
+    flex: 1;
+    min-height: 0;
+    padding: 8px 18px 18px;
+    box-sizing: border-box;
+}
+
+.licenses-list {
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding-right: 4px;
+    scrollbar-width: thin;
+    scrollbar-color: #33333d transparent;
+}
+
+.licenses-list::-webkit-scrollbar {
+    width: 5px;
+}
+
+.licenses-list::-webkit-scrollbar-thumb {
+    background: #33333d;
+    border-radius: 3px;
+}
+
+.licenses-list::-webkit-scrollbar-thumb:hover {
+    background: #484856;
+}
+
+.licenses-list button {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    align-items: flex-start;
+    text-align: left;
+    overflow-wrap: anywhere;
+    flex-shrink: 0;
+    width: 100%;
+    padding: 7px 10px;
+    border: 1px solid var(--border-color, #2e2e36);
+    border-radius: var(--radius-sm, 4px);
+    background: var(--bg-card, #222226);
+    color: var(--text-secondary, #a1a1aa);
+    font: inherit;
+    font-size: 11.5px;
+    cursor: pointer;
+    box-sizing: border-box;
+    transition: background 0.12s ease, border-color 0.12s ease, color 0.12s ease;
+}
+
+.licenses-list button:hover {
+    background: var(--bg-card-hover, #2a2a30);
+    border-color: #42424e;
+    color: var(--text-primary, #f4f4f5);
+}
+
+.licenses-list button:focus-visible {
+    outline: 2px solid var(--accent, #3b82f6);
+    outline-offset: 1px;
+}
+
+.licenses-list button[aria-pressed="true"] {
+    background: rgba(59, 130, 246, 0.15);
+    border-color: var(--accent, #3b82f6);
+    color: var(--text-primary, #ffffff);
+    box-shadow: inset 3px 0 0 var(--accent, #3b82f6);
+    font-weight: 600;
+}
+
+.licenses-text {
+    margin: 0;
+    padding: 14px 16px;
+    overflow: auto;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    min-width: 0;
+    background: var(--bg-main, #121214);
+    color: #e4e4e7;
+    border: 1px solid var(--border-color, #2e2e36);
+    border-radius: var(--radius-sm, 4px);
+    font: 12px/1.65 'Consolas', 'JetBrains Mono', 'Fira Code', monospace;
+    box-sizing: border-box;
+    scrollbar-width: thin;
+    scrollbar-color: #33333d transparent;
+}
+
+.licenses-text::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+.licenses-text::-webkit-scrollbar-thumb {
+    background: #33333d;
+    border-radius: 3px;
+}
+
+.licenses-text::-webkit-scrollbar-thumb:hover {
+    background: #484856;
+}
+
+@media (max-width: 640px) {
+    .licenses-dialog[open] {
+        width: 96vw;
+        height: 92vh;
+        max-width: 96vw;
+        max-height: 92vh;
+    }
+    .licenses-header {
+        padding: 10px 14px;
+    }
+    .licenses-explanation {
+        padding: 8px 14px 0;
+    }
+    .licenses-dialog input[type="search"] {
+        margin: 6px 14px 0;
+        width: calc(100% - 28px);
+    }
+    .licenses-status {
+        padding: 4px 14px 0;
+    }
+    .licenses-body {
+        padding: 6px 14px 14px;
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-rows: 140px minmax(0, 1fr);
+        gap: 8px;
+    }
+}

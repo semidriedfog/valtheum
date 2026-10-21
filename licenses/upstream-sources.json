@@ -1,0 +1,111 @@
+[
+  {
+    "package": "webview2-com-0.33.0",
+    "url": "https://raw.githubusercontent.com/wravery/webview2-rs/d3999204be85efe4c73c0406668b863b25b3946d/LICENSE",
+    "file": "licenses/upstream/webview2-com-0.33.0/LICENSE"
+  },
+  {
+    "package": "webview2-com-macros-0.8.1",
+    "url": "https://raw.githubusercontent.com/wravery/webview2-rs/dffa41a8a46d3f5565eefbff2de57d38d399f158/LICENSE",
+    "file": "licenses/upstream/webview2-com-macros-0.8.1/LICENSE"
+  },
+  {
+    "package": "webview2-com-sys-0.33.0",
+    "url": "https://raw.githubusercontent.com/wravery/webview2-rs/d3999204be85efe4c73c0406668b863b25b3946d/LICENSE",
+    "file": "licenses/upstream/webview2-com-sys-0.33.0/LICENSE"
+  },
+  {
+    "package": "tink-1.16.1",
+    "url": "https://pypi.org/pypi/tink/1.16.1/json",
+    "license": "Apache 2.0",
+    "source": "https://files.pythonhosted.org/packages/d3/e2/06a2836b499abddff5127ac4a849667b721f1e1b38742572e0cf9a53f327/tink-1.16.1.tar.gz",
+    "sha256": "8d82f934f31d1ba8fa6014c37edddc0b3f61cfdbbd9317eb6269cfe7eeb1fa86",
+    "files": [
+      "licenses/python/tink-1.16.1/LICENSE"
+    ]
+  },
+  {
+    "package": "cryptography-50.0.1",
+    "url": "https://pypi.org/pypi/cryptography/50.0.1/json",
+    "license": "Apache-2.0 OR BSD-3-Clause",
+    "source": "https://files.pythonhosted.org/packages/bb/ad/5d6702db60b1e40b41ef513b6967ff5848f307d50f8449baf1634f5908f1/cryptography-50.0.1.tar.gz",
+    "sha256": "5dd9bda1c12b4162f6ff568eeb5e0ff956c28d14406e875cfe8a63a2d414ff20",
+    "files": [
+      "licenses/python/cryptography-50.0.1/LICENSE",
+      "licenses/python/cryptography-50.0.1/LICENSE.APACHE",
+      "licenses/python/cryptography-50.0.1/LICENSE.BSD"
+    ]
+  },
+  {
+    "package": "argon2-cffi-25.1.0",
+    "url": "https://pypi.org/pypi/argon2-cffi/25.1.0/json",
+    "license": "MIT",
+    "source": "https://files.pythonhosted.org/packages/0e/89/ce5af8a7d472a67cc819d5d998aa8c82c5d860608c4db9f46f1162d7dab9/argon2_cffi-25.1.0.tar.gz",
+    "sha256": "694ae5cc8a42f4c4e2bf2ca0e64e51e23a040c6a517a85074683d3959e1346c1",
+    "files": [
+      "licenses/python/argon2-cffi-25.1.0/LICENSE"
+    ]
+  },
+  {
+    "package": "age-0.12.1",
+    "url": "https://raw.githubusercontent.com/str4d/rage/7a854c9c8c02dab2ebea19e02e6693a5730a8b2a/LICENSE-APACHE",
+    "file": "licenses/upstream/age-0.12.1/LICENSE-APACHE"
+  },
+  {
+    "package": "age-0.12.1",
+    "url": "https://raw.githubusercontent.com/str4d/rage/7a854c9c8c02dab2ebea19e02e6693a5730a8b2a/LICENSE-MIT",
+    "file": "licenses/upstream/age-0.12.1/LICENSE-MIT"
+  },
+  {
+    "package": "age-core-0.12.0",
+    "url": "https://raw.githubusercontent.com/str4d/rage/f6383f367e9aa514a3b5fbce7feede08a425d647/LICENSE-APACHE",
+    "file": "licenses/upstream/age-core-0.12.0/LICENSE-APACHE"
+  },
+  {
+    "package": "age-core-0.12.0",
+    "url": "https://raw.githubusercontent.com/str4d/rage/f6383f367e9aa514a3b5fbce7feede08a425d647/LICENSE-MIT",
+    "file": "licenses/upstream/age-core-0.12.0/LICENSE-MIT"
+  },
+  {
+    "package": "cookie-factory-0.3.3",
+    "url": "https://raw.githubusercontent.com/rust-bakery/cookie-factory/d36b805dbd7dd65f2df947235c5bcc573afe2c76/LICENSES/MIT.txt",
+    "file": "licenses/upstream/cookie-factory-0.3.3/MIT.txt"
+  },
+  {
+    "package": "fluent-langneg-0.13.1",
+    "url": "https://raw.githubusercontent.com/projectfluent/fluent-langneg-rs/7fdc590466ea63ca2367ac10fb1b881fe561f1a8/LICENSE-APACHE",
+    "file": "licenses/upstream/fluent-langneg-0.13.1/LICENSE-APACHE"
+  },
+  {
+    "package": "fluent-langneg-0.13.1",
+    "url": "https://raw.githubusercontent.com/projectfluent/fluent-langneg-rs/7fdc590466ea63ca2367ac10fb1b881fe561f1a8/LICENSE-MIT",
+    "file": "licenses/upstream/fluent-langneg-0.13.1/LICENSE-MIT"
+  },
+  {
+    "package": "intl_pluralrules-7.0.2",
+    "url": "https://raw.githubusercontent.com/zbraniecki/pluralrules/d0715d5b7cca72e228d6e6c4de154bd30dfdd06a/intl_pluralrules/LICENSE-APACHE",
+    "file": "licenses/upstream/intl_pluralrules-7.0.2/LICENSE-APACHE"
+  },
+  {
+    "package": "intl_pluralrules-7.0.2",
+    "url": "https://raw.githubusercontent.com/zbraniecki/pluralrules/d0715d5b7cca72e228d6e6c4de154bd30dfdd06a/intl_pluralrules/LICENSE-MIT",
+    "file": "licenses/upstream/intl_pluralrules-7.0.2/LICENSE-MIT"
+  },
+  {
+    "package": "io_tee-0.1.1",
+    "url": "https://raw.githubusercontent.com/TheOnlyMrCat/io_tee/8a7adecebf3429cbc58a0368751d1851dfaf58ed/README.md",
+    "file": "licenses/upstream/io_tee-0.1.1/NOTICE.README.md"
+  },
+  {
+    "package": "io_tee-0.1.1",
+    "url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+    "file": "licenses/upstream/io_tee-0.1.1/LICENSE-APACHE",
+    "note": "Standard Apache-2.0 text accompanying the upstream README dual-license declaration; no standalone license text is supplied in this crate version."
+  },
+  {
+    "package": "Pillow (optional, unpinned benchmark fixture tool)",
+    "url": "https://raw.githubusercontent.com/python-pillow/Pillow/main/LICENSE",
+    "file": "licenses/python/Pillow-unpinned/LICENSE",
+    "note": "Upstream license snapshot retrieved 2026-10-05; Pillow is not bundled."
+  }
+]

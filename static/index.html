@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>valtheum</title>
+    <script src="/i18n-preference.js"></script>
+    <script src="i18n-catalog.js?v=20261005_licenses"></script>
+    <script src="i18n.js?v=20261001"></script>
+    <link rel="icon" href="valtheum.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css?v=20261005_bookmark_overlay">
+    <style>
+        #privacy-screen { display:none; }
+        body.privacy-covered #privacy-screen { display:flex; }
+        body.privacy-covered .app-container,
+        body.privacy-covered > dialog:not(#privacy-dialog):not(#licenses-dialog) { display:none !important; }
+    </style>
+    <link rel="stylesheet" href="password-caps-lock.css?v=20261004">
+    <link rel="stylesheet" href="licenses.css?v=20261005">
+</head>
+<body class="privacy-covered">
+    <section id="privacy-screen" aria-label="라이브러리">
+        <div id="privacy-layout-content" class="privacy-layout">
+            <main class="privacy-viewer">
+                <div class="privacy-canvas">
+                    <img id="privacy-image" alt="" draggable="false">
+                    <p id="privacy-empty" class="privacy-empty" hidden>선택된 이미지가 없습니다.</p>
+                </div>
+                <footer class="privacy-viewer-bar">
+                    <div class="privacy-caption">
+                        <strong id="privacy-filename"></strong>
+                        <span>이미지 뷰어</span>
+                    </div>
+                    <nav aria-label="사진 이동" class="privacy-nav">
+                        <button id="privacy-prev" type="button" aria-label="이전 사진" title="이전 사진 (←)">‹</button>
+                        <span id="privacy-position" aria-live="polite"></span>
+                        <button id="privacy-next" type="button" aria-label="다음 사진" title="다음 사진 (→)">›</button>
+                    </nav>
+                </footer>
+            </main>
+            <aside class="privacy-sidebar">
+                <div class="privacy-list-heading">
+                    <div class="privacy-heading-title">
+                        <button id="privacy-library-title" type="button">사진 라이브러리</button>
+                        <span id="privacy-count" class="badge"></span>
+                    </div>
+                    <label class="language-setting" title="언어 변경 / Language / 言語">
+                        <svg class="language-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                        <select data-language-select class="custom-select language-select" aria-label="Language / 언어 / 言語" title="언어 변경 후 화면을 다시 불러옵니다."><option value="ko">한국어</option><option value="en">English</option><option value="ja">日本語</option></select>
+                    </label>
+                </div>
+                <div class="privacy-gallery-actions">
+                    <button data-open-licenses class="btn secondary-btn compact-icon-btn" type="button" title="정보·라이선스" aria-label="정보·라이선스">ℹ️</button>
+                    <button id="privacy-choose" class="btn secondary-btn" type="button">📂 사진 폴더 선택</button>
+                    <button id="privacy-refresh" class="btn secondary-btn" type="button" title="새로고침" aria-label="사진 새로고침">↻</button>
+                    <button id="privacy-clear" class="btn secondary-btn" type="button" title="사진 폴더 선택 해제" aria-label="사진 폴더 선택 해제">선택 해제</button>
+                </div>
+                <p id="privacy-gallery-message" role="status">사진 폴더를 선택해 주세요.</p>
+                <div class="privacy-frame-actions">
+                    <button id="privacy-frame" class="btn secondary-btn" type="button" disabled>⛶ 액자 모드</button>
+                    <label>표시 시간 <input id="privacy-frame-seconds" type="number" min="1" max="3600" step="1" value="10" aria-label="액자 표시 시간 (초)"> 초</label>
+                </div>
+                <div class="privacy-search-wrapper">
+                    <span class="privacy-search-icon">🔍</span>
+                    <input id="privacy-search" type="search" placeholder="파일명 검색..." aria-label="파일명 검색" autocomplete="off" spellcheck="false">
+                </div>
+                <select id="privacy-sort" class="custom-select" aria-label="사진 정렬">
+                    <option value="default">기본순</option>
+                    <option value="name">이름 오름차순</option>
+                    <option value="name-desc">이름 내림차순</option>
+                </select>
+                <div id="privacy-list" aria-label="사진 목록"></div>
+                <p id="privacy-list-empty" hidden>검색 결과가 없습니다.</p>
+            </aside>
+        </div>
+        <section id="picture-frame" hidden tabindex="-1" aria-label="액자 모드">
+            <div id="frame-canvas"></div>
+            <p id="frame-status" role="status" hidden></p>
+            <div class="frame-controls">
+                <span id="frame-position"></span>
+                <button id="frame-prev" type="button" aria-label="액자 이전 사진">‹</button>
+                <button id="frame-pause" type="button">일시정지</button>
+                <button id="frame-next" type="button" aria-label="액자 다음 사진">›</button>
+                <label>표시 시간 <input id="frame-seconds" type="number" min="1" max="3600" step="1" value="10" aria-label="재생 중 표시 시간 (초)"> 초</label>
+                <button id="frame-exit" type="button">나가기 · Esc</button>
+            </div>
+        </section>
+    </section>
+    <dialog id="privacy-dialog" class="privacy-dialog" aria-labelledby="privacy-title">
+        <div class="shortcut-dialog-header privacy-dialog-header">
+            <h2 id="privacy-title">🔐 라이브러리 열기</h2>
+            <button id="privacy-header-close" class="shortcut-dialog-close" type="button" aria-label="라이브러리 열기 닫기">✕</button>
+        </div>
+        <form id="privacy-form" class="privacy-form">
+            <label for="privacy-folder">
+                라이브러리 폴더
+                <div class="privacy-folder-row">
+                    <select id="privacy-folder" class="custom-select" required aria-label="라이브러리 폴더"></select>
+                    <button id="privacy-pick-folder" class="btn secondary-btn" type="button">📂 폴더 지정</button>
+                </div>
+            </label>
+            <p class="privacy-folder-note">실제 라이브러리 폴더 목록은 저장하지 않습니다. 앱을 실행할 때마다 폴더를 지정해 주세요.</p>
+            <label id="privacy-password-row" for="privacy-password">
+                비밀번호
+                <input id="privacy-password" type="password" required maxlength="256" autocomplete="off" placeholder="비밀번호를 입력하세요">
+            </label>
+            <p id="privacy-message" role="status" aria-live="polite"></p>
+            <div class="privacy-dialog-actions">
+                <button id="privacy-retry" class="btn secondary-btn" type="button" hidden>다시 시도</button>
+                <button id="privacy-close" class="btn secondary-btn" type="button">취소</button>
+                <button id="privacy-submit" class="btn primary-btn" type="submit">열기</button>
+            </div>
+        </form>
+    </dialog>
+    <div class="app-container">
+        <!-- Main View: Video Player & Image Viewer & Arena Stage (Left side) -->
+        <main class="main-content">
+            <div id="db-locked-panel" class="db-locked-panel">
+                <div class="db-lock-symbol">🔒</div>
+                <h2>DB가 잠겨 있습니다</h2>
+                <p>비밀번호로 잠금을 해제하면 미디어 목록을 불러옵니다.</p>
+                <button id="btn-db-unlock" class="btn primary-btn" type="button">잠금 해제</button>
+            </div>
+            <!-- Video Player Stage -->
+            <div id="video-player-stage" class="player-stage">
+                <div class="video-wrapper" title="휠 위: 5초 뒤로 · 휠 아래: 5초 앞으로">
+                    <video id="main-video" crossorigin="anonymous" controlslist="nodownload" muted></video>
+                    <!-- Hidden Canvas for Frame Capture -->
+                    <canvas id="thumbnail-canvas" style="display: none;"></canvas>
+                    
+                    <!-- Volume HUD Overlay -->
+                    <div id="video-volume-hud" class="video-volume-hud">
+                        <span id="volume-hud-icon" class="hud-icon">🔇</span>
+                        <span id="volume-hud-text" class="hud-text">100%</span>
+                        <div class="volume-hud-bar"><div id="volume-hud-fill" class="volume-hud-fill" style="width: 100%;"></div></div>
+                    </div>
+                </div>
+
+                <!-- Custom Player Controls Bar -->
+                <div class="player-controls">
+                    <div class="bookmark-overlay">
+                        <div id="video-bookmarks" class="bookmark-strip" aria-label="저장한 영상 위치"></div>
+                        <span id="video-bookmark-status" class="bookmark-status" role="status"></span>
+                        <button id="video-bookmark-retry" class="btn secondary-btn" hidden>저장 목록 다시 불러오기</button>
+                    </div>
+                    <div class="progress-bar-container">
+                        <div class="seek-bar-wrapper" id="seek-bar-wrapper">
+                            <input type="range" id="seek-bar" title="휠 위: 5초 뒤로 · 휠 아래: 5초 앞으로" min="0" max="100" value="0" step="0.1">
+                            <div id="seek-hover-indicator" class="seek-hover-indicator" style="display: none;"></div>
+                            <div id="seek-hover-time" class="seek-hover-time" style="display: none;">00:00</div>
+                        </div>
+                        <div class="time-display">
+                            <span id="current-time">00:00</span> / <span id="duration">00:00</span>
+                        </div>
+                    </div>
+
+                    <div class="controls-row">
+                        <div class="left-controls">
+                            <button id="btn-play-pause" class="ctrl-btn" title="재생 / 일시정지">▶</button>
+                            <div class="volume-container" title="휠 위: 음량 증가 · 휠 아래: 음량 감소">
+                                <button id="btn-mute" class="ctrl-btn" title="음성 켜기/끄기">🔇</button>
+                                <input type="range" id="volume-bar" min="0" max="1" step="0.05" value="0">
+                            </div>
+                        </div>
+
+                        <div class="right-controls">
+                            <!-- 재생 속도 조절 -->
+                            <div class="speed-selector">
+                                <span>속도:</span>
+                                <select id="speed-select" class="custom-select">
+                                    <option value="0.5">0.5x</option>
+                                    <option value="0.75">0.75x</option>
+                                    <option value="1.0" selected>1.0x (보통)</option>
+                                    <option value="1.25">1.25x</option>
+                                    <option value="1.5">1.5x</option>
+                                    <option value="2.0">2.0x</option>
+                                </select>
+                            </div>
+
+                            <button id="btn-save-video-bookmark" class="btn secondary-btn" title="현재 재생 시점과 화면 저장">🔖 위치 저장</button>
+                            <!-- 썸네일 프레임 추출 버튼 -->
+                            <button id="btn-capture-thumb" class="btn primary-btn" title="현재 프레임을 썸네일로 추출 및 DB 저장">
+                                📸 썸네일 추출
+                            </button>
+                            <!-- 휴지통 이동 버튼 -->
+                            <button id="btn-trash-current-video" class="btn secondary-btn delete-btn" title="이 영상을 휴지통으로 이동">
+                                🗑️
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Image / Archive Viewer Stage -->
+            <div id="image-viewer-stage" class="player-stage" style="display: none;">
+                <div class="image-wrapper" id="image-wrapper">
+                    <button id="btn-img-prev" class="img-nav-btn left" title="이전 장 (마우스 휠 위로 / ←)">◀</button>
+                    <div class="image-display-box single" id="image-display-box">
+                        <img id="viewer-image" class="viewer-img" src="" alt="Viewer Image 1" crossorigin="anonymous">
+                        <img id="viewer-image-2" class="viewer-img" src="" alt="Viewer Image 2" crossorigin="anonymous" style="display: none;">
+                    </div>
+                    <button id="btn-img-next" class="img-nav-btn right" title="다음 장 (마우스 휠 아래로 / →)">▶</button>
+                </div>
+                <div class="image-controls-container">
+                    <div class="bookmark-overlay">
+                        <div id="image-bookmarks" class="bookmark-strip" aria-label="저장한 압축 이미지 페이지"></div>
+                        <span id="image-bookmark-status" class="bookmark-status" role="status"></span>
+                        <button id="image-bookmark-retry" class="btn secondary-btn" hidden>저장 목록 다시 불러오기</button>
+                    </div>
+                    <div class="image-seek-row">
+                        <div class="seek-bar-wrapper" id="image-seek-wrapper">
+                            <input type="range" id="image-seek-bar" class="image-seek-bar" min="1" max="1" value="1" step="1" title="페이지 탐색 (클릭 / 드래그)">
+                            <div id="image-seek-hover-indicator" class="seek-hover-indicator" style="display: none;"></div>
+                            <div id="image-seek-hover-tooltip" class="seek-hover-time" style="display: none;">1 / 1</div>
+                        </div>
+                    </div>
+                    <div class="image-controls-bar">
+                        <div class="image-info-left">
+                            <span id="img-entry-name" class="img-entry-title">이미지 파일</span>
+                            <span id="img-page-counter" class="badge">1 / 1</span>
+                        </div>
+                        <div style="display: flex; gap: 6px; align-items: center;">
+                            <button id="btn-delete-archive-page" class="btn secondary-btn delete-btn" type="button" hidden title="암호화 압축 파일에서 선택한 이미지 삭제">이미지 삭제</button>
+                            <button id="btn-save-image-bookmark" class="btn secondary-btn" title="현재 페이지와 화면 저장">🔖 페이지 저장</button>
+                            <button id="btn-capture-img-thumb" class="btn primary-btn" title="현재 이미지를 대표 썸네일로 DB 저장">
+                                📸 썸네일 지정
+                            </button>
+                            <button id="btn-trash-current-image" class="btn secondary-btn delete-btn" title="이 파일을 휴지통으로 이동">
+                                🗑️
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="note-stage" hidden><h2 id="note-stage-title"></h2><button id="btn-open-note" class="btn primary-btn" type="button">메모 열기</button></div>
+            <div id="pdf-viewer-stage" class="player-stage pdf-stage" style="display:none;">
+                <form id="pdf-password-form" hidden>
+                    <label for="pdf-password">PDF 문서 비밀번호</label>
+                    <input id="pdf-password" type="password" autocomplete="off">
+                    <button type="submit" class="btn primary-btn">PDF 열기</button>
+                </form>
+                <div id="pdf-pages" class="pdf-pages" tabindex="0" aria-label="PDF 페이지 화면"></div>
+                <div class="pdf-controls-container image-controls-container">
+                    <div class="image-seek-row pdf-seek-row">
+                        <div class="seek-bar-wrapper">
+                            <input id="pdf-seek-bar" class="image-seek-bar" type="range" min="1" max="1" value="1" step="1" title="페이지 탐색 (클릭 / 드래그)" aria-label="PDF 페이지 탐색" disabled>
+                        </div>
+                        <span id="pdf-seek-label" class="pdf-seek-label">0 / 0</span>
+                    </div>
+                    <div class="bookmark-overlay">
+                        <div id="pdf-bookmarks" class="bookmark-strip" aria-label="저장한 PDF 페이지"></div>
+                        <span id="pdf-bookmark-status" class="bookmark-status" role="status"></span>
+                        <button id="pdf-bookmark-retry" class="btn secondary-btn" hidden>저장 목록 다시 불러오기</button>
+                        <p id="pdf-status" role="status"></p>
+                        <div id="pdf-position-state" hidden>
+                            <span id="pdf-position-status" role="status"></span>
+                            <button id="pdf-position-retry" type="button" class="btn secondary-btn">진도 저장 재시도</button>
+                        </div>
+                    </div>
+                    <div class="pdf-toolbar">
+                        <p id="pdf-title" class="pdf-title"></p>
+                        <button id="pdf-prev" class="btn secondary-btn" title="이전 페이지">◀</button>
+                        <input id="pdf-page" type="number" min="1" value="1" aria-label="PDF 페이지">
+                        <span id="pdf-count">/ 0</span>
+                        <button id="pdf-next" class="btn secondary-btn" title="다음 페이지">▶</button>
+                        <select id="pdf-layout" class="custom-select" aria-label="PDF 보기 방식">
+                            <option value="1">1페이지 보기</option><option value="2">2페이지 보기</option>
+                        </select>
+                        <select id="pdf-zoom" class="custom-select" aria-label="PDF 확대 비율">
+                            <option value="fit">페이지 맞춤</option><option value="width">너비 맞춤</option>
+                            <option value="1">100%</option><option value="1.5">150%</option><option value="2">200%</option>
+                        </select>
+                        <button id="pdf-save" class="btn secondary-btn">🔖 페이지 저장</button>
+                        <button id="pdf-thumbnail" class="btn secondary-btn">📸 썸네일 지정</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Media Arena Stage (A vs B Elo Rating Match) -->
+            <div id="arena-stage" class="player-stage arena-stage" style="display: none;">
+                <div class="arena-top-bar">
+                    <div class="arena-title">
+                        <span class="arena-icon">⚔️</span>
+                        <div>
+                            <h2>미디어 아레나</h2>
+                            <p class="arena-subtitle">더 선호하는 미디어를 선택하면 점수(Elo Rating)가 산출됩니다</p>
+                        </div>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 8px;">
+                        <div id="arena-pinned-badge" class="arena-pinned-badge" style="display: none;">
+                            <span id="arena-pinned-text">📌 좌측 고정 모드</span>
+                            <button id="btn-unpin-arena" class="btn-unpin" title="고정 해제 (전체 랜덤 매칭으로 전환)">✕ 해제</button>
+                        </div>
+                        <button id="btn-arena-pass-top" class="btn secondary-btn" title="선택할 수 없을 때 패스 (단축키: P 또는 Space)">
+                            ⏭️ 패스
+                        </button>
+                        <button id="btn-exit-arena" class="btn secondary-btn" title="라이브러리로 돌아가기">
+                            ✕ 라이브러리로 돌아가기
+                        </button>
+                    </div>
+                </div>
+
+                <div class="arena-match-container">
+                    <!-- Option A -->
+                    <div id="arena-card-a" class="arena-card">
+                        <div class="arena-card-header">
+                            <button id="btn-pin-card-a" class="btn-card-pin" title="이 미디어를 좌측에 고정하고 상대 미디어만 바꿔가며 연속 대결">
+                                📌 좌측 고정
+                            </button>
+                        </div>
+                        <div id="arena-thumb-wrapper-a" class="arena-thumb-wrapper">
+                            <div id="arena-fallback-a" class="arena-fallback" style="display: none; font-size: 42px;">🎥</div>
+                            <img id="arena-thumb-a" class="arena-thumb" src="" alt="" style="display: none;">
+                            <video id="arena-video-a" class="arena-video" muted loop playsinline preload="none" style="display: none;"></video>
+                            <span id="arena-type-a" class="arena-filetype">VIDEO</span>
+                            <span id="arena-page-a" class="arena-page-badge" style="display: none;">1 / 1</span>
+                        </div>
+                        <div class="arena-info">
+                            <div id="arena-title-a" class="arena-name">미디어 A</div>
+                            <div class="arena-score-badge">
+                                🏆 <span id="arena-score-a">1000</span>점
+                                <span id="arena-delta-a" class="arena-delta"></span>
+                            </div>
+                        </div>
+                        <button class="btn primary-btn arena-vote-btn" style="width: 100%; justify-content: center;">
+                            👉 A 선택하기
+                        </button>
+                    </div>
+
+                    <!-- VS Badge & Pass Action -->
+                    <div class="arena-vs-divider">
+                        <span class="vs-circle">VS</span>
+                        <button id="btn-arena-pass" class="btn-arena-pass" type="button" title="선택할 수 없을 때 다음 매치로 건너뛰기 (단축키: P 또는 Space)">
+                            <span class="pass-icon">⏭️</span>
+                            <span class="pass-text">패스</span>
+                            <span class="pass-key-hint">[P / Space]</span>
+                        </button>
+                    </div>
+
+                    <!-- Option B -->
+                    <div id="arena-card-b" class="arena-card">
+                        <div id="arena-thumb-wrapper-b" class="arena-thumb-wrapper">
+                            <div id="arena-fallback-b" class="arena-fallback" style="display: none; font-size: 42px;">🎥</div>
+                            <img id="arena-thumb-b" class="arena-thumb" src="" alt="" style="display: none;">
+                            <video id="arena-video-b" class="arena-video" muted loop playsinline preload="none" style="display: none;"></video>
+                            <span id="arena-type-b" class="arena-filetype">VIDEO</span>
+                            <span id="arena-page-b" class="arena-page-badge" style="display: none;">1 / 1</span>
+                        </div>
+                        <div class="arena-info">
+                            <div id="arena-title-b" class="arena-name">미디어 B</div>
+                            <div class="arena-score-badge">
+                                🏆 <span id="arena-score-b">1000</span>점
+                                <span id="arena-delta-b" class="arena-delta"></span>
+                            </div>
+                        </div>
+                        <button class="btn primary-btn arena-vote-btn" style="width: 100%; justify-content: center;">
+                            👉 B 선택하기
+                        </button>
+                    </div>
+                </div>
+
+                <div id="arena-feedback" class="arena-footer-hint">
+                    단축키: <strong>[V]</strong> A 선택 &nbsp;|&nbsp; <strong>[B]</strong> B 선택 &nbsp;|&nbsp; <strong>[P]</strong> 또는 <strong>[Space]</strong> 패스 &nbsp;|&nbsp; <strong>[ESC]</strong> 라이브러리로 돌아가기
+                </div>
+            </div>
+
+            <!-- Trash Bin & Deletion Audit Log Stage -->
+            <div id="trash-stage" class="player-stage trash-stage" style="display: none;">
+                <div class="trash-top-bar">
+                    <div class="trash-tabs">
+                        <button id="tab-trash-items" class="trash-tab active">
+                            🗑️ 휴지통 보관함 (<span id="trash-count">0</span>)
+                        </button>
+                        <button id="tab-trash-logs" class="trash-tab">
+                            📋 삭제 이력 기록 (<span id="logs-count">0</span>)
+                        </button>
+                    </div>
+                    <button id="btn-exit-trash" class="btn secondary-btn" title="라이브러리로 돌아가기">
+                        ✕ 라이브러리로 돌아가기
+                    </button>
+                </div>
+
+                <!-- Tab 1: Trash Items List -->
+                <div id="trash-tab-items-content" class="trash-content">
+                    <div class="trash-action-bar">
+                        <p class="trash-hint-text">휴지통에 있는 미디어는 라이브러리와 아레나에서 제외됩니다.</p>
+                        <button id="btn-empty-trash" class="btn danger-btn">
+                            💥 전체 영구 삭제 (비우기)
+                        </button>
+                    </div>
+                    <p id="trash-items-status" class="trash-hint-text" role="status" aria-live="polite"></p>
+                    <div id="trash-items-grid" class="trash-grid">
+                        <!-- Populated dynamically -->
+                    </div>
+                </div>
+
+                <!-- Tab 2: Deletion Audit Logs Table -->
+                <div id="trash-tab-logs-content" class="trash-content" style="display: none;">
+                    <div class="trash-action-bar">
+                        <p class="trash-hint-text">현재 폴더의 삭제 이력을 관리합니다. 이력을 지워도 실제 파일과 휴지통 항목은 유지됩니다.</p>
+                        <button id="btn-clear-trash-logs" class="btn danger-btn" disabled>이력 전체 삭제</button>
+                    </div>
+                    <p id="trash-logs-status" class="trash-hint-text" role="status" aria-live="polite"></p>
+                    <div class="trash-logs-container">
+                        <table class="trash-table">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>파일 이름 / 경로</th>
+                                    <th>타입</th>
+                                    <th>용량</th>
+                                    <th>최종 점수</th>
+                                    <th>태그</th>
+                                    <th>삭제 일시</th>
+                                    <th>관리</th>
+                                </tr>
+                            </thead>
+                            <tbody id="trash-logs-tbody">
+                                <!-- Populated dynamically -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Sidebar: Media Library List (Right side) -->
+        <aside class="sidebar">
+            <div class="folder-control-section">
+                <!-- Row 1: 언어 선택 및 폴더 선택 드롭다운 -->
+                <div class="folder-select-row">
+                    <label class="language-setting" title="언어 변경 / Language / 言語">
+                        <svg class="language-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                        <select data-language-select class="custom-select language-select" aria-label="Language / 언어 / 言語" title="언어 변경 후 화면을 다시 불러옵니다."><option value="ko">한국어</option><option value="en">English</option><option value="ja">日本語</option></select>
+                    </label>
+                    <select id="folder-select" class="custom-select folder-select" title="이번 실행 중 지정한 라이브러리 폴더 선택">
+                        <!-- Populated dynamically -->
+                    </select>
+                </div>
+                <!-- Row 2: 라이브러리 조작 및 바로가기 4분할 바 -->
+                <div class="folder-actions-row">
+                    <button id="btn-add-folder" class="btn secondary-btn compact-action-btn" type="button" title="새로운 라이브러리 폴더 지정">
+                        📂 폴더 지정
+                    </button>
+                    <button id="btn-close-library" class="btn secondary-btn compact-action-btn" type="button" title="현재 라이브러리를 닫고 페이크 화면으로 돌아갑니다. 파일과 DB는 유지됩니다.">
+                        🔒 닫기
+                    </button>
+                    <button id="btn-backup-db" class="btn secondary-btn compact-action-btn" type="button" title="현재 라이브러리 DB와 키 파일 묶음 백업">
+                        💾 백업
+                    </button>
+                    <button data-open-licenses class="btn secondary-btn compact-action-btn compact-icon-btn" type="button" title="정보·라이선스" aria-label="정보·라이선스">ℹ️</button>
+                    <button id="btn-shortcuts" class="btn secondary-btn compact-action-btn shortcut-btn compact-icon-btn" type="button" title="단축키 목록 (F1 / ?)" aria-label="단축키 목록 (F1 / ?)">⌨</button>
+                </div>
+                <!-- Row 3: 핵심 액션 듀얼 바 (아레나 & 새 메모) -->
+                <div class="main-actions-row">
+                    <button id="btn-start-arena" class="btn primary-btn main-action-btn arena-btn" type="button" title="미디어 아레나 시작">
+                        ⚔️ 아레나
+                    </button>
+                    <button id="btn-new-note" class="btn primary-btn main-action-btn note-btn" type="button" title="암호화 새 메모 작성">
+                        ＋ 새 메모
+                    </button>
+                </div>
+            </div>
+
+            <!-- Row 4 & 5: 사이드바 헤더 (목록 상태 및 접이식 고급 도구 패널) -->
+            <div class="sidebar-header">
+                <div class="sidebar-status-row">
+                    <div class="sidebar-status-left">
+                        <span id="media-count" class="badge">0개</span>
+                        <button id="btn-series" class="btn secondary-btn compact-pill-btn" type="button" title="미디어 시리즈 관리">📚 시리즈</button>
+                        <button id="btn-rescan-folder" class="btn secondary-btn compact-pill-btn" type="button" title="폴더 새로고침 (외부 파일 추가/삭제 동기화)">
+                            <span id="rescan-icon">🔄</span> 동기화
+                        </button>
+                        <button id="btn-open-trash" class="btn secondary-btn compact-pill-btn" type="button" title="프로그램 휴지통 및 삭제 이력">
+                            🗑️ 휴지통 (<span id="sidebar-trash-count">0</span>)
+                        </button>
+                    </div>
+                </div>
+                <div class="scan-status-container">
+                    <span id="scan-status" class="scan-status" aria-live="polite"></span>
+                </div>
+                <div id="metadata-state" class="scan-status-container" hidden>
+                    <span id="metadata-status" class="scan-status" role="status"></span>
+                    <button id="metadata-check" class="btn secondary-btn compact-pill-btn" type="button">변경 결과 확인</button>
+                </div>
+
+                <!-- 접이식 고급 도구 패널 (보안/백업/복구/초기화) -->
+                <div class="db-security-bar">
+                    <details id="tools-accordion" class="tools-accordion">
+                        <summary class="tools-accordion-summary" title="클릭하여 DB 보안, 백업 복원, 복구 및 초기화 도구 펼치기/접기">
+                            <span class="tools-summary-title">⚙️ 고급 도구 및 관리</span>
+                            <span class="tools-summary-right">
+                                <span id="db-security-status" role="status"></span>
+                                <span class="tools-accordion-arrow">▾</span>
+                            </span>
+                        </summary>
+                        <div class="tools-accordion-body">
+                            <!-- 보안 및 백업 복원 -->
+                            <div class="tools-group">
+                                <div class="tools-group-header">보안 및 백업 복원</div>
+                                <div class="tools-btn-grid">
+                                    <button id="btn-db-security" class="btn secondary-btn" type="button">🔐 DB 암호화</button>
+                                    <button id="btn-db-lock" class="btn secondary-btn" type="button" hidden>잠그기</button>
+                                    <button id="btn-archive-security" class="btn secondary-btn" type="button">🔒 미디어 암호화</button>
+                                    <button id="btn-restore-db" class="btn secondary-btn" type="button" title="DB·키 백업 파일에서 새 라이브러리 복원">📂 DB 백업 복원</button>
+                                </div>
+                            </div>
+
+                            <!-- 저장소 복구 -->
+                            <div class="tools-group">
+                                <div class="tools-group-header">저장소 복구</div>
+                                <div class="tools-btn-grid">
+                                    <button id="btn-reconnect-storage" class="btn secondary-btn" type="button">↻ 다시 연결</button>
+                                    <button id="btn-cancel-reconnect" class="btn secondary-btn" type="button" hidden>재연결 취소</button>
+                                    <button id="btn-integrity-check" class="btn secondary-btn" type="button">빠른 무결성 검사</button>
+                                </div>
+                                <span id="storage-status" role="status" aria-live="polite" hidden></span>
+                            </div>
+
+                            <!-- 데이터 초기화 -->
+                            <div class="tools-group danger-group">
+                                <div class="tools-group-header">데이터 초기화 (주의)</div>
+                                <div class="tools-btn-grid three-col">
+                                    <button id="btn-reset-all-watch" class="btn secondary-btn reset-action-btn" type="button" title="현재 폴더의 모든 미디어 시청 횟수 및 이력 초기화">
+                                        ↺ 시청초기화
+                                    </button>
+                                    <button id="btn-reset-all-scores" class="btn secondary-btn reset-action-btn" type="button" title="현재 폴더의 모든 미디어 점수(Elo 레이팅)를 1000점으로 초기화">
+                                        🏆 점수초기화
+                                    </button>
+                                    <button id="btn-reset-all-ratings" class="btn secondary-btn reset-action-btn" type="button" title="현재 폴더의 모든 미디어 별점을 초기화">
+                                        ⭐ 별점초기화
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </details>
+                </div>
+            </div>
+
+            <!-- Row 6: 검색창 -->
+            <div class="search-section">
+                <div class="search-input-wrapper">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" id="search-input" class="search-input" placeholder="파일명 또는 시리즈 검색..." aria-label="파일명 또는 시리즈 검색" autocomplete="off">
+                    <button id="btn-clear-search" class="clear-search-btn" title="검색어 지우기" style="display: none;">✕</button>
+                </div>
+                <div class="search-input-wrapper">
+                    <span class="search-icon" aria-hidden="true">#</span>
+                    <input type="text" id="tag-search-input" class="search-input" placeholder="태그 검색..." aria-label="태그 검색" autocomplete="off">
+                    <button id="btn-clear-tag-search" class="clear-search-btn" title="태그 검색어 지우기" style="display: none;">✕</button>
+                </div>
+            </div>
+
+            <!-- Row 7: 필터 및 정렬 툴바 (단 1줄 통합) -->
+            <div class="sort-toolbar">
+                <select id="media-type-filter" class="custom-select" aria-label="파일 종류 필터">
+                    <option value="">모든 파일</option><option value="VIDEO">동영상</option>
+                    <option value="ARCHIVE">이미지 압축 파일</option><option value="IMAGE">개별 이미지</option><option value="PDF">PDF</option><option value="NOTE">메모</option>
+                </select>
+                <select id="sort-select" class="custom-select sort-select" title="정렬 기준 선택">
+                    <option value="score" selected>🏆 점수순</option>
+                    <option value="rating">⭐ 별점순</option>
+                    <option value="date">📅 저장 일자순</option>
+                    <option value="watch_count">🔢 시청 횟수순</option>
+                    <option value="last_watched">👁️ 최근 시청순</option>
+                    <option value="name">🔤 파일 이름순</option>
+                </select>
+                <button id="btn-sort-order" class="btn secondary-btn sort-order-btn" title="오름차순 / 내림차순 전환">
+                    <span id="sort-order-icon">▼</span>
+                    <span id="sort-order-label">내림차순</span>
+                </button>
+            </div>
+
+            <div class="media-list" id="media-list" role="list" aria-label="미디어 목록" tabindex="0">
+                <!-- Media item cards dynamically populated with tags & score & last watched -->
+            </div>
+        </aside>
+    </div>
+
+    <dialog id="integrity-dialog" aria-labelledby="integrity-title" aria-describedby="integrity-description">
+        <div class="shortcut-dialog-header">
+            <h2 id="integrity-title">빠른 무결성 검사</h2>
+            <button id="integrity-header-close" class="shortcut-dialog-close" type="button" aria-label="무결성 검사 닫기">✕</button>
+        </div>
+        <div class="integrity-body">
+            <p id="integrity-description">DB와 키를 확인하고, 암호화 파일의 처음·끝 일부 블록만 읽습니다. 일반 파일은 존재 여부와 크기를 확인합니다.</p>
+            <p class="integrity-limit">파일 전체 해시·중간 데이터·이미지 디코딩은 검사하지 않습니다. 빠른 검사 통과가 파일 전체의 정상 상태를 보장하지는 않습니다.</p>
+            <p class="integrity-note">파일을 변경하거나 복원하지 않습니다. NAS 연결 문제는 손상과 구분하여 표시합니다.</p>
+            <p id="integrity-finished" class="integrity-note"></p>
+            <p id="integrity-status" role="status" aria-live="polite"></p>
+            <progress id="integrity-progress" max="1" value="0" aria-label="빠른 검사 진행률" hidden></progress>
+            <p id="integrity-summary"></p>
+            <ul id="integrity-results" aria-label="검사 문제 및 확인 불가 항목"></ul>
+            <p id="integrity-empty" class="integrity-note"></p>
+            <p id="integrity-truncated" class="integrity-limit" hidden>상세 결과는 처음 1,000개까지만 표시합니다. 위 집계에는 모든 결과가 포함됩니다.</p>
+            <p class="integrity-note">창을 닫아도 검사는 계속됩니다. 취소해도 이미 진행 중인 운영체제의 저장소 요청은 즉시 중단되지 않을 수 있습니다.</p>
+        </div>
+        <div class="integrity-actions">
+            <button id="integrity-cancel" class="btn secondary-btn" type="button" hidden>검사 취소</button>
+            <button id="integrity-start" class="btn primary-btn" type="button">검사 시작</button>
+            <button id="integrity-close" class="btn secondary-btn" type="button">닫기</button>
+        </div>
+    </dialog>
+    <dialog id="db-restore-dialog" class="archive-security-dialog" aria-labelledby="db-restore-title">
+        <h2 id="db-restore-title">DB 백업 복원</h2>
+        <p>.vtbackup 파일의 DB와 vault.key를 함께 복원합니다. 저장할 상위 폴더를 고르면 그 안에 새 라이브러리 폴더를 만들고 엽니다.</p>
+        <button id="db-restore-select" class="btn secondary-btn" type="button">백업 파일 선택</button>
+        <p id="db-restore-file">선택한 파일 없음</p>
+        <form id="db-restore-form">
+            <label id="db-restore-password-row" hidden>백업 당시 비밀번호
+                <input id="db-restore-password" type="password" maxlength="256" autocomplete="current-password">
+            </label>
+            <p>미디어 파일은 백업에 포함되지 않습니다. 복원된 폴더에 원래 경로대로 미디어를 복사한 뒤 동기화해 주세요. 미디어가 아직 없어도 기존 기록은 보존합니다.</p>
+            <p id="db-restore-status" role="status" aria-live="polite"></p>
+            <div class="archive-security-actions">
+                <button id="db-restore-submit" class="btn primary-btn" type="submit" disabled>저장 위치 선택 후 복원</button>
+                <button id="db-restore-close" class="btn secondary-btn" type="button">닫기</button>
+            </div>
+        </form>
+    </dialog>
+
+    <dialog id="db-security-dialog" class="db-security-dialog" aria-labelledby="db-security-title">
+        <div class="shortcut-dialog-header db-dialog-header">
+            <div class="db-header-title-wrap">
+                <span class="db-header-icon" aria-hidden="true">🔐</span>
+                <h2 id="db-security-title">DB 보안</h2>
+            </div>
+            <button id="db-security-close" class="shortcut-dialog-close" type="button" aria-label="DB 보안 닫기">✕</button>
+        </div>
+        <div class="db-dialog-body">
+            <p id="db-security-note" class="db-security-note"></p>
+            <section id="db-encryption-risk" class="encryption-risk" aria-labelledby="db-encryption-risk-title">
+                <h3 id="db-encryption-risk-title">⚠ 암호화 전 반드시 확인하세요</h3>
+                <ul><li>비밀번호를 잊으면 암호화 DB를 복구할 수 없습니다. 비밀번호 재설정이나 우회 복구 기능은 없습니다.</li>
+                    <li>작업 전 DB를 백업하고, 완료 후 암호화된 DB 백업을 새로 만드세요. 백업도 다른 저장장치에 보관하세요.</li>
+                    <li>DB 암호화만으로 미디어 파일은 보호되지 않습니다. 기존 평문 DB와 이전 백업도 그대로 남습니다.</li>
+                    <li>추가 저장 공간이 필요합니다. 작업 중 앱을 종료하거나 NAS·저장장치 연결을 끊지 마세요.</li></ul>
+                <label class="encryption-risk-ack"><input id="db-encryption-risk-ack" type="checkbox"><span>복구 불가 위험과 별도 백업의 필요성을 확인했습니다.</span></label>
+            </section>
+            <form id="db-security-form" class="db-security-form">
+                <div class="db-form-fields">
+                    <label id="db-current-row" class="db-form-row" hidden><span class="db-form-label">현재 비밀번호</span><input id="db-current-password" type="password" maxlength="256" autocomplete="current-password"></label>
+                    <label class="db-form-row"><span id="db-password-label" class="db-form-label">비밀번호</span><input id="db-password" type="password" required maxlength="256" autocomplete="new-password"></label>
+                    <label id="db-confirm-row" class="db-form-row"><span id="db-confirm-label" class="db-form-label">비밀번호 확인</span><input id="db-password-confirm" type="password" required maxlength="256" autocomplete="new-password"></label>
+                </div>
+                <div class="db-form-submit-row">
+                    <button id="db-security-submit" class="btn primary-btn" type="submit">암호화 및 검증</button>
+                </div>
+            </form>
+            <p id="db-security-message" class="db-security-message" role="status" aria-live="polite"></p>
+            <div class="db-extra-actions">
+                <button id="db-change-password" class="btn secondary-btn" type="button" hidden>폴더 비밀번호 변경</button>
+                <button id="db-delete-plaintext" class="btn secondary-btn delete-btn" type="button" hidden>남은 평문 원본 DB 삭제</button>
+            </div>
+        </div>
+    </dialog>
+
+    <dialog id="shortcut-dialog" aria-labelledby="shortcut-title">
+        <div class="shortcut-dialog-header">
+            <h2 id="shortcut-title">⌨ 키보드 단축키</h2>
+            <button id="btn-close-shortcuts" class="shortcut-dialog-close" type="button" aria-label="단축키 목록 닫기">✕</button>
+        </div>
+        <p class="shortcut-dialog-note">입력 중에는 F1·Ctrl+F만 사용할 수 있으며, 한글 조합 중에는 동작하지 않습니다. 영문 키는 한/영 전환과 관계없이 같은 키 위치를 사용합니다. 현재 화면에 해당하는 단축키만 동작합니다.</p>
+        <div id="shortcut-list" class="shortcut-list"></div>
+    </dialog>
+
+    <dialog id="archive-page-dialog" aria-labelledby="archive-page-title">
+        <div class="shortcut-dialog-header">
+            <h2 id="archive-page-title">압축 파일에서 이미지 삭제</h2>
+            <button id="archive-page-close" class="shortcut-dialog-close" type="button" aria-label="이미지 삭제 닫기">✕</button>
+        </div>
+        <form id="archive-page-form">
+            <p id="archive-page-file"></p>
+            <p>삭제할 이미지를 여러 개 선택하세요. 최소 한 장은 남겨야 합니다.</p>
+            <div class="archive-page-toolbar">
+                <button id="archive-page-select-visible" type="button" class="btn secondary-btn">현재 목록 선택</button>
+                <button id="archive-page-clear" type="button" class="btn secondary-btn">선택 해제</button>
+                <span id="archive-page-count" role="status"></span>
+            </div>
+            <div id="archive-page-entry" aria-label="삭제할 이미지"></div>
+            <div class="archive-page-toolbar">
+                <button id="archive-page-prev" type="button" class="btn secondary-btn">이전</button>
+                <span id="archive-page-position"></span>
+                <button id="archive-page-next" type="button" class="btn secondary-btn">다음</button>
+            </div>
+            <p>선택한 이미지를 암호화 압축 파일에서 삭제합니다. 완료 후 앱에서 되돌릴 수 없으며, 복원할 압축 파일에서도 제외됩니다. 해당 페이지의 북마크와 대표 썸네일도 함께 정리합니다.</p>
+            <p>새 암호화 사본을 검증한 뒤 교체하므로 추가 저장 공간과 시간이 필요합니다. 남아 있는 평문 원본은 이미지 삭제 전에 암호화 관리에서 먼저 정리해 주세요. 기존 백업은 그대로 남습니다. 완료 후 DB와 암호화 미디어 백업을 함께 갱신해 주세요.</p>
+            <progress id="archive-page-progress" hidden></progress>
+            <p id="archive-page-message" role="status" aria-live="polite"></p>
+            <div class="dialog-actions">
+                <button id="archive-page-manage-original" type="button" class="btn secondary-btn">미디어 암호화 관리</button>
+                <button id="archive-page-cancel" type="button" class="btn secondary-btn" hidden>작업 취소</button>
+                <button id="archive-page-delete" type="submit" class="btn secondary-btn delete-btn">선택한 이미지 삭제</button>
+            </div>
+        </form>
+    </dialog>
+
+    <dialog id="media-name-dialog" aria-labelledby="media-name-title">
+        <div class="shortcut-dialog-header">
+            <h2 id="media-name-title">암호화 압축 파일 이름 변경</h2>
+            <button id="media-name-close" class="shortcut-dialog-close" type="button" aria-label="이름 변경 닫기">✕</button>
+        </div>
+        <form id="media-name-form">
+            <label>파일명<input id="media-name-input" type="text" required maxlength="240" autocomplete="off" spellcheck="false"></label>
+            <label class="media-name-option"><input id="media-name-include-restore" type="checkbox" checked> 복원 파일명도 함께 변경</label>
+            <p>복원 파일명까지 바꾸면 암호화 사본을 새로 만들고 검증합니다. 파일 크기만큼 추가 공간과 시간이 필요하며, 평문 임시 파일은 만들지 않습니다. 남아 있는 평문 원본의 이름은 유지합니다.</p>
+            <p>완료 후 DB와 암호화 미디어 백업을 갱신해 주세요. 체크를 끄면 목록에 표시되는 이름만 바꿉니다.</p>
+            <progress id="media-name-progress" hidden></progress>
+            <p id="media-name-original"></p>
+            <p id="media-name-message" role="status" aria-live="polite"></p>
+            <div class="dialog-actions">
+                <button id="media-name-cancel" class="btn secondary-btn" type="button" hidden>작업 취소</button>
+                <button id="media-name-restore" class="btn secondary-btn" type="button">현재 복원 이름</button>
+                <button id="media-name-save" class="btn primary-btn" type="submit">저장</button>
+            </div>
+        </form>
+    </dialog>
+
+    <dialog id="series-dialog" aria-labelledby="series-title">
+        <div class="shortcut-dialog-header series-dialog-header">
+            <div class="series-header-title-wrap">
+                <h2 id="series-title">📚 시리즈 관리</h2>
+                <span class="series-header-subtitle">미디어 시리즈와 표시 순서 설정</span>
+            </div>
+            <button id="series-close" class="shortcut-dialog-close" type="button" aria-label="시리즈 관리 닫기">✕</button>
+        </div>
+        <div class="series-dialog-body">
+            <div class="series-info-card">
+                <span class="series-info-icon">ℹ️</span>
+                <div class="series-info-text">
+                    같은 시리즈는 목록에서 함께 묶여 정렬됩니다. 점수·별점은 공통 반영되며, 날짜·시청 기록 정렬은 <strong>대표 파일</strong>을 기준으로 합니다.
+                </div>
+            </div>
+            <fieldset id="series-fields">
+                <div class="series-form-grid">
+                    <div class="series-field-group">
+                        <label for="series-select" class="series-field-label">시리즈 선택</label>
+                        <select id="series-select" class="custom-select series-select"></select>
+                    </div>
+                    <div class="series-field-group">
+                        <label for="series-name" class="series-field-label">시리즈 이름</label>
+                        <input id="series-name" type="text" class="series-text-input" maxlength="200" autocomplete="off" placeholder="예: 시리즈 제목을 입력하세요">
+                    </div>
+                </div>
+
+                <div class="series-section-header">
+                    <span class="series-section-title">포함할 미디어</span>
+                    <span id="series-count" class="series-count-badge" aria-live="polite">0개 선택</span>
+                </div>
+
+                <div class="series-toolbar">
+                    <div class="series-search-wrapper">
+                        <span class="series-search-icon">🔍</span>
+                        <input id="series-search" type="search" class="series-search-input" aria-label="시리즈 파일 검색" placeholder="포함할 파일명 필터링…">
+                    </div>
+                    <button id="series-select-visible" class="btn secondary-btn series-btn-batch" type="button">검색 결과 전체 선택</button>
+                </div>
+
+                <div class="series-list-container">
+                    <div class="series-list-columns">
+                        <span class="col-file">파일명</span>
+                        <span class="col-order">표시 순서</span>
+                        <span class="col-rep">대표 파일</span>
+                    </div>
+                    <div id="series-files" class="series-files-scroll" role="list" aria-label="시리즈에 포함할 미디어" tabindex="0"></div>
+                </div>
+            </fieldset>
+        </div>
+        <div class="series-dialog-footer">
+            <div class="series-footer-left">
+                <button id="series-dissolve" class="btn secondary-btn series-btn-danger" type="button" hidden>🗑 시리즈 해제</button>
+                <span id="series-status" class="series-status-msg" role="status"></span>
+            </div>
+            <div class="series-footer-right">
+                <button id="series-cancel" class="btn secondary-btn" type="button">취소</button>
+                <button id="series-retry" class="btn secondary-btn" type="button" hidden>다시 시도</button>
+                <button id="series-save" class="btn primary-btn" type="button">시리즈 저장</button>
+            </div>
+        </div>
+    </dialog>
+
+    <script>document.addEventListener("DOMContentLoaded", () => window.VaultI18n.captureStatic());</script>
+    <script src="virtual-list.js?v=20261003_perf"></script>
+    <script src="series-editor.js?v=20261005_pending"></script>
+    <dialog id="archive-security-dialog" class="archive-security-dialog" aria-labelledby="archive-security-title">
+        <div class="shortcut-dialog-header archive-dialog-header">
+            <div class="series-header-title-wrap">
+                <h2 id="archive-security-title">🔒 미디어 암호화</h2>
+                <span class="series-header-subtitle">영상 · ZIP · tar.zst 암호화 및 평문 원본 관리</span>
+            </div>
+            <button id="archive-security-header-close" class="shortcut-dialog-close" type="button" aria-label="미디어 암호화 닫기">✕</button>
+        </div>
+        <div class="archive-dialog-body">
+            <section id="media-encryption-risk" class="encryption-risk" aria-labelledby="media-encryption-risk-title">
+            <h3 id="media-encryption-risk-title">⚠ 암호화 전 반드시 확인하세요</h3>
+            <ul><li>vault.key와 비밀번호가 모두 필요합니다. 둘 중 하나라도 잃으면 암호화된 미디어를 복원할 수 없습니다.</li>
+                <li>암호화 파일이 손상되면 키와 비밀번호가 있어도 복원하지 못할 수 있습니다.</li>
+                <li>완료 후 DB 백업(.vtbackup: DB와 vault.key)과 암호화 미디어를 각각 다른 저장장치에 백업하세요. DB 백업에는 미디어 본문이 포함되지 않습니다.</li>
+                <li>평문 원본은 자동 삭제되지 않습니다. 암호화 파일의 열람·복원과 백업을 확인한 뒤 원본을 정리하세요.</li>
+                <li>추가 저장 공간이 필요합니다. 작업 중 앱을 종료하거나 NAS·저장장치 연결을 끊지 마세요.</li></ul>
+            <label class="encryption-risk-ack"><input id="media-encryption-risk-ack" type="checkbox"><span>복구 불가 위험과 별도 백업의 필요성을 확인했습니다.</span></label>
+        </section>
+
+            <div class="archive-toolbar">
+                <div class="archive-search-wrapper">
+                    <span class="archive-search-icon">🔍</span>
+                    <input id="archive-security-search" type="search" class="archive-search-input" placeholder="미디어 파일명 검색…" aria-label="미디어 파일 검색">
+                </div>
+                <div class="archive-toolbar-actions">
+                    <span id="archive-security-count" class="archive-count-badge" aria-live="polite">0개 선택</span>
+                    <button id="archive-security-all" type="button" class="btn secondary-btn archive-btn-batch">검색 결과 전체 선택</button>
+                    <button id="archive-security-none" type="button" class="btn secondary-btn archive-btn-batch">선택 해제</button>
+                </div>
+            </div>
+
+            <div class="archive-list-container">
+                <div class="archive-list-columns">
+                    <span class="col-file">미디어 파일명</span>
+                    <span class="col-status">상태</span>
+                    <span class="col-actions">개별 작업</span>
+                </div>
+                <div id="archive-security-list" class="archive-security-list" role="list" aria-label="암호화 미디어 목록" tabindex="0"></div>
+            </div>
+
+            <div class="archive-progress-section">
+                <div class="archive-progress-bar-wrapper">
+                    <p id="archive-security-progress-label" class="archive-progress-label" hidden></p>
+                    <progress id="archive-security-progress" class="archive-progress-bar" max="1" value="0" aria-label="전체 작업 진행률"></progress>
+                </div>
+                <div id="archive-security-file-progress-section" hidden>
+                    <p id="archive-security-current-file" class="archive-current-file"></p>
+                    <p id="archive-security-file-progress-label" class="archive-progress-label"></p>
+                    <progress id="archive-security-file-progress" class="archive-progress-bar" max="1" value="0" aria-label="현재 단계 진행률"></progress>
+                </div>
+                <div class="archive-status-container">
+                    <span class="archive-status-dot"></span>
+                    <p id="archive-security-status" class="archive-status-text" role="status" aria-live="polite"></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="archive-dialog-footer">
+            <div class="archive-footer-left">
+                <button id="archive-security-cancel" type="button" class="btn secondary-btn archive-btn-danger" hidden>작업 취소</button>
+            </div>
+            <div class="archive-footer-right">
+                <button id="archive-security-restore" type="button" class="btn secondary-btn" disabled>원본 일괄 복원 (0개)</button>
+                <button id="archive-security-delete" type="button" class="btn secondary-btn delete-btn" disabled>평문 원본 일괄 삭제 (0개)</button>
+                <button id="archive-security-encrypt" type="button" class="btn primary-btn" disabled>선택 0개 암호화</button>
+                <button id="archive-security-close" type="button" class="btn secondary-btn">닫기</button>
+            </div>
+        </div>
+    </dialog>
+    <script src="archive-security.js?v=20261005_request_receipts"></script>
+    <script src="backup-restore.js?v=20261004_transitionfix"></script>
+    <script src="picture-frame.js?v=20260927_2"></script>
+    <script src="privacy-screen.js?v=20261004_entryfix"></script>
+    <script src="security.js?v=20261004_encryption_warning"></script>
+    <script src="archive-job-monitor.js?v=20261005_request_receipts"></script>
+    <script src="archive-page-editor.js?v=20261005_request_receipts"></script>
+    <script src="media-name.js?v=20261005_request_receipts"></script>
+    <script src="storage-recovery.js?v=20261002"></script>
+    <script src="integrity-check.js?v=20261003_2"></script>
+    <dialog id="notes-dialog" class="notes-modal" aria-labelledby="notes-heading">
+        <div class="shortcut-dialog-header notes-dialog-header">
+            <div class="notes-header-left">
+                <span class="notes-header-icon">📝</span>
+                <h2 id="notes-heading">암호화 메모</h2>
+                <span id="notes-file" class="notes-file-badge"></span>
+            </div>
+            <button id="notes-close" class="shortcut-dialog-close" type="button" aria-label="메모 닫기" title="닫기 (Esc)">✕</button>
+        </div>
+        <div class="notes-dialog-body">
+            <div class="notes-callout">
+                <span class="notes-callout-icon">🔐</span>
+                <p class="notes-hint">메모는 독립적인 암호화 파일(.vtn)로 저장됩니다. DB 백업과 함께 메모 파일도 별도로 백업해 주세요.</p>
+            </div>
+            <div class="notes-mode-bar">
+                <div class="notes-toolbar notes-segmented-tabs">
+                    <button id="notes-view" class="btn primary-btn" type="button">보기</button>
+                    <button id="notes-edit" class="btn secondary-btn" type="button">수정</button>
+                    <button id="notes-export" class="btn secondary-btn" type="button">메모 내보내기</button>
+                </div>
+            </div>
+            <form id="notes-editor" class="notes-editor-form" hidden autocomplete="off">
+                <div class="notes-form-field">
+                    <label for="notes-title" class="notes-form-label">제목 (선택)</label>
+                    <input id="notes-title" class="notes-input-title" type="text" placeholder="메모 제목을 입력하세요..." spellcheck="false" autocomplete="off">
+                </div>
+                <div class="notes-form-field">
+                    <label for="notes-body" class="notes-form-label">메모 본문</label>
+                    <textarea id="notes-body" class="notes-textarea" rows="22" placeholder="메모 내용을 작성하세요..." spellcheck="false" autocomplete="off" autocorrect="off" autocapitalize="off"></textarea>
+                </div>
+                <div class="notes-editor-subbar">
+                    <p class="notes-hint notes-editor-hint">글꼴에 없는 문자·이모지·제어 문자는 표시가 달라질 수 있습니다. 원문은 변경하지 않습니다.</p>
+                    <div class="notes-editor-actions">
+                        <button id="notes-save" type="submit" class="btn primary-btn save-btn">암호화해 저장</button>
+                    </div>
+                </div>
+            </form>
+            <div class="notes-viewer-toolbar notes-toolbar">
+                <div class="notes-viewer-controls">
+                    <label for="notes-zoom" class="notes-zoom-label">글자 크기
+                        <select id="notes-zoom" class="custom-select notes-zoom-select"><option value="18">18</option><option value="24">24</option><option value="32">32</option></select>
+                    </label>
+                    <label class="notes-whitespace-label"><input id="notes-whitespace" type="checkbox">공백·줄바꿈 표시</label>
+                </div>
+            </div>
+            <div id="notes-viewport" class="notes-viewport" hidden>
+                <div id="notes-space" class="notes-canvas-container">
+                    <canvas id="notes-canvas" aria-label="메모 이미지"></canvas>
+                </div>
+            </div>
+            <div class="notes-status-area">
+                <progress id="notes-progress" class="notes-progress-bar" hidden max="1" value="0"></progress>
+                <p id="notes-status" class="notes-status-msg" role="status"></p>
+                <div class="notes-status-actions">
+                    <button id="notes-setup" class="btn secondary-btn" hidden type="button">DB 암호화 설정</button>
+                    <button id="notes-cancel" class="btn secondary-btn" hidden type="button">작업 취소</button>
+                </div>
+            </div>
+        </div>
+    </dialog>
+    <script src="note-editor.js?v=20261005_note_jobs"></script>
+    <script src="bookmark-mutations.js?v=20261005_receipt"></script>
+    <script src="pdf-viewer.js?v=20261005_bookmark_writes"></script>
+    <script src="password-caps-lock.js?v=20261004"></script>
+    <script src="licenses.js?v=20261005"></script>
+    <script src="app.js?v=20261005_series_reset"></script>
+</body>
+</html>

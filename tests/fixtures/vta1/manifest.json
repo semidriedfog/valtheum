@@ -1,0 +1,10 @@
+{
+  "warning": "PUBLIC TEST-ONLY KEY AND PASSWORD. Not real user data.",
+  "password": "interop password 123",
+  "original_bytes": 180000,
+  "files": {
+    "vault.key": "6afb1f5bb9690ed0ea345f7357d2ad99b2224d0246ce090c74eb42e52e155082",
+    "sample.vta": "859b0780aaa1f20e57e0abfdc3320ccb670940fe1a0a88befb00510aefd5fea5",
+    "original.zip": "252d829217aaec1f13d3ad2972c8939ca00ae25379f073bdb32aba4442588898"
+  }
+}

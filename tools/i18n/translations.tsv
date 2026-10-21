@@ -1,0 +1,523 @@
+0	Request failed ({0})	リクエスト失敗（{0}）
+1	0 items	0件
+2	Syncing… {0} items	同期中… {0}件
+3	Sync error: {0}	同期エラー: {0}
+4	Some paths could not be read. Existing records were kept.\n{0}	一部のパスを読み込めなかったため、既存の記録を保持しました。\n{0}
+5	Sync complete: {0} items, {1} changed{2}	同期完了: {0}件、変更 {1}件{2}
+6	 · {0} missing (records kept)	 · 不明 {0}件（記録は保持）
+7	Could not close library	ライブラリを閉じられませんでした
+8	Could not change folder	フォルダーを変更できませんでした
+9	Missing page	ページがありません
+10	Page {0}	{0}ページ
+11	Go to {0}	{0}に移動
+12	Saved view: {0}	{0}の保存画面
+13	The saved page is no longer in this archive.	保存したページが現在のアーカイブにありません。
+14	Delete bookmark: {0}	{0}のブックマークを削除
+15	Delete failed: {0}	削除失敗: {0}
+16	Could not load bookmarks: {0}	ブックマークを読み込めませんでした: {0}
+17	Saving view…	画面を保存中…
+18	Wait until the video is ready before saving.	動画の準備ができてから保存してください。
+19	Open a page first.	先にページを開いてください。
+20	The page changed. Please save again.	ページが変わりました。もう一度保存してください。
+21	Could not capture the view.	画面を取得できません。
+22	Saved {0}	{0}を保存しました
+23	Save failed: {0}	保存失敗: {0}
+24	⏳ Backing up...	⏳ バックアップ中...
+25	✅ Backup complete!	✅ バックアップ完了！
+26	✅ DB backup bundle created.\n{0}\nMedia files are not included. Back them up separately.\n\nSaved to:\n{1}	✅ DBバックアップを作成しました。\n{0}\nメディアファイルは含まれません。別途バックアップしてください。\n\n保存先:\n{1}
+27	vault.key is included.	vault.keyも含まれています。
+28	No media key exists yet; only the DB was included.	メディアキーがまだないため、DBのみ含まれています。
+29	An error occurred while backing up the DB.	DBのバックアップ中にエラーが発生しました。
+30	Reset all media play counts and viewing history in this folder?	このフォルダーの全メディアの再生回数と視聴履歴をリセットしますか？
+31	Could not reset play counts.	再生回数をリセットできませんでした。
+32	⚠️ Reset all arena scores (Elo ratings) in this folder to 1000?\n\nThis cannot be undone.	⚠️ このフォルダーの全メディアのアリーナスコア（Eloレート）を1000に戻しますか？\n\nこの操作は元に戻せません。
+33	Could not reset scores.	スコアをリセットできませんでした。
+34	⚠️ Reset all star ratings in this folder to 0?\n\nThis cannot be undone.	⚠️ このフォルダーの全メディアの星評価を0に戻しますか？\n\nこの操作は元に戻せません。
+35	Could not reset ratings.	星評価をリセットできませんでした。
+36	Ascending	昇順
+37	Descending	降順
+38	Unknown	不明
+39	{0} items	{0}件
+40	Not viewed	未視聴
+41	Just now	たった今
+42	{0} min ago	{0}分前
+43	{0} hr ago	{0}時間前
+44	{0} days ago	{0}日前
+45	Pin the series representative on the left and start the arena	シリーズの代表を左に固定してアリーナを開始
+46	Pin this media on the left and start the arena	このメディアを左に固定してアリーナを開始
+47	Move to trash	ゴミ箱に移動
+48	Rename (including restore filename)	名前変更（復元ファイル名を含む）
+49	Edit series	シリーズ編集
+50	Assign series	シリーズ指定
+51	🏆 {0} pts	🏆 {0}点
+52	Shared series score	シリーズ共通スコア
+53	Media score	メディアスコア
+54	🔒 Encrypted	🔒 暗号化
+55	ARCHIVE (RAR/7z unsupported)	アーカイブ（RAR/7z非対応）
+56	Encrypted video	暗号化済み動画
+57	Encrypted image archive	暗号化済み画像アーカイブ
+58	Missing file · Reconnect	ファイルなし · 再接続
+59	Records are preserved. Select the original file that was moved or renamed within this library.	記録は保持されています。このライブラリ内で移動または名前変更した元ファイルを選択してください。
+60	Select the same original file after moving or renaming it. Its ratings, scores, tags and bookmarks will be reconnected.	移動または名前変更した同じ元ファイルを選択してください。評価・スコア・タグ・ブックマークを再接続します。
+61	👁️ <span class="watch-count-badge">{0} plays</span> ({1})	👁️ <span class="watch-count-badge">{0}回</span>（{1}）
+62	👁️ 0 plays (not viewed)	👁️ 0回（未視聴）
+63	Last played: {0}	最終再生: {0}
+64	Not viewed yet	まだ視聴していません
+65	Reset play count and history	再生回数と履歴をリセット
+66	↺ Reset	↺ リセット
+67	📚 {0} · #{1}{2}	📚 {0} · {1}番目{2}
+68	 · Representative	 · 代表
+69	Shared series score, rating and tags	シリーズ共通のスコア・星評価・タグ
+70	{0}{1} stars (click to set/clear)	{0}{1}点（クリックで設定／解除）
+71	Series: 	シリーズ共通 
+72	+ Series tag	+ シリーズタグ
+73	+ Add tag	+ タグ入力
+74	Shared series tags	シリーズ共通タグ
+75	Tags for this file	このファイルのタグ
+76	 · Press Space or Enter to add	 · スペースまたはEnterで追加
+77	Search for '#{0}'	「#{0}」で検索
+78	Remove tag from entire series	シリーズ全体からタグを削除
+79	Remove tag	タグを削除
+80	{0} (unsupported archive format)	{0}（非対応のアーカイブ形式）
+81	RAR/7z are not currently supported.	RAR/7zは現在サポートされていません。
+82	Could not open archive.	アーカイブを開けません。
+83	Permanently delete this file from disk?\nIts details will be kept in deletion history.	このファイルをディスクから完全に削除しますか？\nファイル情報は削除履歴に記録されます。
+84	The trash is already empty.	ゴミ箱はすでに空です。
+85	Permanently delete all {0} files in the trash from disk?\nTheir records will be kept in deletion history.	ゴミ箱の全ファイル（{0}件）をディスクから完全に削除しますか？\nすべての記録は削除履歴に保持されます。
+86	<div style="color: var(--text-muted); font-size: 12px; padding: 20px; text-align: center; grid-column: 1 / -1;">The trash is empty.</div>	<div style="color: var(--text-muted); font-size: 12px; padding: 20px; text-align: center; grid-column: 1 / -1;">ゴミ箱は空です。</div>
+87	{0} • {1} MB • 🏆 {2} pts	{0} • {1} MB • 🏆 {2}点
+88	↩️ Restore	↩️ 復元
+89	❌ Delete permanently	❌ 完全に削除
+90	Delete the history entry for “{0}”?	「{0}」の削除履歴を消しますか？
+91	Clear all {0} deletion history entries for this folder?	このフォルダーの削除履歴 {0}件をすべて消しますか？
+92	{0}\nClearing history cannot be undone. Actual files and trash items are kept.	{0}\n履歴の削除は元に戻せません。実ファイルとゴミ箱内の項目は保持されます。
+93	Clearing history…	履歴を削除中…
+94	Could not clear history: {0}	履歴を削除できませんでした: {0}
+95	Loading deletion history…	削除履歴を読み込み中…
+96	<tr><td colspan="8" style="text-align: center; color: var(--text-muted); padding: 20px;">No deletion history.</td></tr>	<tr><td colspan="8" style="text-align: center; color: var(--text-muted); padding: 20px;">削除履歴がありません。</td></tr>
+97	Delete history entry	履歴を削除
+98	Delete history: {0}	{0}の履歴を削除
+99	Could not load deletion history: {0}	削除履歴を読み込めませんでした: {0}
+100	📌 Pinned left: {0}	📌 左に固定: {0}
+101	📌 Unpin	📌 固定解除
+102	Unpin and return to random matches	固定を解除してランダム対戦に戻る
+103	📌 Pin left	📌 左に固定
+104	Keep this media on the left and change only its opponent	このメディアを左に固定し、相手だけを替えて対戦
+105	RAR/7z unsupported	RAR/7z非対応
+106	Representative video	代表動画
+107	Representative volume	代表巻
+108	📚 Series · {0}	📚 シリーズ · {0}
+109	 · 🔒 Encrypted	 · 🔒 暗号化
+110	 (RAR/7z unsupported)	（RAR/7z非対応）
+111	📖 Saved page	📖 保存したページ
+112	The arena needs at least two participants. Each series enters only its representative, which must exist and be outside the trash.	アリーナには参加対象が2つ以上必要です。シリーズは代表ファイルのみ参加し、代表がない場合やゴミ箱にある場合は除外されます。
+113	General	共通
+114	All keyboard shortcuts	ショートカット一覧
+115	Search files and tags	ファイル・タグ検索
+116	Select library folder	ライブラリフォルダー選択
+117	Choose a new library folder	新しいライブラリフォルダーを指定
+118	Sync current library	現在のライブラリを同期
+119	Back up library DB	ライブラリDBをバックアップ
+120	Open arena	アリーナを開く
+121	Open trash	ゴミ箱を開く
+122	Close dialog / return from arena or trash / leave search	ダイアログを閉じる／アリーナ・ゴミ箱から戻る／検索入力を終了
+123	Media	メディア
+124	Previous / next media	前／次のメディア
+125	Save current video position / ZIP page	現在の動画位置／ZIPページを保存
+126	Use current view as thumbnail	現在の画面を代表サムネイルに設定
+127	Set media rating (0: clear)	現在のメディアの星評価を設定（0: 解除）
+128	Move current media to trash (with confirmation)	現在のメディアをゴミ箱に移動（確認あり）
+129	Move current media to trash?	現在のメディアをゴミ箱に移動しますか？
+130	Video	動画
+131	Play / pause	再生／一時停止
+132	Back / forward 5 seconds	5秒戻る／進む
+133	Shift + ↑ / ↓ or Ctrl + ↑ / ↓	Shift + ↑ / ↓ または Ctrl + ↑ / ↓
+134	Volume up / down 5%	音量を5%上げる／下げる
+135	Mute / unmute	ミュート切替
+136	Decrease / increase playback speed	再生速度を1段階下げる／上げる
+137	Go to video start / end	動画の先頭／末尾に移動
+138	ZIP images	ZIP画像
+139	Previous / next page (previous/next archive at the ends)	前／次のページ（先頭・末尾では前／次のアーカイブ）
+140	First / last page	最初／最後のページ
+141	Arena	アリーナ
+142	Choose left / right media	左／右のメディアを選択
+143	Skip current match	現在の対戦をスキップ
+144	Pin / unpin left media	左のメディアを固定／解除
+145	✅ Two-page capture saved!	✅ 2ページ合成を保存しました！
+146	✅ Saved!	✅ 保存しました！
+147	Could not initialize the session. Restart the app.	セッションを初期化できません。アプリを再起動してください。
+148	Requesting cancellation…	キャンセルを要求中…
+149	Page {0} · {1}	{0}ページ · {1}
+150	Preparing deletion…	削除を準備中…
+151	Could not start deletion.	削除を開始できませんでした。
+152	Working…	処理中…
+153	Could not confirm deletion results.	削除結果を確認できませんでした。
+154	Loading…	読み込み中…
+155	Select files to encrypt, delete plaintext originals, or restore originals. Each action processes only eligible selected files.	ファイルを選択して暗号化・平文原本の一括削除・原本の一括復元を実行してください。各操作の対象となる選択ファイルのみ処理します。
+156	No videos or archives to encrypt.	暗号化する動画・アーカイブがありません。
+157	No media matches your search.	検索条件に一致するメディアがありません。
+158	🔒 Encrypted	🔒 暗号化済み
+159	Original kept	原本を保持
+160	⚠️ Interrupted	⚠️ 中断
+161	Plaintext	平文
+162	🗑️ Trash	🗑️ ゴミ箱
+163	Restore original	原本を復元
+164	Delete plaintext original	平文原本を削除
+165	ℹ️ Showing the first 200 of {0} results. 'Select all results' selects all {1} matches.	ℹ️ 検索結果 {0}件のうち先頭200件を表示しています。「検索結果をすべて選択」は一致する全{1}件を選択します。
+166	The folder changed.	フォルダーが変更されました。
+167	{0}/{1} processed · {2} · {3}	{0}/{1}件処理 · {2} · {3}
+168	Preparing {0}/{1}…	{0}/{1}を準備中…
+169	Encrypted {0} files. Back up the DB to save vault.key too. Plaintext originals are still present.	{0}件の暗号化が完了しました。DBをバックアップしてvault.keyも保管してください。平文原本はまだ残っています。
+170	Encrypt {0} selected	選択した{0}件を暗号化
+171	Extra space to preserve originals: at least about {0} MiB	原本保持に必要な追加容量: 約{0} MiB以上
+172	Delete plaintext originals ({0})	平文原本を一括削除（{0}件）
+173	Restore originals ({0})	原本を一括復元（{0}件）
+174	{0} selected	{0}件選択
+175	Batch operation finished.	一括処理が終了しました。
+176	Total {0} · Completed {1} · Skipped {2} · Failed {3}{4}	全{0}件 · 完了{1}件 · スキップ{2}件 · 失敗{3}件{4}
+177	Delete {0} selected plaintext originals? Each original and encrypted copy will be verified again.\n\n{1}{2}\n\nCheck your DB, key and encrypted media backups first. Cancelling cannot undo deletions already completed. Continue?	選択した{0}件の平文原本を一括削除します。各原本と暗号化コピーを再検証します。\n\n{1}{2}\n\n先にDB・キー・暗号化ファイルのバックアップを確認してください。完了済みの削除はキャンセルしても戻せません。続行しますか？
+178	{0} results: {1}	{0}の結果: {1}
+179	Delete plaintext originals	平文原本を一括削除
+180	Restore originals	原本を一括復元
+181	Verify the encrypted copy and original, then delete the plaintext original?\n{0}\n\nBack up the DB, key and encrypted files to another device first. Continue?	暗号化コピーと原本を再検証して、平文原本を削除します。\n{0}\n\n先にDB・キー・暗号化ファイルを別の保存装置にバックアップしてください。続行しますか？
+182	Cancelled.	キャンセルしました。
+183	Completed.	完了しました。
+184	No file selected	ファイル未選択
+185	Select a backup file.	バックアップファイルを選択してください。
+186	File selection cancelled.	ファイルの選択をキャンセルしました。
+187	Encrypted DB	暗号化DB
+188	Plaintext DB	平文DB
+189	vault.key included	vault.keyを含む
+190	DB only	DBのみ
+191	Enter the password used when this backup was made. It may differ from your current password.	バックアップ作成時のパスワードを入力してください。現在のパスワードとは異なる場合があります。
+192	Choose a destination to restore into a new folder.	保存先を選ぶと新しいフォルダーに復元します。
+193	Enter the password used for this backup.	バックアップ作成時のパスワードを入力してください。
+194	Choose a parent folder. The DB and key will be verified and restored. Large databases may take time.	親フォルダーを選択してください。DBとキーを検証して復元します。大きなDBは時間がかかる場合があります。
+195	Destination selection cancelled.	保存先の選択をキャンセルしました。
+196	DB backup restored\n{0}\n{1}\nCopy media separately to their original paths, then sync.	DBバックアップを復元しました\n{0}\n{1}\nメディアを元のパスに別途コピーしてから同期してください。
+197	The restored library is open.	復元したライブラリを開きました。
+198	Check the restore results: {0}	復元結果を確認してください: {0}
+199	Current restore filename: {0}	現在の復元ファイル名: {0}
+200	Saving…	保存中…
+201	Could not confirm the rename results.	名前変更の結果を確認できませんでした。
+202	Enter a whole number from 1 to 3,600 seconds.	表示時間は1～3,600秒の整数で入力してください。
+203	Could not save the interval. It still applies to this slideshow.	表示時間を保存できませんでした。今回の再生には適用されます。
+204	Pause	一時停止
+205	Could not enter fullscreen. Try frame mode again.	全画面表示を開始できませんでした。もう一度額縁モードを押してください。
+206	Cannot display this photo. Moving to the next one.	この写真を表示できません。次の写真に進みます。
+207	Play	再生
+208	Choose a photo folder.	写真フォルダーを選択してください。
+209	Cannot display the image.	画像を表示できません。
+210	Choose a folder to open as a library.	フォルダー指定を押して使用するライブラリを選択してください。
+211	This folder is not encrypted. Select Open to use it as a library.	暗号化されていないフォルダーです。「開く」でライブラリとして使用します。
+212	Could not select the folder. Please try again.	フォルダーを選択できませんでした。もう一度お試しください。
+213	Loading folders…	フォルダー一覧を読み込み中…
+214	Could not load folders. Close this dialog and try again.	フォルダー一覧を読み込めませんでした。閉じてから再試行してください。
+215	Loading photos…	写真一覧を読み込み中…
+216	Could not read the photo folder. Select it again.	写真フォルダーを読み込めませんでした。再選択してください。
+217	Photo folder not found. Check the storage device connection.	写真フォルダーが見つかりません。保存装置の接続を確認してください。
+218	Some photos could not be read. Please refresh.	一部の写真を読み込めませんでした。更新してください。
+219	{0} · {1} items	{0} · {1}件
+220	No search results.	検索結果がありません。
+221	No image selected	画像未選択
+222	Photo folder	写真フォルダー
+223	No photos to display in this folder.	このフォルダーに表示する写真がありません。
+224	Checking…	確認中…
+225	Check the selected folder and password.	選択したフォルダーとパスワードを確認してください。
+226	Verify the encrypted DB and delete this folder's plaintext DB? Backups elsewhere and original media will be kept. Continue?	暗号化DBを再検証し、このフォルダーの平文DBを削除します。別の場所のバックアップと元のメディアは保持されます。続行しますか？
+227	Enter a password of at least 10 characters and repeat it exactly.	10文字以上のパスワードを入力し、確認欄にも同じものを入力してください。
+228	Enter your current password.	現在のパスワードを入力してください。
+229	🔐 DB security	🔐 DBセキュリティ
+230	🔐 Encrypt DB	🔐 DB暗号化
+231	DB locked	DBロック中
+232	Encrypted · Plaintext original remains	暗号化済み · 平文原本あり
+233	DB encrypted	DB暗号化済み
+234	DB not encrypted	DB未暗号化
+235	New password	新しいパスワード
+236	Password	パスワード
+237	Confirm new password	新しいパスワードの確認
+238	Confirm password	パスワードの確認
+239	Unlock DB	DBのロック解除
+240	DB security	DBセキュリティ
+241	Encrypt existing DB	既存DBを暗号化
+242	Enter this folder's DB password. The password is not saved.	このフォルダーのDBパスワードを入力してください。パスワードは保存しません。
+243	Using the encrypted DB. The old plaintext DB remains and can be deleted below. Manage earlier backups separately.	暗号化DBを使用中です。変換前の平文DBが残っているため、下から削除できます。以前のバックアップは別途管理してください。
+244	Tags, series, thumbnails and viewing history are encrypted. Manage media encryption in the media encryption dialog.	タグ・シリーズ・サムネイル・視聴履歴は暗号化されています。メディアの暗号化はメディア暗号化画面で管理します。
+245	Copy this folder's tags, series, scores, thumbnails and bookmarks to an encrypted DB and verify it. The original DB remains until you delete it. Media files are not encrypted. Losing the password makes the encrypted DB unrecoverable.	このフォルダーのタグ・シリーズ・スコア・サムネイル・ブックマークを暗号化DBにコピーして検証します。元のDBは手動で削除するまで保持されます。メディアは暗号化されません。パスワードを失うと暗号化DBを復元できません。
+246	Unlock	ロック解除
+247	Encrypt and verify	暗号化と検証
+248	Change folder password	フォルダーのパスワード変更
+249	Enter the current password and the new password twice. This updates both the DB and vault.key without re-encrypting media. Make a new DB/key backup afterward. Old backups still use the old password.	現在のパスワードと新しいパスワード（確認を含む）を入力してください。DBとvault.keyを更新し、メディアは再暗号化しません。変更後はDB・キーを再バックアップしてください。古いバックアップには古いパスワードが必要です。
+250	Change password and verify	パスワード変更と検証
+251	Working… Please wait.	処理中… しばらくお待ちください。
+252	Loading series…	シリーズを読み込み中…
+253	Could not load series.	シリーズ一覧を読み込めませんでした。
+254	Create new series	新しいシリーズを作成
+255	{0} selected {1}	{0}件選択 {1}
+256	· Representative: 	· 代表: 
+257	No files selected	ファイル未選択
+258	Trash	ゴミ箱
+259	{0} series order	{0}のシリーズ順
+260	Series order (lower numbers first)	シリーズ順（小さい番号が先）
+261	★ Representative	★ 代表
+262	Make representative	代表に設定
+263	Use {0} as representative	{0}を代表に指定
+264	This file represents the current series	現在のシリーズの代表ファイルです
+265	Use this file as the representative	このファイルを代表に設定
+266	Enter a name (1–200 characters), select videos or archives, and choose a representative.	名前（1～200文字）・動画やアーカイブ・代表ファイルを選択してください。
+267	Dissolve this series? Files are kept and return to their individual scores and ratings.	シリーズを解除しますか？ファイルは保持され、各ファイルの元のスコアと星評価に戻ります。
+268	Could not save series.	シリーズを保存できませんでした。
+269	Run the desktop restore tool to select files.	デスクトップ復元ツールを起動してファイルを選択してください。
+270	Failed	失敗
+271	Completed	完了
+272	vault.key or .vtbackup	vault.key または .vtbackup
+273	Create and select a new folder.	新しいフォルダーを用意して選択してください。
+274	{0} selected{1}	{0}件選択済み{1}
+275	 · Showing up to 200 below	 · 一覧は200件まで表示
+276	.vta in .valtheum/archives or .vtv in .valtheum/videos · Multiple selection allowed	.valtheum/archives内の.vta または .valtheum/videos内の.vtv · 複数選択可
+277	Checking the key and password.	キーとパスワードを確認しています。
+278	Preparing restoration…	復元を準備中…
+279	{0} / {1} MiB · Decrypting and verifying original	{0} / {1} MiB · 復号と原本検証中
+280	{0} · {1} succeeded{2}	{0} · 成功{1}件{2}
+281	Cancelled	キャンセル済み
+282	Restoration finished	復元作業完了
+283	 · {0} failed	 · 失敗{0}件
+284	Completed files remain in the destination folder.	完了したファイルは保存先に残っています。
+285	Check the results for each file. Open restored videos in a player and archives in an archive tool.	ファイル別の結果を確認してください。復元した動画はプレーヤー、アーカイブは解凍ソフトで開けます。
+286	Check the key backup and password, then try again.	キーバックアップとパスワードを確認して再試行してください。
+287	Library	ライブラリ
+288	No image selected.	画像が選択されていません。
+289	Image viewer	画像ビューアー
+290	Photo navigation	写真の移動
+291	Previous photo	前の写真
+292	Previous photo (←)	前の写真（←）
+293	Next photo	次の写真
+294	Next photo (→)	次の写真（→）
+295	Photo library	写真ライブラリ
+296	📂 Choose photo folder	📂 写真フォルダー選択
+297	Refresh	更新
+298	Refresh photos	写真を更新
+299	Clear photo folder selection	写真フォルダーの選択を解除
+300	Clear selection	選択解除
+301	⛶ Frame mode	⛶ 額縁モード
+302	Display time	表示時間
+303	Frame interval (seconds)	額縁の表示時間（秒）
+304	seconds	秒
+305	Search filenames...	ファイル名を検索...
+306	Search filenames	ファイル名検索
+307	Sort photos	写真の並べ替え
+308	Default order	標準順
+309	Name ascending	名前の昇順
+310	Name descending	名前の降順
+311	Photo list	写真一覧
+312	Frame mode	額縁モード
+313	Previous frame photo	額縁の前の写真
+314	Next frame photo	額縁の次の写真
+315	Slideshow interval (seconds)	再生中の表示時間（秒）
+316	Exit · Esc	終了 · Esc
+317	🔐 Open library	🔐 ライブラリを開く
+318	Close open-library dialog	ライブラリを開く画面を閉じる
+319	Library folder	ライブラリフォルダー
+320	📂 Choose folder	📂 フォルダー指定
+321	Library folder lists are not saved. Choose a folder each time you start the app.	ライブラリフォルダーの一覧は保存しません。アプリを起動するたびに指定してください。
+322	Enter password	パスワードを入力
+323	Cancel	キャンセル
+324	Open	開く
+325	The DB is locked	DBがロックされています
+326	Unlock with your password to load media.	パスワードでロックを解除するとメディア一覧を読み込みます。
+327	Saved video positions	保存した動画位置
+328	Mute/unmute	ミュート切替
+329	Speed:	速度:
+330	1.0x (normal)	1.0x（標準）
+331	Save current playback position and view	現在の再生位置と画面を保存
+332	🔖 Save position	🔖 位置を保存
+333	Capture current frame as thumbnail and save to DB	現在のフレームをサムネイルとしてDBに保存
+334	📸 Capture thumbnail	📸 サムネイル取得
+335	Move this video to trash	この動画をゴミ箱に移動
+336	Previous page (wheel up / ←)	前のページ（ホイール上／←）
+337	Next page (wheel down / →)	次のページ（ホイール下／→）
+338	Saved archive image pages	保存したアーカイブのページ
+339	Seek page (click / drag)	ページ移動（クリック／ドラッグ）
+340	Image file	画像ファイル
+341	Delete selected image from encrypted archive	暗号化アーカイブから選択画像を削除
+342	Delete image	画像を削除
+343	Save current page and view	現在のページと画面を保存
+344	🔖 Save page	🔖 ページを保存
+345	Save current image as representative thumbnail	現在の画像を代表サムネイルとしてDBに保存
+346	📸 Set thumbnail	📸 サムネイル設定
+347	Move this file to trash	このファイルをゴミ箱に移動
+348	Media arena	メディアアリーナ
+349	Choose your preferred media to update Elo ratings	好みのメディアを選ぶとスコア（Eloレート）が更新されます
+350	📌 Left pin mode	📌 左固定モード
+351	Unpin (return to random matches)	固定解除（ランダム対戦に戻る）
+352	✕ Unpin	✕ 解除
+353	Skip if you cannot choose (P or Space)	選べないときはスキップ（PまたはSpace）
+354	⏭️ Skip	⏭️ スキップ
+355	Back to library	ライブラリに戻る
+356	✕ Back to library	✕ ライブラリに戻る
+357	Media A	メディアA
+358	pts	点
+359	👉 Choose A	👉 Aを選択
+360	Skip to next match (P or Space)	次の対戦にスキップ（PまたはSpace）
+361	Skip	スキップ
+362	Media B	メディアB
+363	👉 Choose B	👉 Bを選択
+364	Shortcuts:	ショートカット:
+365	Choose A  |	Aを選択  |
+366	Choose B  |	Bを選択  |
+367	or	または
+368	Skip  |	スキップ  |
+369	🗑️ Trash (	🗑️ ゴミ箱（
+370	📋 Deletion history (	📋 削除履歴（
+371	Media in the trash are excluded from the library and arena.	ゴミ箱内のメディアはライブラリとアリーナから除外されます。
+372	💥 Delete all permanently	💥 すべて完全に削除
+373	Manage deletion history for this folder. Clearing history keeps actual files and trash items.	このフォルダーの削除履歴を管理します。履歴を消しても実ファイルとゴミ箱内の項目は保持されます。
+374	Clear all history	履歴をすべて削除
+375	Filename / path	ファイル名／パス
+376	Type	種類
+377	Size	サイズ
+378	Final score	最終スコア
+379	Tags	タグ
+380	Deleted at	削除日時
+381	Actions	操作
+382	Select a library folder added during this session	今回の起動中に指定したライブラリフォルダーを選択
+383	Choose a new library folder	新しいライブラリフォルダーを指定
+384	Close this library and return to the photo screen. Files and DB are kept.	ライブラリを閉じて写真画面に戻ります。ファイルとDBは保持されます。
+385	🔒 Close library	🔒 ライブラリを閉じる
+386	Start media arena	メディアアリーナを開始
+387	⚔️ Arena	⚔️ アリーナ
+388	App trash and deletion history	アプリのゴミ箱と削除履歴
+389	🗑️ Trash (	🗑️ ゴミ箱（
+390	Back up current library DB and key file	現在のライブラリDBとキーファイルをバックアップ
+391	💾 Backup	💾 バックアップ
+392	Keyboard shortcuts (F1 / ?)	ショートカット一覧（F1／?）
+393	⌨ Shortcuts	⌨ ショートカット
+394	Restore a new library from a DB/key backup	DB・キーバックアップから新しいライブラリを復元
+395	📂 Restore DB backup	📂 DBバックアップ復元
+396	🔒 Encrypt media	🔒 メディア暗号化
+397	Lock	ロック
+398	Manage video and archive series	動画・アーカイブのシリーズ管理
+399	📚 Series	📚 シリーズ
+400	Refresh folder (sync external file additions/deletions)	フォルダー更新（外部のファイル追加・削除を同期）
+401	Sync	同期
+402	Reset all play counts and history in this folder	このフォルダーの全再生回数と履歴をリセット
+403	↺ Reset views	↺ 視聴リセット
+404	Reset all Elo scores in this folder to 1000	このフォルダーの全Eloスコアを1000に戻す
+405	🏆 Reset scores	🏆 スコアリセット
+406	Reset all star ratings in this folder	このフォルダーの全星評価をリセット
+407	⭐ Reset ratings	⭐ 評価リセット
+408	Search filename, series or #tag...	ファイル名・シリーズ・#タグを検索...
+409	Clear search	検索をクリア
+410	Sort by	並べ替え基準
+411	🏆 Score	🏆 スコア順
+412	⭐ Rating	⭐ 星評価順
+413	📅 Date saved	📅 保存日順
+414	🔢 Play count	🔢 再生回数順
+415	👁️ Recently viewed	👁️ 最近の視聴順
+416	🔤 Filename	🔤 ファイル名順
+417	Toggle ascending / descending	昇順／降順の切替
+418	Media list	メディア一覧
+419	Restore DB backup	DBバックアップ復元
+420	Restore the DB and vault.key from a .vtbackup file. Select a parent folder to create and open a new library within it.	.vtbackupのDBとvault.keyを復元します。親フォルダーを選ぶと、その中に新しいライブラリを作成して開きます。
+421	Choose backup file	バックアップを選択
+422	Password at backup time	バックアップ時のパスワード
+423	Media files are not included. Copy them to their original paths in the restored folder, then sync. Records are kept even while media are missing.	メディアは含まれません。復元先に元のパスでコピーしてから同期してください。メディアがなくても記録は保持されます。
+424	Choose destination and restore	保存先を選択して復元
+425	Close	閉じる
+426	Close DB security	DBセキュリティを閉じる
+427	Current password	現在のパスワード
+428	Delete remaining plaintext DB	残った平文DBを削除
+429	⌨ Keyboard shortcuts	⌨ キーボードショートカット
+430	Close shortcuts	ショートカット一覧を閉じる
+431	While typing, only F1 and Ctrl+F are available. Shortcuts are disabled during IME composition. Letter shortcuts use physical key positions regardless of input language. Only shortcuts for the current screen apply.	入力中はF1とCtrl+Fのみ使用でき、IME変換中は無効です。英字キーは入力言語に関係なく同じキー位置を使用します。現在の画面に対応するショートカットのみ動作します。
+432	Delete image from archive	アーカイブから画像を削除
+433	Close image deletion	画像削除を閉じる
+434	Image to delete	削除する画像
+435	Delete the selected image from the encrypted archive. This cannot be undone in the app and restored archives will also omit it. Bookmarks and the representative thumbnail for this page are removed too.	選択画像を暗号化アーカイブから削除します。アプリでは元に戻せず、復元するアーカイブにも含まれません。そのページのブックマークと代表サムネイルも整理します。
+436	A new encrypted copy is verified before replacement, requiring extra space and time. Plaintext originals and existing backups remain unchanged. Update both DB and encrypted media backups afterward.	新しい暗号化コピーを検証してから置き換えるため、追加容量と時間が必要です。平文原本と既存バックアップはそのまま残ります。完了後はDBと暗号化メディアの両方を再バックアップしてください。
+437	Cancel operation	処理をキャンセル
+438	Delete selected image	選択画像を削除
+439	Rename encrypted archive	暗号化アーカイブの名前変更
+440	Close rename dialog	名前変更を閉じる
+441	Filename	ファイル名
+442	Also change the restore filename	復元ファイル名も変更
+443	Changing the restore filename rebuilds and verifies the encrypted copy. This needs extra space and time proportional to file size, without plaintext temporary files. Any remaining plaintext original keeps its name.	復元ファイル名も変更すると暗号化コピーを再作成・検証します。ファイルサイズ相当の追加容量と時間が必要ですが、平文の一時ファイルは作りません。残っている平文原本の名前は維持します。
+444	Update DB and encrypted media backups afterward. Uncheck to change only the displayed name.	完了後はDBと暗号化メディアを再バックアップしてください。チェックを外すと表示名だけ変更します。
+445	Current restore name	現在の復元名
+446	Save	保存
+447	📚 Manage series	📚 シリーズ管理
+448	Set video/archive series and display order	動画・アーカイブのシリーズと表示順を設定
+449	Close series manager	シリーズ管理を閉じる
+450	Files in a series are sorted together. Scores and ratings are shared; date and viewing-history sorts use the	同じシリーズはまとめて並べ替えられます。スコアと星評価は共通で、日付と視聴履歴の並べ替えは
+451	representative file	代表ファイル
+452	as their reference.	を基準にします。
+453	Select series	シリーズ選択
+454	Series name	シリーズ名
+455	Enter a series title	シリーズ名を入力
+456	Videos and archives to include	含める動画・アーカイブ
+457	0 selected	0件選択
+458	Search series files	シリーズファイルを検索
+459	Filter filenames…	ファイル名で絞り込み…
+460	Select all results	検索結果をすべて選択
+461	Display order	表示順
+462	Videos and archives in the series	シリーズに含める動画・アーカイブ
+463	🗑 Dissolve series	🗑 シリーズ解除
+464	Save series	シリーズを保存
+465	🔒 Encrypt videos and image archives	🔒 動画・画像アーカイブの暗号化
+466	Encrypt videos, ZIP and tar.zst; manage plaintext originals	動画・ZIP・tar.zstの暗号化と平文原本の管理
+467	Close media encryption	メディア暗号化を閉じる
+468	Encrypt the DB first	先にDBの暗号化が必要
+469	: Encrypt videos and ZIP/tar.zst archives using	: 動画とZIP・tar.zstアーカイブを
+470	. Videos are hashed and encrypted together in 64 KiB blocks; playback decrypts only the required ranges. Originals are kept. DB backups (.vtbackup) also include	で暗号化します。動画は64 KiBブロックでハッシュ計算と暗号化を同時処理し、再生時は必要な範囲だけ復号します。原本は保持され、DBバックアップ（.vtbackup）には
+471	.	も含まれます。
+472	Encrypted files can be restored in batches without overwriting existing files. Back up the DB and key before deleting plaintext originals.	暗号化済みファイルは既存ファイルを上書きせず一括復元できます。平文原本を削除する前にDB・キーをバックアップしてください。
+473	Search video/archive filenames…	動画・アーカイブ名を検索…
+474	Search media files	メディアファイルを検索
+475	Media filename	メディアファイル名
+476	Status	状態
+477	File actions	個別操作
+478	Encrypted media list	暗号化メディア一覧
+479	Restore originals (0)	原本を一括復元（0件）
+480	Delete plaintext originals (0)	平文原本を一括削除（0件）
+481	Encrypt 0 selected	選択した0件を暗号化
+482	valtheum · Standalone restore tool	valtheum · 独立復元ツール
+483	Restore encrypted files	暗号化ファイルの復元
+484	Restore encrypted videos and image archives to their original video, ZIP or tar.zst files.	暗号化された動画・画像アーカイブを元の動画・ZIP・tar.zstに戻します。
+485	Offline · No DB needed	オフライン · DB不要
+486	What you need	必要なもの
+487	You need a key backup, encrypted files and the original password.	キーバックアップ・暗号化ファイル・元のパスワードが必要です。
+488	You can select a vtbackup directly. Its vault.key is read automatically; select media files separately.	vtbackupをそのまま選択できます。中のvault.keyを自動で読み取ります。メディアは別途選択してください。
+489	Key file or DB/key backup	キーファイルまたはDB・キーバックアップ
+490	🔑 Choose key / backup	🔑 キー／バックアップ選択
+491	Select the key for the library used to encrypt these files.	暗号化に使用したライブラリのキーを選択してください。
+492	Restore destination folder	復元先フォルダー
+493	📁 Choose folder	📁 フォルダー選択
+494	Existing files will not be overwritten.	既存ファイルは上書きしません。
+495	Encrypted media files	暗号化メディアファイル
+496	📦 Choose .vta / .vtv files	📦 .vta・.vtvファイル選択
+497	Selected encrypted files	選択した暗号化ファイル
+498	Password used for encryption	暗号化時のパスワード
+499	Enter original password	元のパスワードを入力
+500	🚀 Start restore	🚀 復元開始
+501	⛔ Cancel	⛔ キャンセル
+502	Your password is not saved. Restored video, ZIP and tar.zst files are unencrypted originals.	パスワードは保存しません。復元された動画・ZIP・tar.zstは暗号化されていない原本です。
+503	Restore progress	復元の進行状況
+504	Select files and a folder, then enter the password.	ファイルとフォルダーを選択してパスワードを入力してください。
+505	Current file restore progress	現在のファイルの復元進行状況
+506	Encrypted files and key backups are preserved.	暗号化ファイルとキーバックアップは保持されます。
+507	Per-file restore results	ファイル別の復元結果
+508	How to restore and FAQ	復元方法とよくある質問
+509	Is vtbackup alone enough?	vtbackupだけで復元できますか？
+510	DB/key backups do not include media. You also need separately saved	DB・キーバックアップにメディアは含まれません。別途保管した
+511	. Older backups without a key cannot be used.	も必要です。キーを含まない古いバックアップは使用できません。
+512	What does this tool restore?	このツールは何を復元しますか？
+513	It restores the original bytes of videos and image archives. Restore DB backups in valtheum to recover tags, ratings and series.	動画・画像アーカイブの元のバイトを復元します。タグ・星評価・シリーズなどはvaltheumでDBバックアップを復元してください。
+514	What happens to filenames and folders?	ファイル名とフォルダーはどうなりますか？
+515	Files are saved with their original names in the selected folder, without recreating subfolders. Name collisions fail instead of overwriting; choose another folder.	元のファイル名で選択フォルダーに保存し、サブフォルダーは再作成しません。同名ファイルは上書きせず失敗とするため、別のフォルダーに復元してください。
+516	What if verification or restoration fails?	検証や復元に失敗したら？
+517	Check the password and library key. Corrupted files are never reported as successful. Failed items and reasons are shown, then processing continues.	パスワードとライブラリのキーを確認してください。破損ファイルは成功扱いにしません。失敗項目と理由を表示し、次のファイルを処理します。
+518	What happens if I cancel?	キャンセルするとどうなりますか？
+519	Completed files are kept and unfinished temporary files are removed. Original ciphertext is not deleted. Closing the window during restoration also waits for cleanup.	完了ファイルは保持し、処理中の一時ファイルは削除します。元の暗号化ファイルは削除しません。復元中に閉じても後片付け後に終了します。
+520	What if I lose the key or password?	キーやパスワードを失ったら？
+521	Both the matching key file and password are required. This tool cannot replace a lost key or password.	対応するキーファイルとパスワードの両方が必要です。紛失したキーやパスワードを代わりにする機能はありません。
+522	Authenticate all segments · Verify original SHA-256 before saving · No external server connection	全区間の認証 · 元のSHA-256を検証して保存 · 外部サーバー接続なし

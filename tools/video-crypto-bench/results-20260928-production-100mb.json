@@ -1,0 +1,231 @@
+{
+  "aes_cpu_support": true,
+  "baseline_stage_note": "phase boundary inferred from first progress callback; VTA1 includes original SHA-256 prepass; production VTV2 hashes while encrypting",
+  "cache_policy": "buffered Windows I/O; recently generated source, warm/mixed OS caches; no cache flush; output sync_all included",
+  "exclusions": [
+    "input creation",
+    "password KDF/unlock",
+    "database/UI",
+    "video decoding/transcoding"
+  ],
+  "fixture_generation_seconds_excluded": 0.1162595,
+  "input": "synthetic incompressible random bytes, not a real video or archive",
+  "input_bytes": 100000000,
+  "io_measurement": "GetProcessIoCounters: process I/O transfer bytes, not physical disk/NAND traffic; range reference reads excluded",
+  "pclmul_cpu_support": true,
+  "prototype_warning": "production VTV2 implementation; benchmark is not a security review",
+  "results": [
+    {
+      "encryption_including_prehash_seconds": 0.1981905,
+      "mode": "production_vtv2_64k",
+      "output_bytes": 100024666,
+      "phase_transitions": [
+        {
+          "at_seconds": 0.0043734,
+          "phase": "해시·암호화"
+        },
+        {
+          "at_seconds": 0.1981905,
+          "phase": "사본 검증"
+        }
+      ],
+      "range_reads": [
+        {
+          "offset": 0,
+          "read_bytes": 1221052,
+          "read_operations": 21,
+          "returned_bytes": 1048576,
+          "seconds": 0.0013631,
+          "write_bytes": 0,
+          "write_operations": 0
+        },
+        {
+          "offset": 25000000,
+          "read_bytes": 1221092,
+          "read_operations": 21,
+          "returned_bytes": 1048576,
+          "seconds": 0.001339,
+          "write_bytes": 0,
+          "write_operations": 0
+        },
+        {
+          "offset": 50000000,
+          "read_bytes": 1221092,
+          "read_operations": 21,
+          "returned_bytes": 1048576,
+          "seconds": 0.0013002,
+          "write_bytes": 0,
+          "write_operations": 0
+        },
+        {
+          "offset": 75000000,
+          "read_bytes": 1221092,
+          "read_operations": 21,
+          "returned_bytes": 1048576,
+          "seconds": 0.0012892,
+          "write_bytes": 0,
+          "write_operations": 0
+        },
+        {
+          "offset": 98951424,
+          "read_bytes": 1172202,
+          "read_operations": 21,
+          "returned_bytes": 1048576,
+          "seconds": 0.0011889,
+          "write_bytes": 0,
+          "write_operations": 0
+        }
+      ],
+      "read_bytes": 200623216,
+      "read_operations": 3089,
+      "round": 1,
+      "seconds": 0.2970614,
+      "source_mb_per_second": 336.63074367790637,
+      "verification_seconds": 0.09887010000000002,
+      "write_bytes": 100024666,
+      "write_operations": 1531
+    },
+    {
+      "encryption_including_prehash_seconds": 0.185833,
+      "mode": "production_vtv2_64k",
+      "output_bytes": 100024666,
+      "phase_transitions": [
+        {
+          "at_seconds": 0.0002617,
+          "phase": "해시·암호화"
+        },
+        {
+          "at_seconds": 0.185833,
+          "phase": "사본 검증"
+        }
+      ],
+      "range_reads": [
+        {
+          "offset": 0,
+          "read_bytes": 1221052,
+          "read_operations": 21,
+          "returned_bytes": 1048576,
+          "seconds": 0.0009988,
+          "write_bytes": 0,
+          "write_operations": 0
+        },
+        {
+          "offset": 25000000,
+          "read_bytes": 1221092,
+          "read_operations": 21,
+          "returned_bytes": 1048576,
+          "seconds": 0.0009962,
+          "write_bytes": 0,
+          "write_operations": 0
+        },
+        {
+          "offset": 50000000,
+          "read_bytes": 1221092,
+          "read_operations": 21,
+          "returned_bytes": 1048576,
+          "seconds": 0.0009788,
+          "write_bytes": 0,
+          "write_operations": 0
+        },
+        {
+          "offset": 75000000,
+          "read_bytes": 1221092,
+          "read_operations": 21,
+          "returned_bytes": 1048576,
+          "seconds": 0.0009525,
+          "write_bytes": 0,
+          "write_operations": 0
+        },
+        {
+          "offset": 98951424,
+          "read_bytes": 1172202,
+          "read_operations": 21,
+          "returned_bytes": 1048576,
+          "seconds": 0.0008786,
+          "write_bytes": 0,
+          "write_operations": 0
+        }
+      ],
+      "read_bytes": 200623216,
+      "read_operations": 3089,
+      "round": 2,
+      "seconds": 0.2801223,
+      "source_mb_per_second": 356.9869303514929,
+      "verification_seconds": 0.09428850000000003,
+      "write_bytes": 100024666,
+      "write_operations": 1531
+    },
+    {
+      "encryption_including_prehash_seconds": 0.1814767,
+      "mode": "production_vtv2_64k",
+      "output_bytes": 100024666,
+      "phase_transitions": [
+        {
+          "at_seconds": 0.0002256,
+          "phase": "해시·암호화"
+        },
+        {
+          "at_seconds": 0.1814767,
+          "phase": "사본 검증"
+        }
+      ],
+      "range_reads": [
+        {
+          "offset": 0,
+          "read_bytes": 1221052,
+          "read_operations": 21,
+          "returned_bytes": 1048576,
+          "seconds": 0.0009501,
+          "write_bytes": 0,
+          "write_operations": 0
+        },
+        {
+          "offset": 25000000,
+          "read_bytes": 1221092,
+          "read_operations": 21,
+          "returned_bytes": 1048576,
+          "seconds": 0.0008792,
+          "write_bytes": 0,
+          "write_operations": 0
+        },
+        {
+          "offset": 50000000,
+          "read_bytes": 1221092,
+          "read_operations": 21,
+          "returned_bytes": 1048576,
+          "seconds": 0.0008336,
+          "write_bytes": 0,
+          "write_operations": 0
+        },
+        {
+          "offset": 75000000,
+          "read_bytes": 1221092,
+          "read_operations": 21,
+          "returned_bytes": 1048576,
+          "seconds": 0.0008438,
+          "write_bytes": 0,
+          "write_operations": 0
+        },
+        {
+          "offset": 98951424,
+          "read_bytes": 1172202,
+          "read_operations": 21,
+          "returned_bytes": 1048576,
+          "seconds": 0.000765,
+          "write_bytes": 0,
+          "write_operations": 0
+        }
+      ],
+      "read_bytes": 200623216,
+      "read_operations": 3089,
+      "round": 3,
+      "seconds": 0.2785564,
+      "source_mb_per_second": 358.9937262256405,
+      "verification_seconds": 0.09707939999999998,
+      "write_bytes": 100024666,
+      "write_operations": 1531
+    }
+  ],
+  "rounds": 3,
+  "source_directory": "D:\\10_Projects\\06_programming\\vault\\target/video-crypto-bench-data\\53d80428bd36e4693cb2463467ce5e58"
+}

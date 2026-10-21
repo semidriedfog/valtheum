@@ -1,0 +1,3894 @@
+{
+  "target": "x86_64-pc-windows-msvc",
+  "components": [
+    {
+      "name": "valtheum",
+      "version": "0.1.0",
+      "license": "MIT",
+      "scope": "project",
+      "notices": [
+        {
+          "file": "LICENSE",
+          "text": "9d1a428a3ade70e766a95cb46c7c0174e4e12d906fe038906eb5ce9b4f3bfd69"
+        }
+      ]
+    },
+    {
+      "name": "Third-party notices",
+      "version": "",
+      "license": "See component licenses",
+      "scope": "project",
+      "notices": [
+        {
+          "file": "THIRD_PARTY_NOTICES.md",
+          "text": "d7a19f545a9cce666e56d1c7dd6fc4af9b7b84fa9d051983daa74d1f8b194e19"
+        }
+      ]
+    },
+    {
+      "name": "PDF.js local changes",
+      "version": "",
+      "license": "Apache-2.0",
+      "scope": "pdf",
+      "notices": [
+        {
+          "file": "docs/VENDOR_PATCHES.md",
+          "text": "ccf4b3f31115f1dcfa231f1b4280187bd9455ae68a16a452bcaaa0b94ebe6af0"
+        }
+      ]
+    },
+    {
+      "name": "aes-gcm",
+      "version": "0.11.1",
+      "license": "Apache-2.0 OR MIT",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/aes-gcm-0.11.1/LICENSE-APACHE",
+          "text": "a9040321c3712d8fd0b09cf52b17445de04a23a10165049ae187cd39e5c86be5"
+        },
+        {
+          "file": "licenses/rust/aes-gcm-0.11.1/LICENSE-MIT",
+          "text": "b8c6939380a400f53e11923d50fcc4dd2fa1ba8339fd9d04cda38a0251b6c9b0"
+        }
+      ]
+    },
+    {
+      "name": "aead",
+      "version": "0.6.1",
+      "license": "MIT OR Apache-2.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/aead-0.6.1/LICENSE-APACHE",
+          "text": "b1cf9a3333ca78152b859012cd4a804156e5243e9ca20ad1df7327ba5ea7405c"
+        },
+        {
+          "file": "licenses/rust/aead-0.6.1/LICENSE-MIT",
+          "text": "33b32a251d445c5c03a634e64c53314c55540fc367fabdd45d9b6c8f260c028c"
+        }
+      ]
+    },
+    {
+      "name": "crypto-common",
+      "version": "0.2.2",
+      "license": "MIT OR Apache-2.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/crypto-common-0.2.2/LICENSE-APACHE",
+          "text": "a9040321c3712d8fd0b09cf52b17445de04a23a10165049ae187cd39e5c86be5"
+        },
+        {
+          "file": "licenses/rust/crypto-common-0.2.2/LICENSE-MIT",
+          "text": "d2e7ec5355c96eeade56b09187ceb48a6a30299da3ce7531a66d3d11405ab963"
+        }
+      ]
+    },
+    {
+      "name": "getrandom",
+      "version": "0.4.3",
+      "license": "MIT OR Apache-2.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/getrandom-0.4.3/LICENSE-APACHE",
+          "text": "aaff376532ea30a0cd5330b9502ad4a4c8bf769c539c87ffe78819d188a18ebf"
+        },
+        {
+          "file": "licenses/rust/getrandom-0.4.3/LICENSE-MIT",
+          "text": "523a42c25d245dde9c015f882cec7f4555aad883382a6cf19b4b7d9b2cd5419b"
+        }
+      ]
+    },
+    {
+      "name": "cfg-if",
+      "version": "1.0.4",
+      "license": "MIT OR Apache-2.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/cfg-if-1.0.4/LICENSE-APACHE",
+          "text": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "file": "licenses/rust/cfg-if-1.0.4/LICENSE-MIT",
+          "text": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397"
+        }
+      ]
+    },
+    {
+      "name": "rand_core",
+      "version": "0.10.1",
+      "license": "MIT OR Apache-2.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/rand_core-0.10.1/COPYRIGHT",
+          "text": "92b81db30f7ab6d693e0af5661a40d273ca1947e891123ed823924192c10cbc7"
+        },
+        {
+          "file": "licenses/rust/rand_core-0.10.1/LICENSE-APACHE",
+          "text": "6df43f6f4b5d4587f3d8d71e45532c688fd168afa5fe89d571cb32fa09c4ef51"
+        },
+        {
+          "file": "licenses/rust/rand_core-0.10.1/LICENSE-MIT",
+          "text": "8b6e9feec03e7c9a5facb26855cecd31662bf989b636bcfe79521bdf8ac863f0"
+        }
+      ]
+    },
+    {
+      "name": "hybrid-array",
+      "version": "0.4.14",
+      "license": "MIT OR Apache-2.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/hybrid-array-0.4.14/LICENSE-APACHE",
+          "text": "a9040321c3712d8fd0b09cf52b17445de04a23a10165049ae187cd39e5c86be5"
+        },
+        {
+          "file": "licenses/rust/hybrid-array-0.4.14/LICENSE-MIT",
+          "text": "70c9d40f1f9545c3f133b8a67206e89da850f6468eed072281bb3701514114a9"
+        }
+      ]
+    },
+    {
+      "name": "typenum",
+      "version": "1.20.1",
+      "license": "MIT OR Apache-2.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/typenum-1.20.1/LICENSE",
+          "text": "db11fec9946737df39ca3898d9cd8c10ec6f6c3a884a6802b0ad0b81b4e8f23a"
+        },
+        {
+          "file": "licenses/rust/typenum-1.20.1/LICENSE-APACHE",
+          "text": "516b24e051bf5630880ebbd55c40a25ce9552ebaf8970a53e8976eb70e522406"
+        },
+        {
+          "file": "licenses/rust/typenum-1.20.1/LICENSE-MIT",
+          "text": "a825bd853ab71619a4923d7b4311221427848070ff44d990da39b0b274c1683f"
+        }
+      ]
+    },
+    {
+      "name": "inout",
+      "version": "0.2.2",
+      "license": "MIT OR Apache-2.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/inout-0.2.2/LICENSE-APACHE",
+          "text": "a9040321c3712d8fd0b09cf52b17445de04a23a10165049ae187cd39e5c86be5"
+        },
+        {
+          "file": "licenses/rust/inout-0.2.2/LICENSE-MIT",
+          "text": "a07fcacc3c60de4dc0fab10ac9d6aaba7379974e28451c99da7f7df09c25b28c"
+        }
+      ]
+    },
+    {
+      "name": "aes",
+      "version": "0.9.3",
+      "license": "MIT OR Apache-2.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/aes-0.9.3/LICENSE-APACHE",
+          "text": "a9040321c3712d8fd0b09cf52b17445de04a23a10165049ae187cd39e5c86be5"
+        },
+        {
+          "file": "licenses/rust/aes-0.9.3/LICENSE-MIT",
+          "text": "25f77efa393854f7c15eaf6a2589a2071db2d7337642742763adb12bdecf0445"
+        }
+      ]
+    },
+    {
+      "name": "cipher",
+      "version": "0.5.2",
+      "license": "MIT OR Apache-2.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/cipher-0.5.2/LICENSE-APACHE",
+          "text": "a9040321c3712d8fd0b09cf52b17445de04a23a10165049ae187cd39e5c86be5"
+        },
+        {
+          "file": "licenses/rust/cipher-0.5.2/LICENSE-MIT",
+          "text": "950d712c518a02fcb7cff96950aee304a1cc5283361712c980ea21e8d6d669a5"
+        }
+      ]
+    },
+    {
+      "name": "block-buffer",
+      "version": "0.12.1",
+      "license": "MIT OR Apache-2.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/block-buffer-0.12.1/LICENSE-APACHE",
+          "text": "a9040321c3712d8fd0b09cf52b17445de04a23a10165049ae187cd39e5c86be5"
+        },
+        {
+          "file": "licenses/rust/block-buffer-0.12.1/LICENSE-MIT",
+          "text": "98181e7249d0c01737645ec982499ce99a0f07eb8f7d625b8840d799d10dbc01"
+        }
+      ]
+    },
+    {
+      "name": "cpubits",
+      "version": "0.1.1",
+      "license": "MIT OR Apache-2.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/cpubits-0.1.1/LICENSE-APACHE",
+          "text": "a9040321c3712d8fd0b09cf52b17445de04a23a10165049ae187cd39e5c86be5"
+        },
+        {
+          "file": "licenses/rust/cpubits-0.1.1/LICENSE-MIT",
+          "text": "003736bc98408b53511b9cc8ff5d1af3bf0a8f17d53841cc39d8ab1b96a195b0"
+        }
+      ]
+    },
+    {
+      "name": "cpufeatures",
+      "version": "0.3.1",
+      "license": "MIT OR Apache-2.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/cpufeatures-0.3.1/LICENSE-APACHE",
+          "text": "a9040321c3712d8fd0b09cf52b17445de04a23a10165049ae187cd39e5c86be5"
+        },
+        {
+          "file": "licenses/rust/cpufeatures-0.3.1/LICENSE-MIT",
+          "text": "73b9dc2e79c7308998dd30296e073aefaefb944a68fb89aa412c23c0edcabcaa"
+        }
+      ]
+    },
+    {
+      "name": "zeroize",
+      "version": "1.9.0",
+      "license": "Apache-2.0 OR MIT",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/zeroize-1.9.0/LICENSE-APACHE",
+          "text": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        },
+        {
+          "file": "licenses/rust/zeroize-1.9.0/LICENSE-MIT",
+          "text": "8c7516d4b27b1e495be5e38b612298b63de48d05f49cdac94f70f3cd70f8864b"
+        }
+      ]
+    },
+    {
+      "name": "zeroize_derive",
+      "version": "1.5.0",
+      "license": "Apache-2.0 OR MIT",
+      "scope": "generated",
+      "notices": [
+        {
+          "file": "licenses/rust/zeroize_derive-1.5.0/LICENSE-APACHE",
+          "text": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        },
+        {
+          "file": "licenses/rust/zeroize_derive-1.5.0/LICENSE-MIT",
+          "text": "b8c6939380a400f53e11923d50fcc4dd2fa1ba8339fd9d04cda38a0251b6c9b0"
+        }
+      ]
+    },
+    {
+      "name": "ctr",
+      "version": "0.10.1",
+      "license": "MIT OR Apache-2.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/ctr-0.10.1/LICENSE-APACHE",
+          "text": "a9040321c3712d8fd0b09cf52b17445de04a23a10165049ae187cd39e5c86be5"
+        },
+        {
+          "file": "licenses/rust/ctr-0.10.1/LICENSE-MIT",
+          "text": "63af4bea227c94d021e99427f6ca3a4b8efddadcca93ab6130f708cf6138cf68"
+        }
+      ]
+    },
+    {
+      "name": "ctutils",
+      "version": "0.4.2",
+      "license": "Apache-2.0 OR MIT",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/ctutils-0.4.2/LICENSE-APACHE",
+          "text": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        },
+        {
+          "file": "licenses/rust/ctutils-0.4.2/LICENSE-MIT",
+          "text": "91585c36e4fb9ab4ca0d3dfac5d66d3c0c62cc51f640a0e1196542daf2267eae"
+        }
+      ]
+    },
+    {
+      "name": "cmov",
+      "version": "0.5.4",
+      "license": "Apache-2.0 OR MIT",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/cmov-0.5.4/LICENSE-APACHE",
+          "text": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        },
+        {
+          "file": "licenses/rust/cmov-0.5.4/LICENSE-MIT",
+          "text": "70c9d40f1f9545c3f133b8a67206e89da850f6468eed072281bb3701514114a9"
+        }
+      ]
+    },
+    {
+      "name": "ghash",
+      "version": "0.6.0",
+      "license": "Apache-2.0 OR MIT",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/ghash-0.6.0/LICENSE-APACHE",
+          "text": "a9040321c3712d8fd0b09cf52b17445de04a23a10165049ae187cd39e5c86be5"
+        },
+        {
+          "file": "licenses/rust/ghash-0.6.0/LICENSE-MIT",
+          "text": "b8c6939380a400f53e11923d50fcc4dd2fa1ba8339fd9d04cda38a0251b6c9b0"
+        }
+      ]
+    },
+    {
+      "name": "polyval",
+      "version": "0.7.3",
+      "license": "Apache-2.0 OR MIT",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/polyval-0.7.3/LICENSE-APACHE",
+          "text": "a9040321c3712d8fd0b09cf52b17445de04a23a10165049ae187cd39e5c86be5"
+        },
+        {
+          "file": "licenses/rust/polyval-0.7.3/LICENSE-MIT",
+          "text": "b8c6939380a400f53e11923d50fcc4dd2fa1ba8339fd9d04cda38a0251b6c9b0"
+        }
+      ]
+    },
+    {
+      "name": "universal-hash",
+      "version": "0.6.1",
+      "license": "MIT OR Apache-2.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/universal-hash-0.6.1/LICENSE-APACHE",
+          "text": "a9040321c3712d8fd0b09cf52b17445de04a23a10165049ae187cd39e5c86be5"
+        },
+        {
+          "file": "licenses/rust/universal-hash-0.6.1/LICENSE-MIT",
+          "text": "efa52eb70a774b62c50cf50f5e57e2625c29d375d09b91132f4f020e47b9944e"
+        }
+      ]
+    },
+    {
+      "name": "anyhow",
+      "version": "1.0.104",
+      "license": "MIT OR Apache-2.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/anyhow-1.0.104/LICENSE-APACHE",
+          "text": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+        },
+        {
+          "file": "licenses/rust/anyhow-1.0.104/LICENSE-MIT",
+          "text": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+        }
+      ]
+    },
+    {
+      "name": "argon2",
+      "version": "0.5.3",
+      "license": "MIT OR Apache-2.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/argon2-0.5.3/LICENSE-APACHE",
+          "text": "a9040321c3712d8fd0b09cf52b17445de04a23a10165049ae187cd39e5c86be5"
+        },
+        {
+          "file": "licenses/rust/argon2-0.5.3/LICENSE-MIT",
+          "text": "33f702959c0ea91c08b21b65cf1f08b6c122ec9e6db0b5db784a7b367d942330"
+        }
+      ]
+    },
+    {
+      "name": "base64ct",
+      "version": "1.8.3",
+      "license": "Apache-2.0 OR MIT",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/base64ct-1.8.3/LICENSE-APACHE",
+          "text": "a9040321c3712d8fd0b09cf52b17445de04a23a10165049ae187cd39e5c86be5"
+        },
+        {
+          "file": "licenses/rust/base64ct-1.8.3/LICENSE-MIT",
+          "text": "2d1c57bff28344b9e698f51063bc8509799cc4c99a4e0cf2aa3f7e7c3e1f9a9d"
+        }
+      ]
+    },
+    {
+      "name": "blake2",
+      "version": "0.10.6",
+      "license": "MIT OR Apache-2.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/blake2-0.10.6/LICENSE-APACHE",
+          "text": "a9040321c3712d8fd0b09cf52b17445de04a23a10165049ae187cd39e5c86be5"
+        },
+        {
+          "file": "licenses/rust/blake2-0.10.6/LICENSE-MIT",
+          "text": "9c768944eb4a0422ca2efc25ea9fb2fb9e7fbd3fdb04e86b87366339cb7466db"
+        }
+      ]
+    },
+    {
+      "name": "digest",
+      "version": "0.10.7",
+      "license": "MIT OR Apache-2.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/digest-0.10.7/LICENSE-APACHE",
+          "text": "a9040321c3712d8fd0b09cf52b17445de04a23a10165049ae187cd39e5c86be5"
+        },
+        {
+          "file": "licenses/rust/digest-0.10.7/LICENSE-MIT",
+          "text": "9e0dfd2dd4173a530e238cb6adb37aa78c34c6bc7444e0e10c1ab5d8881f63ba"
+        }
+      ]
+    },
+    {
+      "name": "block-buffer",
+      "version": "0.10.4",
+      "license": "MIT OR Apache-2.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/block-buffer-0.10.4/LICENSE-APACHE",
+          "text": "a9040321c3712d8fd0b09cf52b17445de04a23a10165049ae187cd39e5c86be5"
+        },
+        {
+          "file": "licenses/rust/block-buffer-0.10.4/LICENSE-MIT",
+          "text": "d5c22aa3118d240e877ad41c5d9fa232f9c77d757d4aac0c2f943afc0a95e0ef"
+        }
+      ]
+    },
+    {
+      "name": "generic-array",
+      "version": "0.14.7",
+      "license": "MIT",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/generic-array-0.14.7/LICENSE",
+          "text": "c09aae9d3c77b531f56351a9947bc7446511d6b025b3255312d3e3442a9a7583"
+        }
+      ]
+    },
+    {
+      "name": "crypto-common",
+      "version": "0.1.7",
+      "license": "MIT OR Apache-2.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/crypto-common-0.1.7/LICENSE-APACHE",
+          "text": "a9040321c3712d8fd0b09cf52b17445de04a23a10165049ae187cd39e5c86be5"
+        },
+        {
+          "file": "licenses/rust/crypto-common-0.1.7/LICENSE-MIT",
+          "text": "3521672491a3479422d5fe1aca6645dd2984090f85da6e5205abfb18fb7a6897"
+        }
+      ]
+    },
+    {
+      "name": "subtle",
+      "version": "2.6.1",
+      "license": "BSD-3-Clause",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/subtle-2.6.1/LICENSE",
+          "text": "d1fc1bc0d155df60b2e7705b6b2ae02a05c96f948e1cec6e2fb86360b09f346b"
+        }
+      ]
+    },
+    {
+      "name": "cpufeatures",
+      "version": "0.2.17",
+      "license": "MIT OR Apache-2.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/cpufeatures-0.2.17/LICENSE-APACHE",
+          "text": "a9040321c3712d8fd0b09cf52b17445de04a23a10165049ae187cd39e5c86be5"
+        },
+        {
+          "file": "licenses/rust/cpufeatures-0.2.17/LICENSE-MIT",
+          "text": "ae9baa7beea910273c2f384c2a6b721fb7bd02bda3436074a1072e4ee689f985"
+        }
+      ]
+    },
+    {
+      "name": "password-hash",
+      "version": "0.5.0",
+      "license": "MIT OR Apache-2.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/password-hash-0.5.0/LICENSE-APACHE",
+          "text": "a9040321c3712d8fd0b09cf52b17445de04a23a10165049ae187cd39e5c86be5"
+        },
+        {
+          "file": "licenses/rust/password-hash-0.5.0/LICENSE-MIT",
+          "text": "233b95ccbf90dc67e32f3e8995c489f6312d9191ebd141a931c3b684f1e3be6d"
+        }
+      ]
+    },
+    {
+      "name": "rand_core",
+      "version": "0.6.4",
+      "license": "MIT OR Apache-2.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/rand_core-0.6.4/COPYRIGHT",
+          "text": "90eb64f0279b0d9432accfa6023ff803bc4965212383697eee27a0f426d5f8d5"
+        },
+        {
+          "file": "licenses/rust/rand_core-0.6.4/LICENSE-APACHE",
+          "text": "6df43f6f4b5d4587f3d8d71e45532c688fd168afa5fe89d571cb32fa09c4ef51"
+        },
+        {
+          "file": "licenses/rust/rand_core-0.6.4/LICENSE-MIT",
+          "text": "209fbbe0ad52d9235e37badf9cadfe4dbdc87203179c0899e738b39ade42177b"
+        }
+      ]
+    },
+    {
+      "name": "getrandom",
+      "version": "0.2.17",
+      "license": "MIT OR Apache-2.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/getrandom-0.2.17/LICENSE-APACHE",
+          "text": "aaff376532ea30a0cd5330b9502ad4a4c8bf769c539c87ffe78819d188a18ebf"
+        },
+        {
+          "file": "licenses/rust/getrandom-0.2.17/LICENSE-MIT",
+          "text": "42fa16951ce7f24b5a467a40e5b449a1d41e662f97ca779864f053f39e097737"
+        }
+      ]
+    },
+    {
+      "name": "axum",
+      "version": "0.7.9",
+      "license": "MIT",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/axum-0.7.9/LICENSE",
+          "text": "c14b6ed9d732322af9bae1551f6ca373b3893d7ce6e9d46429fc378478d00dfb"
+        }
+      ]
+    },
+    {
+      "name": "async-trait",
+      "version": "0.1.91",
+      "license": "MIT OR Apache-2.0",
+      "scope": "generated",
+      "notices": [
+        {
+          "file": "licenses/rust/async-trait-0.1.91/LICENSE-APACHE",
+          "text": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+        },
+        {
+          "file": "licenses/rust/async-trait-0.1.91/LICENSE-MIT",
+          "text": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+        }
+      ]
+    },
+    {
+      "name": "axum-core",
+      "version": "0.4.5",
+      "license": "MIT",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/axum-core-0.4.5/LICENSE",
+          "text": "ab25eee08e7b6d209398f44e6f4a6f17c9446cd54b99fd64e041edadc96b6f9b"
+        }
+      ]
+    },
+    {
+      "name": "bytes",
+      "version": "1.12.1",
+      "license": "MIT",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/bytes-1.12.1/LICENSE",
+          "text": "45f522cacecb1023856e46df79ca625dfc550c94910078bd8aec6e02880b3d42"
+        }
+      ]
+    },
+    {
+      "name": "futures-util",
+      "version": "0.3.33",
+      "license": "MIT OR Apache-2.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/futures-util-0.3.33/LICENSE-APACHE",
+          "text": "275c491d6d1160553c32fd6127061d7f9606c3ea25abfad6ca3f6ed088785427"
+        },
+        {
+          "file": "licenses/rust/futures-util-0.3.33/LICENSE-MIT",
+          "text": "6652c868f35dfe5e8ef636810a4e576b9d663f3a17fb0f5613ad73583e1b88fd"
+        }
+      ]
+    },
+    {
+      "name": "futures-core",
+      "version": "0.3.33",
+      "license": "MIT OR Apache-2.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/futures-core-0.3.33/LICENSE-APACHE",
+          "text": "275c491d6d1160553c32fd6127061d7f9606c3ea25abfad6ca3f6ed088785427"
+        },
+        {
+          "file": "licenses/rust/futures-core-0.3.33/LICENSE-MIT",
+          "text": "6652c868f35dfe5e8ef636810a4e576b9d663f3a17fb0f5613ad73583e1b88fd"
+        }
+      ]
+    },
+    {
+      "name": "futures-io",
+      "version": "0.3.33",
+      "license": "MIT OR Apache-2.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/futures-io-0.3.33/LICENSE-APACHE",
+          "text": "275c491d6d1160553c32fd6127061d7f9606c3ea25abfad6ca3f6ed088785427"
+        },
+        {
+          "file": "licenses/rust/futures-io-0.3.33/LICENSE-MIT",
+          "text": "6652c868f35dfe5e8ef636810a4e576b9d663f3a17fb0f5613ad73583e1b88fd"
+        }
+      ]
+    },
+    {
+      "name": "futures-macro",
+      "version": "0.3.33",
+      "license": "MIT OR Apache-2.0",
+      "scope": "generated",
+      "notices": [
+        {
+          "file": "licenses/rust/futures-macro-0.3.33/LICENSE-APACHE",
+          "text": "275c491d6d1160553c32fd6127061d7f9606c3ea25abfad6ca3f6ed088785427"
+        },
+        {
+          "file": "licenses/rust/futures-macro-0.3.33/LICENSE-MIT",
+          "text": "6652c868f35dfe5e8ef636810a4e576b9d663f3a17fb0f5613ad73583e1b88fd"
+        }
+      ]
+    },
+    {
+      "name": "futures-task",
+      "version": "0.3.33",
+      "license": "MIT OR Apache-2.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/futures-task-0.3.33/LICENSE-APACHE",
+          "text": "275c491d6d1160553c32fd6127061d7f9606c3ea25abfad6ca3f6ed088785427"
+        },
+        {
+          "file": "licenses/rust/futures-task-0.3.33/LICENSE-MIT",
+          "text": "6652c868f35dfe5e8ef636810a4e576b9d663f3a17fb0f5613ad73583e1b88fd"
+        }
+      ]
+    },
+    {
+      "name": "memchr",
+      "version": "2.8.3",
+      "license": "Unlicense OR MIT",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/memchr-2.8.3/COPYING",
+          "text": "01c266bced4a434da0051174d6bee16a4c82cf634e2679b6155d40d75012390f"
+        },
+        {
+          "file": "licenses/rust/memchr-2.8.3/LICENSE-MIT",
+          "text": "0f96a83840e146e43c0ec96a22ec1f392e0680e6c1226e6f3ba87e0740af850f"
+        }
+      ]
+    },
+    {
+      "name": "pin-project-lite",
+      "version": "0.2.17",
+      "license": "Apache-2.0 OR MIT",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/pin-project-lite-0.2.17/LICENSE-APACHE",
+          "text": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+        },
+        {
+          "file": "licenses/rust/pin-project-lite-0.2.17/LICENSE-MIT",
+          "text": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+        }
+      ]
+    },
+    {
+      "name": "slab",
+      "version": "0.4.12",
+      "license": "MIT",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/slab-0.4.12/LICENSE",
+          "text": "8ce0830173fdac609dfb4ea603fdc002c2f4af0dc9b1a005653f5da9cf534b18"
+        }
+      ]
+    },
+    {
+      "name": "http",
+      "version": "1.5.0",
+      "license": "MIT OR Apache-2.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/http-1.5.0/LICENSE-APACHE",
+          "text": "8bb1b50b0e5c9399ae33bd35fab2769010fa6c14e8860c729a52295d84896b7a"
+        },
+        {
+          "file": "licenses/rust/http-1.5.0/LICENSE-MIT",
+          "text": "dc91f8200e4b2a1f9261035d4c18c33c246911a6c0f7b543d75347e61b249cff"
+        }
+      ]
+    },
+    {
+      "name": "itoa",
+      "version": "1.0.18",
+      "license": "MIT OR Apache-2.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/itoa-1.0.18/LICENSE-APACHE",
+          "text": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+        },
+        {
+          "file": "licenses/rust/itoa-1.0.18/LICENSE-MIT",
+          "text": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+        }
+      ]
+    },
+    {
+      "name": "http-body",
+      "version": "1.1.0",
+      "license": "MIT",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/http-body-1.1.0/LICENSE",
+          "text": "248378d0a3383c173fb925f17141b88e71580b3ba17ddc6ac3d2a344683232ab"
+        }
+      ]
+    },
+    {
+      "name": "http-body-util",
+      "version": "0.1.4",
+      "license": "MIT",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/http-body-util-0.1.4/LICENSE",
+          "text": "248378d0a3383c173fb925f17141b88e71580b3ba17ddc6ac3d2a344683232ab"
+        }
+      ]
+    },
+    {
+      "name": "mime",
+      "version": "0.3.17",
+      "license": "MIT OR Apache-2.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/mime-0.3.17/LICENSE-APACHE",
+          "text": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "file": "licenses/rust/mime-0.3.17/LICENSE-MIT",
+          "text": "df9cfd06d8a44d9a671eadd39ffd97f166481da015a30f45dfd27886209c5922"
+        }
+      ]
+    },
+    {
+      "name": "rustversion",
+      "version": "1.0.23",
+      "license": "MIT OR Apache-2.0",
+      "scope": "generated",
+      "notices": [
+        {
+          "file": "licenses/rust/rustversion-1.0.23/LICENSE-APACHE",
+          "text": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+        },
+        {
+          "file": "licenses/rust/rustversion-1.0.23/LICENSE-MIT",
+          "text": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+        }
+      ]
+    },
+    {
+      "name": "sync_wrapper",
+      "version": "1.0.2",
+      "license": "Apache-2.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/sync_wrapper-1.0.2/LICENSE",
+          "text": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+        }
+      ]
+    },
+    {
+      "name": "tower-layer",
+      "version": "0.3.3",
+      "license": "MIT",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/tower-layer-0.3.3/LICENSE",
+          "text": "4249c8e6c5ebb85f97c77e6457c6fafc1066406eb8f1ef61e796fbdc5ff18482"
+        }
+      ]
+    },
+    {
+      "name": "tower-service",
+      "version": "0.3.3",
+      "license": "MIT",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/tower-service-0.3.3/LICENSE",
+          "text": "4249c8e6c5ebb85f97c77e6457c6fafc1066406eb8f1ef61e796fbdc5ff18482"
+        }
+      ]
+    },
+    {
+      "name": "tracing",
+      "version": "0.1.44",
+      "license": "MIT",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/tracing-0.1.44/LICENSE",
+          "text": "898b1ae9821e98daf8964c8d6c7f61641f5f5aa78ad500020771c0939ee0dea1"
+        }
+      ]
+    },
+    {
+      "name": "log",
+      "version": "0.4.33",
+      "license": "MIT OR Apache-2.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/log-0.4.33/LICENSE-APACHE",
+          "text": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "file": "licenses/rust/log-0.4.33/LICENSE-MIT",
+          "text": "6485b8ed310d3f0340bf1ad1f47645069ce4069dcc6bb46c7d5c6faf41de1fdb"
+        }
+      ]
+    },
+    {
+      "name": "tracing-attributes",
+      "version": "0.1.31",
+      "license": "MIT",
+      "scope": "generated",
+      "notices": [
+        {
+          "file": "licenses/rust/tracing-attributes-0.1.31/LICENSE",
+          "text": "898b1ae9821e98daf8964c8d6c7f61641f5f5aa78ad500020771c0939ee0dea1"
+        }
+      ]
+    },
+    {
+      "name": "tracing-core",
+      "version": "0.1.36",
+      "license": "MIT",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/tracing-core-0.1.36/LICENSE",
+          "text": "898b1ae9821e98daf8964c8d6c7f61641f5f5aa78ad500020771c0939ee0dea1"
+        },
+        {
+          "file": "licenses/rust/tracing-core-0.1.36/src/spin/LICENSE",
+          "text": "58545fed1565e42d687aecec6897d35c6d37ccb71479a137c0deb2203e125c79"
+        }
+      ]
+    },
+    {
+      "name": "once_cell",
+      "version": "1.21.4",
+      "license": "MIT OR Apache-2.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/once_cell-1.21.4/LICENSE-APACHE",
+          "text": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "file": "licenses/rust/once_cell-1.21.4/LICENSE-MIT",
+          "text": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+        }
+      ]
+    },
+    {
+      "name": "hyper",
+      "version": "1.11.0",
+      "license": "MIT",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/hyper-1.11.0/LICENSE",
+          "text": "2d01890414494742ba4a509fcec8efa40f6d8be22cbd72be7cff08d6fda4ec89"
+        }
+      ]
+    },
+    {
+      "name": "atomic-waker",
+      "version": "1.1.2",
+      "license": "Apache-2.0 OR MIT",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/atomic-waker-1.1.2/LICENSE-APACHE",
+          "text": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "file": "licenses/rust/atomic-waker-1.1.2/LICENSE-MIT",
+          "text": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+        },
+        {
+          "file": "licenses/rust/atomic-waker-1.1.2/LICENSE-THIRD-PARTY",
+          "text": "6226d0632e2e1a80c23597e964da9812ae193c535fe058154afb034e94167aa5"
+        }
+      ]
+    },
+    {
+      "name": "futures-channel",
+      "version": "0.3.33",
+      "license": "MIT OR Apache-2.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/futures-channel-0.3.33/LICENSE-APACHE",
+          "text": "275c491d6d1160553c32fd6127061d7f9606c3ea25abfad6ca3f6ed088785427"
+        },
+        {
+          "file": "licenses/rust/futures-channel-0.3.33/LICENSE-MIT",
+          "text": "6652c868f35dfe5e8ef636810a4e576b9d663f3a17fb0f5613ad73583e1b88fd"
+        }
+      ]
+    },
+    {
+      "name": "httparse",
+      "version": "1.10.1",
+      "license": "MIT OR Apache-2.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/httparse-1.10.1/LICENSE-APACHE",
+          "text": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "file": "licenses/rust/httparse-1.10.1/LICENSE-MIT",
+          "text": "391a5396cec6230bfabd4ef4eb2350eb895bc5efce377a2218f5702ed020d3e3"
+        }
+      ]
+    },
+    {
+      "name": "httpdate",
+      "version": "1.0.3",
+      "license": "MIT OR Apache-2.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/httpdate-1.0.3/LICENSE-APACHE",
+          "text": "4d10fe5f3aa176b05b229a248866bad70b834c173f1252a814ff4748d8a13837"
+        },
+        {
+          "file": "licenses/rust/httpdate-1.0.3/LICENSE-MIT",
+          "text": "934887691e05d69d7c86ad3f2c360980fa30c15b035e351f3c9865e99da4debc"
+        }
+      ]
+    },
+    {
+      "name": "smallvec",
+      "version": "1.15.2",
+      "license": "MIT OR Apache-2.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/smallvec-1.15.2/LICENSE-APACHE",
+          "text": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "file": "licenses/rust/smallvec-1.15.2/LICENSE-MIT",
+          "text": "0b28172679e0009b655da42797c03fd163a3379d5cfa67ba1f1655e974a2a1a9"
+        }
+      ]
+    },
+    {
+      "name": "tokio",
+      "version": "1.53.1",
+      "license": "MIT",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/tokio-1.53.1/LICENSE",
+          "text": "253cd04c6714889df2d32f3f64d669179a1c95c76ac43c40882c52eb06bc3552"
+        }
+      ]
+    },
+    {
+      "name": "mio",
+      "version": "1.2.2",
+      "license": "MIT",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/mio-1.2.2/LICENSE",
+          "text": "07919255c7e04793d8ea760d6c2ce32d19f9ff02bdbdde3ce90b1e1880929a9b"
+        }
+      ]
+    },
+    {
+      "name": "windows-sys",
+      "version": "0.61.2",
+      "license": "MIT OR Apache-2.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/windows-sys-0.61.2/license-apache-2.0",
+          "text": "c16f8dcf1a368b83be78d826ea23de4079fe1b4469a0ab9ee20563f37ff3d44b"
+        },
+        {
+          "file": "licenses/rust/windows-sys-0.61.2/license-mit",
+          "text": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383"
+        }
+      ]
+    },
+    {
+      "name": "windows-link",
+      "version": "0.2.1",
+      "license": "MIT OR Apache-2.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/windows-link-0.2.1/license-apache-2.0",
+          "text": "c16f8dcf1a368b83be78d826ea23de4079fe1b4469a0ab9ee20563f37ff3d44b"
+        },
+        {
+          "file": "licenses/rust/windows-link-0.2.1/license-mit",
+          "text": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383"
+        }
+      ]
+    },
+    {
+      "name": "parking_lot",
+      "version": "0.12.5",
+      "license": "MIT OR Apache-2.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/parking_lot-0.12.5/LICENSE-APACHE",
+          "text": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "file": "licenses/rust/parking_lot-0.12.5/LICENSE-MIT",
+          "text": "c9a75f18b9ab2927829a208fc6aa2cf4e63b8420887ba29cdb265d6619ae82d5"
+        }
+      ]
+    },
+    {
+      "name": "lock_api",
+      "version": "0.4.14",
+      "license": "MIT OR Apache-2.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/lock_api-0.4.14/LICENSE-APACHE",
+          "text": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "file": "licenses/rust/lock_api-0.4.14/LICENSE-MIT",
+          "text": "c9a75f18b9ab2927829a208fc6aa2cf4e63b8420887ba29cdb265d6619ae82d5"
+        }
+      ]
+    },
+    {
+      "name": "scopeguard",
+      "version": "1.2.0",
+      "license": "MIT OR Apache-2.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/scopeguard-1.2.0/LICENSE-APACHE",
+          "text": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "file": "licenses/rust/scopeguard-1.2.0/LICENSE-MIT",
+          "text": "fb77f0a9c53e473abe5103c8632ef9f0f2874d4fb3f17cb2d8c661aab9cee9d7"
+        }
+      ]
+    },
+    {
+      "name": "parking_lot_core",
+      "version": "0.9.12",
+      "license": "MIT OR Apache-2.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/parking_lot_core-0.9.12/LICENSE-APACHE",
+          "text": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "file": "licenses/rust/parking_lot_core-0.9.12/LICENSE-MIT",
+          "text": "c9a75f18b9ab2927829a208fc6aa2cf4e63b8420887ba29cdb265d6619ae82d5"
+        }
+      ]
+    },
+    {
+      "name": "socket2",
+      "version": "0.6.5",
+      "license": "MIT OR Apache-2.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/socket2-0.6.5/LICENSE-APACHE",
+          "text": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "file": "licenses/rust/socket2-0.6.5/LICENSE-MIT",
+          "text": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397"
+        }
+      ]
+    },
+    {
+      "name": "tokio-macros",
+      "version": "2.7.2",
+      "license": "MIT",
+      "scope": "generated",
+      "notices": [
+        {
+          "file": "licenses/rust/tokio-macros-2.7.2/LICENSE",
+          "text": "0b83dc40cba89b9922bb84b0a9c7d2768ce37c1d7e138b7424fd4549915778c9"
+        }
+      ]
+    },
+    {
+      "name": "hyper-util",
+      "version": "0.1.20",
+      "license": "MIT",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/hyper-util-0.1.20/LICENSE",
+          "text": "9e0a97848ea543aef745c98e84fde696a9a3e0735538f6daefdd3cb1942effc1"
+        }
+      ]
+    },
+    {
+      "name": "matchit",
+      "version": "0.7.3",
+      "license": "MIT AND BSD-3-Clause",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/matchit-0.7.3/LICENSE",
+          "text": "de701d0618d694feb1af90f02181a1763d9b0bdeb70a3a592781e529077dba65"
+        },
+        {
+          "file": "licenses/rust/matchit-0.7.3/LICENSE.httprouter",
+          "text": "162ce11ad71338d0a0c6ebaf5c48af72c6ae237b468859d3656fe2d9ed3f3a85"
+        }
+      ]
+    },
+    {
+      "name": "multer",
+      "version": "3.1.0",
+      "license": "MIT",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/multer-3.1.0/LICENSE",
+          "text": "cfb47b4c5832e5a204d86140ba385e683309e3c82f670e65dfaf491b13c5e2c4"
+        }
+      ]
+    },
+    {
+      "name": "encoding_rs",
+      "version": "0.8.35",
+      "license": "(Apache-2.0 OR MIT) AND BSD-3-Clause",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/encoding_rs-0.8.35/COPYRIGHT",
+          "text": "11789f45bb180841cd362a5eee6789c68ddb573a11105e30768c308a6add0190"
+        },
+        {
+          "file": "licenses/rust/encoding_rs-0.8.35/LICENSE-APACHE",
+          "text": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        },
+        {
+          "file": "licenses/rust/encoding_rs-0.8.35/LICENSE-MIT",
+          "text": "3fa4ca83dcc9237839b1bdeb2e6d16bdfb5ec0c5ce42b24694d8bbf0dcbef72c"
+        },
+        {
+          "file": "licenses/rust/encoding_rs-0.8.35/LICENSE-WHATWG",
+          "text": "838118388fe5c2e7f1dbbaeed13e1c7f3ebf88be91319c7c1d77c18e987d1a50"
+        }
+      ]
+    },
+    {
+      "name": "spin",
+      "version": "0.9.9",
+      "license": "MIT",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/spin-0.9.9/LICENSE",
+          "text": "6ac8711fb340c62ce0a4ecd463342d3fa0e8e70de697c863a2e1c0c53006003c"
+        }
+      ]
+    },
+    {
+      "name": "percent-encoding",
+      "version": "2.3.2",
+      "license": "MIT OR Apache-2.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/percent-encoding-2.3.2/LICENSE-APACHE",
+          "text": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "file": "licenses/rust/percent-encoding-2.3.2/LICENSE-MIT",
+          "text": "b38f11f6096706e6de553dabe2a7ed142d59b6fa8c97e290c67496154745cdd5"
+        }
+      ]
+    },
+    {
+      "name": "serde",
+      "version": "1.0.229",
+      "license": "MIT OR Apache-2.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/serde-1.0.229/LICENSE-APACHE",
+          "text": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+        },
+        {
+          "file": "licenses/rust/serde-1.0.229/LICENSE-MIT",
+          "text": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+        }
+      ]
+    },
+    {
+      "name": "serde_core",
+      "version": "1.0.229",
+      "license": "MIT OR Apache-2.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/serde_core-1.0.229/LICENSE-APACHE",
+          "text": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+        },
+        {
+          "file": "licenses/rust/serde_core-1.0.229/LICENSE-MIT",
+          "text": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+        }
+      ]
+    },
+    {
+      "name": "serde_derive",
+      "version": "1.0.229",
+      "license": "MIT OR Apache-2.0",
+      "scope": "generated",
+      "notices": [
+        {
+          "file": "licenses/rust/serde_derive-1.0.229/LICENSE-APACHE",
+          "text": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+        },
+        {
+          "file": "licenses/rust/serde_derive-1.0.229/LICENSE-MIT",
+          "text": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+        }
+      ]
+    },
+    {
+      "name": "serde_json",
+      "version": "1.0.151",
+      "license": "MIT OR Apache-2.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/serde_json-1.0.151/LICENSE-APACHE",
+          "text": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+        },
+        {
+          "file": "licenses/rust/serde_json-1.0.151/LICENSE-MIT",
+          "text": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+        }
+      ]
+    },
+    {
+      "name": "zmij",
+      "version": "1.0.23",
+      "license": "MIT",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/zmij-1.0.23/LICENSE-MIT",
+          "text": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+        }
+      ]
+    },
+    {
+      "name": "serde_path_to_error",
+      "version": "0.1.20",
+      "license": "MIT OR Apache-2.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/serde_path_to_error-0.1.20/LICENSE-APACHE",
+          "text": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+        },
+        {
+          "file": "licenses/rust/serde_path_to_error-0.1.20/LICENSE-MIT",
+          "text": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+        }
+      ]
+    },
+    {
+      "name": "serde_urlencoded",
+      "version": "0.7.1",
+      "license": "MIT/Apache-2.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/serde_urlencoded-0.7.1/LICENSE-APACHE",
+          "text": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+        },
+        {
+          "file": "licenses/rust/serde_urlencoded-0.7.1/LICENSE-MIT",
+          "text": "b9eb266294324f672cbe945fe8f2e32f85024f0d61a1a7d14382cdde0ac44769"
+        }
+      ]
+    },
+    {
+      "name": "form_urlencoded",
+      "version": "1.2.2",
+      "license": "MIT OR Apache-2.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/form_urlencoded-1.2.2/LICENSE-APACHE",
+          "text": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "file": "licenses/rust/form_urlencoded-1.2.2/LICENSE-MIT",
+          "text": "20c7855c364d57ea4c97889a5e8d98470a9952dade37bd9248b9a54431670e5e"
+        }
+      ]
+    },
+    {
+      "name": "ryu",
+      "version": "1.0.23",
+      "license": "Apache-2.0 OR BSL-1.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/ryu-1.0.23/LICENSE-APACHE",
+          "text": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+        },
+        {
+          "file": "licenses/rust/ryu-1.0.23/LICENSE-BOOST",
+          "text": "c9bff75738922193e67fa726fa225535870d2aa1059f91452c411736284ad566"
+        }
+      ]
+    },
+    {
+      "name": "tower",
+      "version": "0.5.3",
+      "license": "MIT",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/tower-0.5.3/LICENSE",
+          "text": "4249c8e6c5ebb85f97c77e6457c6fafc1066406eb8f1ef61e796fbdc5ff18482"
+        }
+      ]
+    },
+    {
+      "name": "base64",
+      "version": "0.22.1",
+      "license": "MIT OR Apache-2.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/base64-0.22.1/LICENSE-APACHE",
+          "text": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "file": "licenses/rust/base64-0.22.1/LICENSE-MIT",
+          "text": "0dd882e53de11566d50f8e8e2d5a651bcf3fabee4987d70f306233cf39094ba7"
+        }
+      ]
+    },
+    {
+      "name": "getrandom",
+      "version": "0.3.4",
+      "license": "MIT OR Apache-2.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/getrandom-0.3.4/LICENSE-APACHE",
+          "text": "aaff376532ea30a0cd5330b9502ad4a4c8bf769c539c87ffe78819d188a18ebf"
+        },
+        {
+          "file": "licenses/rust/getrandom-0.3.4/LICENSE-MIT",
+          "text": "29e9fe5074bd27e0e5d5d110394fbbcd841baee2651a3c4b4560a632702cede4"
+        }
+      ]
+    },
+    {
+      "name": "hkdf",
+      "version": "0.12.4",
+      "license": "MIT OR Apache-2.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/hkdf-0.12.4/LICENSE-APACHE",
+          "text": "59013a5c8d3a19c26a457579105915a5d51bb0c09d579f8cdedf12e4203c3018"
+        },
+        {
+          "file": "licenses/rust/hkdf-0.12.4/LICENSE-MIT",
+          "text": "d288f9c9b4590446ec18c22ead8f8b5a12a3d4025b68f62dc9015063eb9cca69"
+        }
+      ]
+    },
+    {
+      "name": "hmac",
+      "version": "0.12.1",
+      "license": "MIT OR Apache-2.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/hmac-0.12.1/LICENSE-APACHE",
+          "text": "a9040321c3712d8fd0b09cf52b17445de04a23a10165049ae187cd39e5c86be5"
+        },
+        {
+          "file": "licenses/rust/hmac-0.12.1/LICENSE-MIT",
+          "text": "9e0dfd2dd4173a530e238cb6adb37aa78c34c6bc7444e0e10c1ab5d8881f63ba"
+        }
+      ]
+    },
+    {
+      "name": "mime_guess",
+      "version": "2.0.5",
+      "license": "MIT",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/mime_guess-2.0.5/LICENSE",
+          "text": "816000f9c28f7005d931c77636eb79fa7020071eb0f6e6a995515dfccd3559cb"
+        }
+      ]
+    },
+    {
+      "name": "unicase",
+      "version": "2.9.0",
+      "license": "MIT OR Apache-2.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/unicase-2.9.0/LICENSE-APACHE",
+          "text": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "file": "licenses/rust/unicase-2.9.0/LICENSE-MIT",
+          "text": "4f6bd11a0f17fe5b085ace1daaedb7b002a08316850dd9577c246c6a68a68e8c"
+        }
+      ]
+    },
+    {
+      "name": "rfd",
+      "version": "0.15.4",
+      "license": "MIT",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/rfd-0.15.4/LICENSE",
+          "text": "65fc947f4bac882a2cd104ef73c246b1b037059df9f2b3a58b7f77f0b9e56071"
+        }
+      ]
+    },
+    {
+      "name": "raw-window-handle",
+      "version": "0.6.2",
+      "license": "MIT OR Apache-2.0 OR Zlib",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/raw-window-handle-0.6.2/LICENSE-APACHE.md",
+          "text": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+        },
+        {
+          "file": "licenses/rust/raw-window-handle-0.6.2/LICENSE-MIT.md",
+          "text": "9c5a80639a57c1c945570e7ebbca0706305849ce3c098021325cca9db2f7acc4"
+        },
+        {
+          "file": "licenses/rust/raw-window-handle-0.6.2/LICENSE-ZLIB.md",
+          "text": "ae895c8576e682f310fb70d93d9f99b1dd82872094c54a8f6cdfe2ca5c2d6ecb"
+        }
+      ]
+    },
+    {
+      "name": "windows-sys",
+      "version": "0.59.0",
+      "license": "MIT OR Apache-2.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/windows-sys-0.59.0/license-apache-2.0",
+          "text": "c16f8dcf1a368b83be78d826ea23de4079fe1b4469a0ab9ee20563f37ff3d44b"
+        },
+        {
+          "file": "licenses/rust/windows-sys-0.59.0/license-mit",
+          "text": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383"
+        }
+      ]
+    },
+    {
+      "name": "windows-targets",
+      "version": "0.52.6",
+      "license": "MIT OR Apache-2.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/windows-targets-0.52.6/license-apache-2.0",
+          "text": "c16f8dcf1a368b83be78d826ea23de4079fe1b4469a0ab9ee20563f37ff3d44b"
+        },
+        {
+          "file": "licenses/rust/windows-targets-0.52.6/license-mit",
+          "text": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383"
+        }
+      ]
+    },
+    {
+      "name": "windows_x86_64_msvc",
+      "version": "0.52.6",
+      "license": "MIT OR Apache-2.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/windows_x86_64_msvc-0.52.6/license-apache-2.0",
+          "text": "c16f8dcf1a368b83be78d826ea23de4079fe1b4469a0ab9ee20563f37ff3d44b"
+        },
+        {
+          "file": "licenses/rust/windows_x86_64_msvc-0.52.6/license-mit",
+          "text": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383"
+        }
+      ]
+    },
+    {
+      "name": "rpassword",
+      "version": "7.5.4",
+      "license": "Apache-2.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/rpassword-7.5.4/LICENSE-APACHE",
+          "text": "a6cba85bc92e0cff7a450b1d873c0eaa2e9fc96bf472df0247a26bec77bf3ff9"
+        }
+      ]
+    },
+    {
+      "name": "rtoolbox",
+      "version": "0.0.6",
+      "license": "Apache-2.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/rtoolbox-0.0.6/LICENSE-APACHE",
+          "text": "a6cba85bc92e0cff7a450b1d873c0eaa2e9fc96bf472df0247a26bec77bf3ff9"
+        }
+      ]
+    },
+    {
+      "name": "rusqlite",
+      "version": "0.40.2",
+      "license": "MIT",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/rusqlite-0.40.2/LICENSE",
+          "text": "c10c1f27337546471e5f7e4e97fdd398b35b9d4e126115dcd22de8d8e65abf6f"
+        }
+      ]
+    },
+    {
+      "name": "bitflags",
+      "version": "2.13.1",
+      "license": "MIT OR Apache-2.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/bitflags-2.13.1/LICENSE-APACHE",
+          "text": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "file": "licenses/rust/bitflags-2.13.1/LICENSE-MIT",
+          "text": "6485b8ed310d3f0340bf1ad1f47645069ce4069dcc6bb46c7d5c6faf41de1fdb"
+        }
+      ]
+    },
+    {
+      "name": "fallible-iterator",
+      "version": "0.3.0",
+      "license": "MIT/Apache-2.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/fallible-iterator-0.3.0/LICENSE-APACHE",
+          "text": "c6596eb7be8581c18be736c846fb9173b69eccf6ef94c5135893ec56bd92ba08"
+        },
+        {
+          "file": "licenses/rust/fallible-iterator-0.3.0/LICENSE-MIT",
+          "text": "0816e154b159ba255c563f7c8c7df5bbb8cc5fc96f5ab8cf9f4743b4f41fe7eb"
+        }
+      ]
+    },
+    {
+      "name": "fallible-streaming-iterator",
+      "version": "0.1.9",
+      "license": "MIT/Apache-2.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/fallible-streaming-iterator-0.1.9/LICENSE-APACHE",
+          "text": "c6596eb7be8581c18be736c846fb9173b69eccf6ef94c5135893ec56bd92ba08"
+        },
+        {
+          "file": "licenses/rust/fallible-streaming-iterator-0.1.9/LICENSE-MIT",
+          "text": "8dcec5569a9be5b0e086c80faed6f1aefa670af0ec29cecc2f714303096887e0"
+        }
+      ]
+    },
+    {
+      "name": "hashlink",
+      "version": "0.12.2",
+      "license": "MIT OR Apache-2.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/hashlink-0.12.2/LICENSE-APACHE",
+          "text": "c144680885b29e4719e2a51f0aab5439a1e02d980692b5aaf086cae12727f28b"
+        },
+        {
+          "file": "licenses/rust/hashlink-0.12.2/LICENSE-MIT",
+          "text": "e915669a595b11a200873df8286561881b0e04932f6412a585db6297ba0bc97c"
+        }
+      ]
+    },
+    {
+      "name": "hashbrown",
+      "version": "0.17.1",
+      "license": "MIT OR Apache-2.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/hashbrown-0.17.1/LICENSE-APACHE",
+          "text": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "file": "licenses/rust/hashbrown-0.17.1/LICENSE-MIT",
+          "text": "ff8f68cb076caf8cefe7a6430d4ac086ce6af2ca8ce2c4e5a2004d4552ef52a2"
+        }
+      ]
+    },
+    {
+      "name": "foldhash",
+      "version": "0.2.0",
+      "license": "Zlib",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/foldhash-0.2.0/LICENSE",
+          "text": "b1181a40b2a7b25cf66fd01481713bc1005df082c53ef73e851e55071b102744"
+        }
+      ]
+    },
+    {
+      "name": "libsqlite3-sys",
+      "version": "0.38.2",
+      "license": "MIT",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/libsqlite3-sys-0.38.2/LICENSE",
+          "text": "c10c1f27337546471e5f7e4e97fdd398b35b9d4e126115dcd22de8d8e65abf6f"
+        },
+        {
+          "file": "licenses/rust/libsqlite3-sys-0.38.2/sqlcipher/LICENSE",
+          "text": "ea4fcb309f14a22065e1ea45362d494d320012249ed865fe9c7c0946db754131"
+        }
+      ]
+    },
+    {
+      "name": "openssl-sys",
+      "version": "0.9.117",
+      "license": "MIT",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/openssl-sys-0.9.117/LICENSE-MIT",
+          "text": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397"
+        }
+      ]
+    },
+    {
+      "name": "libc",
+      "version": "0.2.189",
+      "license": "MIT OR Apache-2.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/libc-0.2.189/LICENSE-APACHE",
+          "text": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+        },
+        {
+          "file": "licenses/rust/libc-0.2.189/LICENSE-MIT",
+          "text": "123a331b5dbf04c30097fa43b8f858bc85df671fe776de498d01f3d6b7c1f69e"
+        }
+      ]
+    },
+    {
+      "name": "rust-embed",
+      "version": "8.12.0",
+      "license": "MIT",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/rust-embed-8.12.0/LICENSE",
+          "text": "d517148a36db1081efe894d3534c5c3d2694d1fea434f8b0c5a5871016374495"
+        }
+      ]
+    },
+    {
+      "name": "rust-embed-impl",
+      "version": "8.12.0",
+      "license": "MIT",
+      "scope": "generated",
+      "notices": [
+        {
+          "file": "licenses/rust/rust-embed-impl-8.12.0/LICENSE",
+          "text": "d517148a36db1081efe894d3534c5c3d2694d1fea434f8b0c5a5871016374495"
+        }
+      ]
+    },
+    {
+      "name": "rust-embed-utils",
+      "version": "8.12.0",
+      "license": "MIT",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/rust-embed-utils-8.12.0/LICENSE",
+          "text": "d517148a36db1081efe894d3534c5c3d2694d1fea434f8b0c5a5871016374495"
+        }
+      ]
+    },
+    {
+      "name": "sha2",
+      "version": "0.11.0",
+      "license": "MIT OR Apache-2.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/sha2-0.11.0/LICENSE-APACHE",
+          "text": "a9040321c3712d8fd0b09cf52b17445de04a23a10165049ae187cd39e5c86be5"
+        },
+        {
+          "file": "licenses/rust/sha2-0.11.0/LICENSE-MIT",
+          "text": "831e0f43ad0bf014c1c4fec5767aae470434c1d66d6e671be2d823e729063e25"
+        }
+      ]
+    },
+    {
+      "name": "digest",
+      "version": "0.11.3",
+      "license": "MIT OR Apache-2.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/digest-0.11.3/LICENSE-APACHE",
+          "text": "a9040321c3712d8fd0b09cf52b17445de04a23a10165049ae187cd39e5c86be5"
+        },
+        {
+          "file": "licenses/rust/digest-0.11.3/LICENSE-MIT",
+          "text": "af59cea35d7f5e2777a713b8d155d65efa2c339eb43f3c14e868c6ac8506edad"
+        }
+      ]
+    },
+    {
+      "name": "const-oid",
+      "version": "0.10.2",
+      "license": "Apache-2.0 OR MIT",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/const-oid-0.10.2/LICENSE-APACHE",
+          "text": "a9040321c3712d8fd0b09cf52b17445de04a23a10165049ae187cd39e5c86be5"
+        },
+        {
+          "file": "licenses/rust/const-oid-0.10.2/LICENSE-MIT",
+          "text": "73b9dc2e79c7308998dd30296e073aefaefb944a68fb89aa412c23c0edcabcaa"
+        }
+      ]
+    },
+    {
+      "name": "walkdir",
+      "version": "2.5.0",
+      "license": "Unlicense/MIT",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/walkdir-2.5.0/COPYING",
+          "text": "01c266bced4a434da0051174d6bee16a4c82cf634e2679b6155d40d75012390f"
+        },
+        {
+          "file": "licenses/rust/walkdir-2.5.0/LICENSE-MIT",
+          "text": "0f96a83840e146e43c0ec96a22ec1f392e0680e6c1226e6f3ba87e0740af850f"
+        }
+      ]
+    },
+    {
+      "name": "same-file",
+      "version": "1.0.6",
+      "license": "Unlicense/MIT",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/same-file-1.0.6/COPYING",
+          "text": "01c266bced4a434da0051174d6bee16a4c82cf634e2679b6155d40d75012390f"
+        },
+        {
+          "file": "licenses/rust/same-file-1.0.6/LICENSE-MIT",
+          "text": "cb3c929a05e6cbc9de9ab06a4c57eeb60ca8c724bef6c138c87d3a577e27aa14"
+        }
+      ]
+    },
+    {
+      "name": "winapi-util",
+      "version": "0.1.11",
+      "license": "Unlicense OR MIT",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/winapi-util-0.1.11/COPYING",
+          "text": "01c266bced4a434da0051174d6bee16a4c82cf634e2679b6155d40d75012390f"
+        },
+        {
+          "file": "licenses/rust/winapi-util-0.1.11/LICENSE-MIT",
+          "text": "cb3c929a05e6cbc9de9ab06a4c57eeb60ca8c724bef6c138c87d3a577e27aa14"
+        }
+      ]
+    },
+    {
+      "name": "sha2",
+      "version": "0.10.9",
+      "license": "MIT OR Apache-2.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/sha2-0.10.9/LICENSE-APACHE",
+          "text": "a9040321c3712d8fd0b09cf52b17445de04a23a10165049ae187cd39e5c86be5"
+        },
+        {
+          "file": "licenses/rust/sha2-0.10.9/LICENSE-MIT",
+          "text": "b4eb00df6e2a4d22518fcaa6a2b4646f249b3a3c9814509b22bd2091f1392ff1"
+        }
+      ]
+    },
+    {
+      "name": "tao",
+      "version": "0.30.8",
+      "license": "Apache-2.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/tao-0.30.8/LICENSE",
+          "text": "6dc0e068dcf3a5bc8e054205b85b7720e1d49265bbc64bf515d2cf79197df69a"
+        },
+        {
+          "file": "licenses/rust/tao-0.30.8/LICENSE.spdx",
+          "text": "02b6448337b757772d90e5f31caaa0f9e6afaad2221c01771d0a3deaa4d4196c"
+        }
+      ]
+    },
+    {
+      "name": "crossbeam-channel",
+      "version": "0.5.16",
+      "license": "MIT OR Apache-2.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/crossbeam-channel-0.5.16/LICENSE-APACHE",
+          "text": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "file": "licenses/rust/crossbeam-channel-0.5.16/LICENSE-MIT",
+          "text": "5734ed989dfca1f625b40281ee9f4530f91b2411ec01cb748223e7eb87e201ab"
+        },
+        {
+          "file": "licenses/rust/crossbeam-channel-0.5.16/LICENSE-THIRD-PARTY",
+          "text": "b16db96b93b1d7cf7bea533f572091ec6bca3234fbe0a83038be772ff391a44c"
+        }
+      ]
+    },
+    {
+      "name": "crossbeam-utils",
+      "version": "0.8.22",
+      "license": "MIT OR Apache-2.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/crossbeam-utils-0.8.22/LICENSE-APACHE",
+          "text": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "file": "licenses/rust/crossbeam-utils-0.8.22/LICENSE-MIT",
+          "text": "5734ed989dfca1f625b40281ee9f4530f91b2411ec01cb748223e7eb87e201ab"
+        }
+      ]
+    },
+    {
+      "name": "dpi",
+      "version": "0.1.2",
+      "license": "Apache-2.0 AND MIT",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/dpi-0.1.2/LICENSE",
+          "text": "6dc0e068dcf3a5bc8e054205b85b7720e1d49265bbc64bf515d2cf79197df69a"
+        },
+        {
+          "file": "licenses/rust/dpi-0.1.2/LICENSE-LIBM-MIT",
+          "text": "9eff396a99bafd208e7126602420d6864f6066c08b84485a5b032320a9c01997"
+        }
+      ]
+    },
+    {
+      "name": "instant",
+      "version": "0.1.13",
+      "license": "BSD-3-Clause",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/instant-0.1.13/AUTHORS",
+          "text": "451a1be16acafff0cb0eaedc49b46063cc6ce087d0c36f6d64d67aa93d20e485"
+        },
+        {
+          "file": "licenses/rust/instant-0.1.13/LICENSE",
+          "text": "2510d4cde8c4e13d8c54b9fe2a9d144daf567ec8d02832f1454e7ca2d58cdda6"
+        }
+      ]
+    },
+    {
+      "name": "lazy_static",
+      "version": "1.5.0",
+      "license": "MIT OR Apache-2.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/lazy_static-1.5.0/LICENSE-APACHE",
+          "text": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "file": "licenses/rust/lazy_static-1.5.0/LICENSE-MIT",
+          "text": "0621878e61f0d0fda054bcbe02df75192c28bde1ecc8289cbd86aeba2dd72720"
+        }
+      ]
+    },
+    {
+      "name": "unicode-segmentation",
+      "version": "1.13.3",
+      "license": "MIT OR Apache-2.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/unicode-segmentation-1.13.3/COPYRIGHT",
+          "text": "23860c2a7b5d96b21569afedf033469bab9fe14a1b24a35068b8641c578ce24d"
+        },
+        {
+          "file": "licenses/rust/unicode-segmentation-1.13.3/LICENSE-APACHE",
+          "text": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "file": "licenses/rust/unicode-segmentation-1.13.3/LICENSE-MIT",
+          "text": "7b63ecd5f1902af1b63729947373683c32745c16a10e8e6292e2e2dcd7e90ae0"
+        }
+      ]
+    },
+    {
+      "name": "url",
+      "version": "2.5.8",
+      "license": "MIT OR Apache-2.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/url-2.5.8/LICENSE-APACHE",
+          "text": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "file": "licenses/rust/url-2.5.8/LICENSE-MIT",
+          "text": "b38f11f6096706e6de553dabe2a7ed142d59b6fa8c97e290c67496154745cdd5"
+        }
+      ]
+    },
+    {
+      "name": "idna",
+      "version": "1.1.0",
+      "license": "MIT OR Apache-2.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/idna-1.1.0/LICENSE-APACHE",
+          "text": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "file": "licenses/rust/idna-1.1.0/LICENSE-MIT",
+          "text": "b38f11f6096706e6de553dabe2a7ed142d59b6fa8c97e290c67496154745cdd5"
+        }
+      ]
+    },
+    {
+      "name": "idna_adapter",
+      "version": "1.2.2",
+      "license": "Apache-2.0 OR MIT",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/idna_adapter-1.2.2/LICENSE-APACHE",
+          "text": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "file": "licenses/rust/idna_adapter-1.2.2/LICENSE-MIT",
+          "text": "8b43ce8accd61e9d370b5ca9e9c4f953279b5c239926c62315b40e24df51b726"
+        }
+      ]
+    },
+    {
+      "name": "icu_normalizer",
+      "version": "2.2.0",
+      "license": "Unicode-3.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/icu_normalizer-2.2.0/LICENSE",
+          "text": "f367c1b8e1aa262435251e442901da4607b4650e0e63a026f5044473ecfb90f2"
+        }
+      ]
+    },
+    {
+      "name": "icu_collections",
+      "version": "2.2.0",
+      "license": "Unicode-3.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/icu_collections-2.2.0/LICENSE",
+          "text": "f367c1b8e1aa262435251e442901da4607b4650e0e63a026f5044473ecfb90f2"
+        }
+      ]
+    },
+    {
+      "name": "displaydoc",
+      "version": "0.2.7",
+      "license": "MIT OR Apache-2.0",
+      "scope": "generated",
+      "notices": [
+        {
+          "file": "licenses/rust/displaydoc-0.2.7/LICENSE-APACHE",
+          "text": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "file": "licenses/rust/displaydoc-0.2.7/LICENSE-MIT",
+          "text": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+        }
+      ]
+    },
+    {
+      "name": "potential_utf",
+      "version": "0.1.5",
+      "license": "Unicode-3.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/potential_utf-0.1.5/LICENSE",
+          "text": "f367c1b8e1aa262435251e442901da4607b4650e0e63a026f5044473ecfb90f2"
+        }
+      ]
+    },
+    {
+      "name": "zerovec",
+      "version": "0.11.6",
+      "license": "Unicode-3.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/zerovec-0.11.6/LICENSE",
+          "text": "f367c1b8e1aa262435251e442901da4607b4650e0e63a026f5044473ecfb90f2"
+        }
+      ]
+    },
+    {
+      "name": "yoke",
+      "version": "0.8.3",
+      "license": "Unicode-3.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/yoke-0.8.3/LICENSE",
+          "text": "f367c1b8e1aa262435251e442901da4607b4650e0e63a026f5044473ecfb90f2"
+        }
+      ]
+    },
+    {
+      "name": "stable_deref_trait",
+      "version": "1.2.1",
+      "license": "MIT OR Apache-2.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/stable_deref_trait-1.2.1/LICENSE-APACHE",
+          "text": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "file": "licenses/rust/stable_deref_trait-1.2.1/LICENSE-MIT",
+          "text": "5e05b024f653a5ce199e77cbbbd42fb5553562ec714b819421ed0c3e552a75d7"
+        }
+      ]
+    },
+    {
+      "name": "yoke-derive",
+      "version": "0.8.2",
+      "license": "Unicode-3.0",
+      "scope": "generated",
+      "notices": [
+        {
+          "file": "licenses/rust/yoke-derive-0.8.2/LICENSE",
+          "text": "f367c1b8e1aa262435251e442901da4607b4650e0e63a026f5044473ecfb90f2"
+        }
+      ]
+    },
+    {
+      "name": "zerofrom",
+      "version": "0.1.8",
+      "license": "Unicode-3.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/zerofrom-0.1.8/LICENSE",
+          "text": "f367c1b8e1aa262435251e442901da4607b4650e0e63a026f5044473ecfb90f2"
+        }
+      ]
+    },
+    {
+      "name": "zerofrom-derive",
+      "version": "0.1.7",
+      "license": "Unicode-3.0",
+      "scope": "generated",
+      "notices": [
+        {
+          "file": "licenses/rust/zerofrom-derive-0.1.7/LICENSE",
+          "text": "f367c1b8e1aa262435251e442901da4607b4650e0e63a026f5044473ecfb90f2"
+        }
+      ]
+    },
+    {
+      "name": "zerovec-derive",
+      "version": "0.11.3",
+      "license": "Unicode-3.0",
+      "scope": "generated",
+      "notices": [
+        {
+          "file": "licenses/rust/zerovec-derive-0.11.3/LICENSE",
+          "text": "f367c1b8e1aa262435251e442901da4607b4650e0e63a026f5044473ecfb90f2"
+        }
+      ]
+    },
+    {
+      "name": "utf8_iter",
+      "version": "1.0.4",
+      "license": "Apache-2.0 OR MIT",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/utf8_iter-1.0.4/COPYRIGHT",
+          "text": "c30152c94a6d75e021adbc52b3a52470366a46edb917e17deae3259251af244c"
+        },
+        {
+          "file": "licenses/rust/utf8_iter-1.0.4/LICENSE-APACHE",
+          "text": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+        },
+        {
+          "file": "licenses/rust/utf8_iter-1.0.4/LICENSE-MIT",
+          "text": "3fa4ca83dcc9237839b1bdeb2e6d16bdfb5ec0c5ce42b24694d8bbf0dcbef72c"
+        }
+      ]
+    },
+    {
+      "name": "icu_normalizer_data",
+      "version": "2.2.0",
+      "license": "Unicode-3.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/icu_normalizer_data-2.2.0/LICENSE",
+          "text": "f367c1b8e1aa262435251e442901da4607b4650e0e63a026f5044473ecfb90f2"
+        }
+      ]
+    },
+    {
+      "name": "icu_properties",
+      "version": "2.2.0",
+      "license": "Unicode-3.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/icu_properties-2.2.0/LICENSE",
+          "text": "f367c1b8e1aa262435251e442901da4607b4650e0e63a026f5044473ecfb90f2"
+        }
+      ]
+    },
+    {
+      "name": "icu_locale_core",
+      "version": "2.2.0",
+      "license": "Unicode-3.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/icu_locale_core-2.2.0/LICENSE",
+          "text": "f367c1b8e1aa262435251e442901da4607b4650e0e63a026f5044473ecfb90f2"
+        }
+      ]
+    },
+    {
+      "name": "litemap",
+      "version": "0.8.2",
+      "license": "Unicode-3.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/litemap-0.8.2/LICENSE",
+          "text": "f367c1b8e1aa262435251e442901da4607b4650e0e63a026f5044473ecfb90f2"
+        }
+      ]
+    },
+    {
+      "name": "tinystr",
+      "version": "0.8.3",
+      "license": "Unicode-3.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/tinystr-0.8.3/LICENSE",
+          "text": "f367c1b8e1aa262435251e442901da4607b4650e0e63a026f5044473ecfb90f2"
+        }
+      ]
+    },
+    {
+      "name": "writeable",
+      "version": "0.6.3",
+      "license": "Unicode-3.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/writeable-0.6.3/LICENSE",
+          "text": "f367c1b8e1aa262435251e442901da4607b4650e0e63a026f5044473ecfb90f2"
+        }
+      ]
+    },
+    {
+      "name": "icu_properties_data",
+      "version": "2.2.0",
+      "license": "Unicode-3.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/icu_properties_data-2.2.0/LICENSE",
+          "text": "f367c1b8e1aa262435251e442901da4607b4650e0e63a026f5044473ecfb90f2"
+        }
+      ]
+    },
+    {
+      "name": "icu_provider",
+      "version": "2.2.0",
+      "license": "Unicode-3.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/icu_provider-2.2.0/LICENSE",
+          "text": "f367c1b8e1aa262435251e442901da4607b4650e0e63a026f5044473ecfb90f2"
+        }
+      ]
+    },
+    {
+      "name": "zerotrie",
+      "version": "0.2.4",
+      "license": "Unicode-3.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/zerotrie-0.2.4/LICENSE",
+          "text": "f367c1b8e1aa262435251e442901da4607b4650e0e63a026f5044473ecfb90f2"
+        }
+      ]
+    },
+    {
+      "name": "windows",
+      "version": "0.58.0",
+      "license": "MIT OR Apache-2.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/windows-0.58.0/license-apache-2.0",
+          "text": "c16f8dcf1a368b83be78d826ea23de4079fe1b4469a0ab9ee20563f37ff3d44b"
+        },
+        {
+          "file": "licenses/rust/windows-0.58.0/license-mit",
+          "text": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383"
+        }
+      ]
+    },
+    {
+      "name": "windows-core",
+      "version": "0.58.0",
+      "license": "MIT OR Apache-2.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/windows-core-0.58.0/license-apache-2.0",
+          "text": "c16f8dcf1a368b83be78d826ea23de4079fe1b4469a0ab9ee20563f37ff3d44b"
+        },
+        {
+          "file": "licenses/rust/windows-core-0.58.0/license-mit",
+          "text": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383"
+        }
+      ]
+    },
+    {
+      "name": "windows-implement",
+      "version": "0.58.0",
+      "license": "MIT OR Apache-2.0",
+      "scope": "generated",
+      "notices": [
+        {
+          "file": "licenses/rust/windows-implement-0.58.0/license-apache-2.0",
+          "text": "c16f8dcf1a368b83be78d826ea23de4079fe1b4469a0ab9ee20563f37ff3d44b"
+        },
+        {
+          "file": "licenses/rust/windows-implement-0.58.0/license-mit",
+          "text": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383"
+        }
+      ]
+    },
+    {
+      "name": "windows-interface",
+      "version": "0.58.0",
+      "license": "MIT OR Apache-2.0",
+      "scope": "generated",
+      "notices": [
+        {
+          "file": "licenses/rust/windows-interface-0.58.0/license-apache-2.0",
+          "text": "c16f8dcf1a368b83be78d826ea23de4079fe1b4469a0ab9ee20563f37ff3d44b"
+        },
+        {
+          "file": "licenses/rust/windows-interface-0.58.0/license-mit",
+          "text": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383"
+        }
+      ]
+    },
+    {
+      "name": "windows-result",
+      "version": "0.2.0",
+      "license": "MIT OR Apache-2.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/windows-result-0.2.0/license-apache-2.0",
+          "text": "c16f8dcf1a368b83be78d826ea23de4079fe1b4469a0ab9ee20563f37ff3d44b"
+        },
+        {
+          "file": "licenses/rust/windows-result-0.2.0/license-mit",
+          "text": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383"
+        }
+      ]
+    },
+    {
+      "name": "windows-strings",
+      "version": "0.1.0",
+      "license": "MIT OR Apache-2.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/windows-strings-0.1.0/license-apache-2.0",
+          "text": "c16f8dcf1a368b83be78d826ea23de4079fe1b4469a0ab9ee20563f37ff3d44b"
+        },
+        {
+          "file": "licenses/rust/windows-strings-0.1.0/license-mit",
+          "text": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383"
+        }
+      ]
+    },
+    {
+      "name": "windows-version",
+      "version": "0.1.7",
+      "license": "MIT OR Apache-2.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/windows-version-0.1.7/license-apache-2.0",
+          "text": "c16f8dcf1a368b83be78d826ea23de4079fe1b4469a0ab9ee20563f37ff3d44b"
+        },
+        {
+          "file": "licenses/rust/windows-version-0.1.7/license-mit",
+          "text": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383"
+        }
+      ]
+    },
+    {
+      "name": "tar",
+      "version": "0.4.46",
+      "license": "MIT OR Apache-2.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/tar-0.4.46/LICENSE-APACHE",
+          "text": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "file": "licenses/rust/tar-0.4.46/LICENSE-MIT",
+          "text": "8ca6b96cea9e67c6c5c63f452c31bd396db8bd2406231fdea5d48ef462b48077"
+        }
+      ]
+    },
+    {
+      "name": "filetime",
+      "version": "0.2.29",
+      "license": "MIT/Apache-2.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/filetime-0.2.29/LICENSE-APACHE",
+          "text": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "file": "licenses/rust/filetime-0.2.29/LICENSE-MIT",
+          "text": "378f5840b258e2779c39418f3f2d7b2ba96f1c7917dd6be0713f88305dbda397"
+        }
+      ]
+    },
+    {
+      "name": "tower-http",
+      "version": "0.5.2",
+      "license": "MIT",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/tower-http-0.5.2/LICENSE",
+          "text": "5049cf464977eff4b4fcfa7988d84e74116956a3eb9d5f1d451b3f828f945233"
+        }
+      ]
+    },
+    {
+      "name": "http-range-header",
+      "version": "0.4.2",
+      "license": "MIT",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/http-range-header-0.4.2/LICENSE",
+          "text": "ed72515b08d7ce8a497e7cb8418a0c93f5b0a119349db4f3b8a0dcf6cb76951a"
+        }
+      ]
+    },
+    {
+      "name": "tokio-util",
+      "version": "0.7.19",
+      "license": "MIT",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/tokio-util-0.7.19/LICENSE",
+          "text": "253cd04c6714889df2d32f3f64d669179a1c95c76ac43c40882c52eb06bc3552"
+        }
+      ]
+    },
+    {
+      "name": "futures-sink",
+      "version": "0.3.33",
+      "license": "MIT OR Apache-2.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/futures-sink-0.3.33/LICENSE-APACHE",
+          "text": "275c491d6d1160553c32fd6127061d7f9606c3ea25abfad6ca3f6ed088785427"
+        },
+        {
+          "file": "licenses/rust/futures-sink-0.3.33/LICENSE-MIT",
+          "text": "6652c868f35dfe5e8ef636810a4e576b9d663f3a17fb0f5613ad73583e1b88fd"
+        }
+      ]
+    },
+    {
+      "name": "wry",
+      "version": "0.47.2",
+      "license": "Apache-2.0 OR MIT",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/wry-0.47.2/LICENSE-APACHE",
+          "text": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "file": "licenses/rust/wry-0.47.2/LICENSE-MIT",
+          "text": "ef88893533af22ffbb68ceef0724ba1389518df26165a34f3c99ad30b884df4f"
+        },
+        {
+          "file": "licenses/rust/wry-0.47.2/LICENSE.spdx",
+          "text": "26235c41e314fb0da35b33b2bb5bcbc4dd523839f8eeca52efcd43586f441fb5"
+        }
+      ]
+    },
+    {
+      "name": "cookie",
+      "version": "0.18.1",
+      "license": "MIT OR Apache-2.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/cookie-0.18.1/LICENSE-APACHE",
+          "text": "2773e20df8f4c52a026b5b578c7f2457341f5aa3fb6612fd87e1d2e1bd8f48ad"
+        },
+        {
+          "file": "licenses/rust/cookie-0.18.1/LICENSE-MIT",
+          "text": "f28420c1906af38be726cd7842798f0194b27c41d6051c0d1e9ee348b8a4a0ea"
+        }
+      ]
+    },
+    {
+      "name": "time",
+      "version": "0.3.55",
+      "license": "MIT OR Apache-2.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/time-0.3.55/LICENSE-Apache",
+          "text": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+        },
+        {
+          "file": "licenses/rust/time-0.3.55/LICENSE-MIT",
+          "text": "2537228d9a1b44a5dc595241349cae7090b326c8de165aaf89bfddef4a00d0fc"
+        }
+      ]
+    },
+    {
+      "name": "deranged",
+      "version": "0.5.8",
+      "license": "MIT OR Apache-2.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/deranged-0.5.8/LICENSE-Apache",
+          "text": "edd65bdd88957a205c47d53fa499eed8865a70320f0f03f6391668cb304ea376"
+        },
+        {
+          "file": "licenses/rust/deranged-0.5.8/LICENSE-MIT",
+          "text": "231c837c45eb53f108fb48929e488965bc4fcc14e9ea21d35f50e6b99d98685b"
+        }
+      ]
+    },
+    {
+      "name": "num-conv",
+      "version": "0.2.2",
+      "license": "MIT OR Apache-2.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/num-conv-0.2.2/LICENSE-Apache",
+          "text": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+        },
+        {
+          "file": "licenses/rust/num-conv-0.2.2/LICENSE-MIT",
+          "text": "e2e245f2b566d0bfafb0f6a04c16b82d710c4e6e7d799e39bb4ef6e541b85b98"
+        }
+      ]
+    },
+    {
+      "name": "powerfmt",
+      "version": "0.2.0",
+      "license": "MIT OR Apache-2.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/powerfmt-0.2.0/LICENSE-Apache",
+          "text": "155420c6403d4e0fca34105e3c03fdd6939b64c393c7ec6f95f5b72c5474eab0"
+        },
+        {
+          "file": "licenses/rust/powerfmt-0.2.0/LICENSE-MIT",
+          "text": "070dbc7dda03a29296f2d58bdb9b7331af90f2abc9f31df22875d1eabaf29852"
+        }
+      ]
+    },
+    {
+      "name": "time-core",
+      "version": "0.1.9",
+      "license": "MIT OR Apache-2.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/time-core-0.1.9/LICENSE-Apache",
+          "text": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+        },
+        {
+          "file": "licenses/rust/time-core-0.1.9/LICENSE-MIT",
+          "text": "2537228d9a1b44a5dc595241349cae7090b326c8de165aaf89bfddef4a00d0fc"
+        }
+      ]
+    },
+    {
+      "name": "time-macros",
+      "version": "0.2.32",
+      "license": "MIT OR Apache-2.0",
+      "scope": "generated",
+      "notices": [
+        {
+          "file": "licenses/rust/time-macros-0.2.32/LICENSE-Apache",
+          "text": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+        },
+        {
+          "file": "licenses/rust/time-macros-0.2.32/LICENSE-MIT",
+          "text": "2537228d9a1b44a5dc595241349cae7090b326c8de165aaf89bfddef4a00d0fc"
+        }
+      ]
+    },
+    {
+      "name": "dunce",
+      "version": "1.0.5",
+      "license": "CC0-1.0 OR MIT-0 OR Apache-2.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/dunce-1.0.5/LICENSE",
+          "text": "a2010f343487d3f7618affe54f789f5487602331c0a8d03f49e9a7c547cf0499"
+        }
+      ]
+    },
+    {
+      "name": "thiserror",
+      "version": "1.0.69",
+      "license": "MIT OR Apache-2.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/thiserror-1.0.69/LICENSE-APACHE",
+          "text": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+        },
+        {
+          "file": "licenses/rust/thiserror-1.0.69/LICENSE-MIT",
+          "text": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+        }
+      ]
+    },
+    {
+      "name": "thiserror-impl",
+      "version": "1.0.69",
+      "license": "MIT OR Apache-2.0",
+      "scope": "generated",
+      "notices": [
+        {
+          "file": "licenses/rust/thiserror-impl-1.0.69/LICENSE-APACHE",
+          "text": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+        },
+        {
+          "file": "licenses/rust/thiserror-impl-1.0.69/LICENSE-MIT",
+          "text": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+        }
+      ]
+    },
+    {
+      "name": "webview2-com",
+      "version": "0.33.0",
+      "license": "MIT",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/webview2-com-0.33.0/LICENSE",
+          "text": "0dcf41516e608bbcb6cdc5229feb7b86fe4a643b85e7df251133c93408fdac73"
+        }
+      ]
+    },
+    {
+      "name": "webview2-com-macros",
+      "version": "0.8.1",
+      "license": "MIT",
+      "scope": "generated",
+      "notices": [
+        {
+          "file": "licenses/rust/webview2-com-macros-0.8.1/LICENSE",
+          "text": "0dcf41516e608bbcb6cdc5229feb7b86fe4a643b85e7df251133c93408fdac73"
+        }
+      ]
+    },
+    {
+      "name": "webview2-com-sys",
+      "version": "0.33.0",
+      "license": "MIT",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/webview2-com-sys-0.33.0/LICENSE",
+          "text": "0dcf41516e608bbcb6cdc5229feb7b86fe4a643b85e7df251133c93408fdac73"
+        }
+      ]
+    },
+    {
+      "name": "zip",
+      "version": "2.4.2",
+      "license": "MIT",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/zip-2.4.2/LICENSE",
+          "text": "04dc52136d82400b11df5f474949863a70a5d05d2278dec45b99c479494450a6"
+        }
+      ]
+    },
+    {
+      "name": "aes",
+      "version": "0.8.4",
+      "license": "MIT OR Apache-2.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/aes-0.8.4/LICENSE-APACHE",
+          "text": "a9040321c3712d8fd0b09cf52b17445de04a23a10165049ae187cd39e5c86be5"
+        },
+        {
+          "file": "licenses/rust/aes-0.8.4/LICENSE-MIT",
+          "text": "f7e8ab639afef15573680c97f796166835cbeb3865175882fea41c60d106b733"
+        }
+      ]
+    },
+    {
+      "name": "cipher",
+      "version": "0.4.4",
+      "license": "MIT OR Apache-2.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/cipher-0.4.4/LICENSE-APACHE",
+          "text": "a9040321c3712d8fd0b09cf52b17445de04a23a10165049ae187cd39e5c86be5"
+        },
+        {
+          "file": "licenses/rust/cipher-0.4.4/LICENSE-MIT",
+          "text": "5c7bd92d1f096f12203dc1b601e3cb17484fa1b023e30b6b8edcc80e416237ec"
+        }
+      ]
+    },
+    {
+      "name": "inout",
+      "version": "0.1.4",
+      "license": "MIT OR Apache-2.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/inout-0.1.4/LICENSE-APACHE",
+          "text": "a9040321c3712d8fd0b09cf52b17445de04a23a10165049ae187cd39e5c86be5"
+        },
+        {
+          "file": "licenses/rust/inout-0.1.4/LICENSE-MIT",
+          "text": "304b898acad7f02e03d6d8832d682a3b43ee729ab5d3a069af5a36979083b6b4"
+        }
+      ]
+    },
+    {
+      "name": "bzip2",
+      "version": "0.5.2",
+      "license": "MIT OR Apache-2.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/bzip2-0.5.2/LICENSE-APACHE",
+          "text": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "file": "licenses/rust/bzip2-0.5.2/LICENSE-MIT",
+          "text": "c8c6324cf2f0f076e3ed5dea4a21f00bd4dd6fce44f72b110bc52e7fe06f6e1e"
+        }
+      ]
+    },
+    {
+      "name": "bzip2-sys",
+      "version": "0.1.13+1.0.8",
+      "license": "MIT/Apache-2.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/bzip2-sys-0.1.13+1.0.8/bzip2-1.0.8/LICENSE",
+          "text": "c6dbbf828498be844a89eaa3b84adbab3199e342eb5cb2ed2f0d4ba7ec0f38a3"
+        },
+        {
+          "file": "licenses/rust/bzip2-sys-0.1.13+1.0.8/LICENSE-APACHE",
+          "text": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "file": "licenses/rust/bzip2-sys-0.1.13+1.0.8/LICENSE-MIT",
+          "text": "c8c6324cf2f0f076e3ed5dea4a21f00bd4dd6fce44f72b110bc52e7fe06f6e1e"
+        }
+      ]
+    },
+    {
+      "name": "constant_time_eq",
+      "version": "0.3.1",
+      "license": "CC0-1.0 OR MIT-0 OR Apache-2.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/constant_time_eq-0.3.1/LICENSE-APACHE",
+          "text": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+        },
+        {
+          "file": "licenses/rust/constant_time_eq-0.3.1/LICENSE-CC0",
+          "text": "a2010f343487d3f7618affe54f789f5487602331c0a8d03f49e9a7c547cf0499"
+        },
+        {
+          "file": "licenses/rust/constant_time_eq-0.3.1/LICENSE-MIT0",
+          "text": "9a3aeb3f63659c4c6302d315e1d98784d1e8559858a47ff9562e091bb922d28d"
+        }
+      ]
+    },
+    {
+      "name": "crc32fast",
+      "version": "1.5.0",
+      "license": "MIT OR Apache-2.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/crc32fast-1.5.0/LICENSE-APACHE",
+          "text": "c6596eb7be8581c18be736c846fb9173b69eccf6ef94c5135893ec56bd92ba08"
+        },
+        {
+          "file": "licenses/rust/crc32fast-1.5.0/LICENSE-MIT",
+          "text": "61d383b05b87d78f94d2937e2580cce47226d17823c0430fbcad09596537efcf"
+        }
+      ]
+    },
+    {
+      "name": "deflate64",
+      "version": "0.1.12",
+      "license": "MIT",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/deflate64-0.1.12/LICENSE",
+          "text": "86b5aedec040ac6eab419af61a8f0aea48ab0037c4b764e5cff5df15bee40df2"
+        }
+      ]
+    },
+    {
+      "name": "flate2",
+      "version": "1.1.9",
+      "license": "MIT OR Apache-2.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/flate2-1.1.9/LICENSE-APACHE",
+          "text": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "file": "licenses/rust/flate2-1.1.9/LICENSE-MIT",
+          "text": "025436edff4cfcdde17a5811fdea78892d8482efd1abdec5a17872d07a4f2112"
+        }
+      ]
+    },
+    {
+      "name": "miniz_oxide",
+      "version": "0.8.9",
+      "license": "MIT OR Zlib OR Apache-2.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/miniz_oxide-0.8.9/LICENSE",
+          "text": "4108245a1f2df9d4e94df8abed5b4ba0759bb2f9b40a6b939f1be141077ae50b"
+        },
+        {
+          "file": "licenses/rust/miniz_oxide-0.8.9/LICENSE-APACHE.md",
+          "text": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+        },
+        {
+          "file": "licenses/rust/miniz_oxide-0.8.9/LICENSE-MIT.md",
+          "text": "799e9ca9d179295ef372f25d3769cdda7d25bb2668add6a6a1e22d1e4c678b8d"
+        },
+        {
+          "file": "licenses/rust/miniz_oxide-0.8.9/LICENSE-ZLIB.md",
+          "text": "0a54e647fe54104658b5e563c04c6f9edf251710e47bce692e0bd990a4ddaa39"
+        }
+      ]
+    },
+    {
+      "name": "adler2",
+      "version": "2.0.1",
+      "license": "0BSD OR MIT OR Apache-2.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/adler2-2.0.1/LICENSE-0BSD",
+          "text": "861399f8c21c042b110517e76dc6b63a2b334276c8cf17412fc3c8908ca8dc17"
+        },
+        {
+          "file": "licenses/rust/adler2-2.0.1/LICENSE-APACHE",
+          "text": "8ada45cd9f843acf64e4722ae262c622a2b3b3007c7310ef36ac1061a30f6adb"
+        },
+        {
+          "file": "licenses/rust/adler2-2.0.1/LICENSE-MIT",
+          "text": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+        }
+      ]
+    },
+    {
+      "name": "simd-adler32",
+      "version": "0.3.10",
+      "license": "MIT",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/simd-adler32-0.3.10/LICENSE.md",
+          "text": "42a35170233e83e18856792e748de4c1ce4a63b2afce9a370c89ef3fe23f9f2d"
+        }
+      ]
+    },
+    {
+      "name": "indexmap",
+      "version": "2.14.0",
+      "license": "Apache-2.0 OR MIT",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/indexmap-2.14.0/LICENSE-APACHE",
+          "text": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "file": "licenses/rust/indexmap-2.14.0/LICENSE-MIT",
+          "text": "ecc269ef87fd38a1d98e30bfac9ba964a9dbd9315c3770fed98d4d7cb5882055"
+        }
+      ]
+    },
+    {
+      "name": "equivalent",
+      "version": "1.0.2",
+      "license": "Apache-2.0 OR MIT",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/equivalent-1.0.2/LICENSE-APACHE",
+          "text": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "file": "licenses/rust/equivalent-1.0.2/LICENSE-MIT",
+          "text": "7365cc8878a1d7ce155a58c4ca09c3d7a6be413efa5334a80ea842912b669349"
+        }
+      ]
+    },
+    {
+      "name": "lzma-rs",
+      "version": "0.3.0",
+      "license": "MIT",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/lzma-rs-0.3.0/LICENSE",
+          "text": "ad9f07faa5f6f671df93523293cf8c1ce24f14886fa101013c21536c7890c59b"
+        }
+      ]
+    },
+    {
+      "name": "byteorder",
+      "version": "1.5.0",
+      "license": "Unlicense OR MIT",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/byteorder-1.5.0/COPYING",
+          "text": "01c266bced4a434da0051174d6bee16a4c82cf634e2679b6155d40d75012390f"
+        },
+        {
+          "file": "licenses/rust/byteorder-1.5.0/LICENSE-MIT",
+          "text": "0f96a83840e146e43c0ec96a22ec1f392e0680e6c1226e6f3ba87e0740af850f"
+        }
+      ]
+    },
+    {
+      "name": "crc",
+      "version": "3.4.0",
+      "license": "MIT OR Apache-2.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/crc-3.4.0/LICENSE-APACHE",
+          "text": "470355a7eed93fcc4281ec2e0f82ca3b94e7af1e4d83629f91de8cfac34d750e"
+        },
+        {
+          "file": "licenses/rust/crc-3.4.0/LICENSE-MIT",
+          "text": "3488679340a49ecc34d342c4009d2dabf76f4a21f12aec2ca99b15805d656544"
+        }
+      ]
+    },
+    {
+      "name": "crc-catalog",
+      "version": "2.5.0",
+      "license": "MIT OR Apache-2.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/crc-catalog-2.5.0/LICENSES/Apache-2.0.txt",
+          "text": "d3cdb764b98283ee7c3a3cea8d374e2a2957322374378d1f3263f4d512741fc3"
+        },
+        {
+          "file": "licenses/rust/crc-catalog-2.5.0/LICENSES/MIT.txt",
+          "text": "5ef8fcfb6cccec8fcae043c834099a60c8b7406408db576e026d2b7e67dc5cf5"
+        }
+      ]
+    },
+    {
+      "name": "pbkdf2",
+      "version": "0.12.2",
+      "license": "MIT OR Apache-2.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/pbkdf2-0.12.2/LICENSE-APACHE",
+          "text": "a9040321c3712d8fd0b09cf52b17445de04a23a10165049ae187cd39e5c86be5"
+        },
+        {
+          "file": "licenses/rust/pbkdf2-0.12.2/LICENSE-MIT",
+          "text": "8ea5cea8ddecc46a64a004406414d25529fca7eb71cfd8c0cfe49c343bff79c5"
+        }
+      ]
+    },
+    {
+      "name": "sha1",
+      "version": "0.10.7",
+      "license": "MIT OR Apache-2.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/sha1-0.10.7/LICENSE-APACHE",
+          "text": "a9040321c3712d8fd0b09cf52b17445de04a23a10165049ae187cd39e5c86be5"
+        },
+        {
+          "file": "licenses/rust/sha1-0.10.7/LICENSE-MIT",
+          "text": "b4eb00df6e2a4d22518fcaa6a2b4646f249b3a3c9814509b22bd2091f1392ff1"
+        }
+      ]
+    },
+    {
+      "name": "thiserror",
+      "version": "2.0.19",
+      "license": "MIT OR Apache-2.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/thiserror-2.0.19/LICENSE-APACHE",
+          "text": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+        },
+        {
+          "file": "licenses/rust/thiserror-2.0.19/LICENSE-MIT",
+          "text": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+        }
+      ]
+    },
+    {
+      "name": "thiserror-impl",
+      "version": "2.0.19",
+      "license": "MIT OR Apache-2.0",
+      "scope": "generated",
+      "notices": [
+        {
+          "file": "licenses/rust/thiserror-impl-2.0.19/LICENSE-APACHE",
+          "text": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+        },
+        {
+          "file": "licenses/rust/thiserror-impl-2.0.19/LICENSE-MIT",
+          "text": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+        }
+      ]
+    },
+    {
+      "name": "xz2",
+      "version": "0.1.7",
+      "license": "MIT/Apache-2.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/xz2-0.1.7/LICENSE-APACHE",
+          "text": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "file": "licenses/rust/xz2-0.1.7/LICENSE-MIT",
+          "text": "69036b033e4bb951821964dbc3d9b1efe6913a6e36d9c1f206de4035a1a85cc4"
+        }
+      ]
+    },
+    {
+      "name": "lzma-sys",
+      "version": "0.1.20",
+      "license": "MIT/Apache-2.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/lzma-sys-0.1.20/LICENSE-APACHE",
+          "text": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "file": "licenses/rust/lzma-sys-0.1.20/LICENSE-MIT",
+          "text": "69036b033e4bb951821964dbc3d9b1efe6913a6e36d9c1f206de4035a1a85cc4"
+        },
+        {
+          "file": "licenses/rust/lzma-sys-0.1.20/xz-5.2/AUTHORS",
+          "text": "72d7a7ee8a4eaca5d0b53f20609eff95d5e6f9e155ecce98127414b8215b0b15"
+        },
+        {
+          "file": "licenses/rust/lzma-sys-0.1.20/xz-5.2/COPYING",
+          "text": "bcb02973ef6e87ea73d331b3a80df7748407f17efdb784b61b47e0e610d3bb5c"
+        },
+        {
+          "file": "licenses/rust/lzma-sys-0.1.20/xz-5.2/COPYING.GPLv2",
+          "text": "8177f97513213526df2cf6184d8ff986c675afb514d4e68a404010521b880643"
+        },
+        {
+          "file": "licenses/rust/lzma-sys-0.1.20/xz-5.2/COPYING.GPLv3",
+          "text": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903"
+        },
+        {
+          "file": "licenses/rust/lzma-sys-0.1.20/xz-5.2/COPYING.LGPLv2.1",
+          "text": "dc626520dcd53a22f727af3ee42c770e56c97a64fe3adb063799d8ab032fe551"
+        }
+      ]
+    },
+    {
+      "name": "zopfli",
+      "version": "0.8.3",
+      "license": "Apache-2.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/zopfli-0.8.3/COPYING",
+          "text": "018b1cb87efdf7a04c2fcc13d57ed63f62149113fb207b27ea13430d64f13513"
+        }
+      ]
+    },
+    {
+      "name": "bumpalo",
+      "version": "3.20.3",
+      "license": "MIT OR Apache-2.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/bumpalo-3.20.3/LICENSE-APACHE",
+          "text": "a60eea817514531668d7e00765731449fe14d059d3249e0bc93b36de45f759f2"
+        },
+        {
+          "file": "licenses/rust/bumpalo-3.20.3/LICENSE-MIT",
+          "text": "65f94e99ddaf4f5d1782a6dae23f35d4293a9a01444a13135a6887017d353cee"
+        }
+      ]
+    },
+    {
+      "name": "zstd",
+      "version": "0.13.3",
+      "license": "MIT",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/zstd-0.13.3/LICENSE",
+          "text": "129e8edef29e9abcd2ebabe252f4ef1b1289cdca356bf0040284a2fbccfb96c8"
+        }
+      ]
+    },
+    {
+      "name": "zstd-safe",
+      "version": "7.2.4",
+      "license": "MIT OR Apache-2.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/zstd-safe-7.2.4/LICENSE",
+          "text": "a77b7cfeaf911ed410ffbe76f0cb2b24ad8a4d94e7ead5727e914425c416cc63"
+        },
+        {
+          "file": "licenses/rust/zstd-safe-7.2.4/LICENSE.Apache-2.0",
+          "text": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+        },
+        {
+          "file": "licenses/rust/zstd-safe-7.2.4/LICENSE.Mit",
+          "text": "129e8edef29e9abcd2ebabe252f4ef1b1289cdca356bf0040284a2fbccfb96c8"
+        }
+      ]
+    },
+    {
+      "name": "zstd-sys",
+      "version": "2.0.16+zstd.1.5.7",
+      "license": "MIT/Apache-2.0",
+      "scope": "app",
+      "notices": [
+        {
+          "file": "licenses/rust/zstd-sys-2.0.16+zstd.1.5.7/LICENSE",
+          "text": "a77b7cfeaf911ed410ffbe76f0cb2b24ad8a4d94e7ead5727e914425c416cc63"
+        },
+        {
+          "file": "licenses/rust/zstd-sys-2.0.16+zstd.1.5.7/LICENSE.Apache-2.0",
+          "text": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+        },
+        {
+          "file": "licenses/rust/zstd-sys-2.0.16+zstd.1.5.7/LICENSE.BSD-3-Clause",
+          "text": "48341f685c87304089aa099b23c386f8bacc519ef555aa7a13e239908907b3fd"
+        },
+        {
+          "file": "licenses/rust/zstd-sys-2.0.16+zstd.1.5.7/LICENSE.Mit",
+          "text": "129e8edef29e9abcd2ebabe252f4ef1b1289cdca356bf0040284a2fbccfb96c8"
+        },
+        {
+          "file": "licenses/rust/zstd-sys-2.0.16+zstd.1.5.7/zstd/COPYING",
+          "text": "f9c375a1be4a41f7b70301dd83c91cb89e41567478859b77eef375a52d782505"
+        },
+        {
+          "file": "licenses/rust/zstd-sys-2.0.16+zstd.1.5.7/zstd/LICENSE",
+          "text": "7055266497633c9025b777c78eb7235af13922117480ed5c674677adc381c9d8"
+        }
+      ]
+    },
+    {
+      "name": "SQLCipher",
+      "version": "",
+      "license": "BSD-3-Clause",
+      "scope": "native",
+      "notices": [
+        {
+          "file": "licenses/rust/libsqlite3-sys-0.38.2/sqlcipher/LICENSE",
+          "text": "ea4fcb309f14a22065e1ea45362d494d320012249ed865fe9c7c0946db754131"
+        }
+      ]
+    },
+    {
+      "name": "OpenSSL",
+      "version": "3.6.3",
+      "license": "Apache-2.0",
+      "scope": "native",
+      "notices": [
+        {
+          "file": "licenses/rust/openssl-src-300.6.1+3.6.3/openssl/LICENSE.txt",
+          "text": "7d5450cb2d142651b8afa315b5f238efc805dad827d91ba367d8516bc9d49e7a"
+        }
+      ]
+    },
+    {
+      "name": "PDF.js",
+      "version": "6.3.289",
+      "license": "Apache-2.0",
+      "scope": "pdf",
+      "notices": [
+        {
+          "file": "static/vendor/pdfjs/LICENSE",
+          "text": "0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594"
+        }
+      ]
+    },
+    {
+      "name": "Adobe CMaps",
+      "version": "",
+      "license": "Adobe redistribution terms",
+      "scope": "pdf",
+      "notices": [
+        {
+          "file": "static/vendor/pdfjs/cmaps/LICENSE",
+          "text": "aa92ab5a472974865a96fd4a4e9c13bb41bf6fe1b309cb6b8da48bc9e19839a2"
+        }
+      ]
+    },
+    {
+      "name": "Foxit / PDFium fonts",
+      "version": "",
+      "license": "BSD-style",
+      "scope": "pdf",
+      "notices": [
+        {
+          "file": "static/vendor/pdfjs/standard_fonts/LICENSE_FOXIT",
+          "text": "b578cdd2345840ada550bd12519533812320d5f1d21cf4c1c7e1b1b0a31c98b7"
+        }
+      ]
+    },
+    {
+      "name": "Liberation fonts",
+      "version": "1.07.4",
+      "license": "GPL v2 with the bundled exceptions",
+      "scope": "pdf",
+      "notices": [
+        {
+          "file": "static/vendor/pdfjs/standard_fonts/LICENSE_LIBERATION",
+          "text": "d2c4d5b3e115a519cb58eb691aa64538397e2611f9ebe801392cf9667997e7dc"
+        },
+        {
+          "file": "licenses/sources/README.md",
+          "text": "a1365ed8d950066bb1087ba63c57f04ef83339013e2ab8a2f0b1d314c59fb985"
+        },
+        {
+          "file": "licenses/sources/liberation-fonts-1.07.4.json",
+          "text": "6c8f2e90a0874d78f548e8f1627028e67867771fe388a6d160b161fc56062bb6"
+        }
+      ]
+    },
+    {
+      "name": "ICC profiles",
+      "version": "",
+      "license": "CC0-1.0",
+      "scope": "pdf",
+      "notices": [
+        {
+          "file": "static/vendor/pdfjs/iccs/LICENSE",
+          "text": "286e4fd7b447330b2c88e23890e3cd0a9d38cb398d4a59cb247f578ccbda3213"
+        }
+      ]
+    },
+    {
+      "name": "OpenJPEG",
+      "version": "",
+      "license": "BSD-style",
+      "scope": "pdf",
+      "notices": [
+        {
+          "file": "static/vendor/pdfjs/wasm/LICENSE_OPENJPEG",
+          "text": "a6af136f3e15038a666b61f376612a07d9a4e48cb7c01adbf3e33b3f14ab49b6"
+        }
+      ]
+    },
+    {
+      "name": "PDF.js OpenJPEG integration",
+      "version": "",
+      "license": "BSD-style",
+      "scope": "pdf",
+      "notices": [
+        {
+          "file": "static/vendor/pdfjs/wasm/LICENSE_PDFJS_OPENJPEG",
+          "text": "717fc62da03292dbb4dd0c8280bd4ce7bb8550dcf31d772bc93455fb50313425"
+        }
+      ]
+    },
+    {
+      "name": "JBIG2 / PDFium",
+      "version": "",
+      "license": "BSD-style",
+      "scope": "pdf",
+      "notices": [
+        {
+          "file": "static/vendor/pdfjs/wasm/LICENSE_JBIG2",
+          "text": "9e66b7f1b934a28b37f3bc4dac97915de1674271e79a0a88182a18ed9731b4d1"
+        }
+      ]
+    },
+    {
+      "name": "PDF.js JBIG2 integration",
+      "version": "",
+      "license": "BSD-style",
+      "scope": "pdf",
+      "notices": [
+        {
+          "file": "static/vendor/pdfjs/wasm/LICENSE_PDFJS_JBIG2",
+          "text": "aad3cce09842e00e9e11ad5e8fef8cc02fbc3a3768fe2f007443b9cee37aaee5"
+        }
+      ]
+    },
+    {
+      "name": "qcms",
+      "version": "",
+      "license": "MIT-style",
+      "scope": "pdf",
+      "notices": [
+        {
+          "file": "static/vendor/pdfjs/wasm/LICENSE_QCMS",
+          "text": "36d847ae882f6574ebc72f56a4f354e4f104fde4a584373496482e97d52d31bc"
+        }
+      ]
+    },
+    {
+      "name": "PDF.js qcms integration",
+      "version": "",
+      "license": "BSD-style",
+      "scope": "pdf",
+      "notices": [
+        {
+          "file": "static/vendor/pdfjs/wasm/LICENSE_PDFJS_QCMS",
+          "text": "508a77d2e7b51d98adeed32648ad124b7b30241a8e70b2e72c99f92d8e5874d1"
+        }
+      ]
+    }
+  ],
+  "files": [
+    "LICENSE",
+    "THIRD_PARTY_NOTICES.md",
+    "docs/VENDOR_PATCHES.md",
+    "licenses/DISTRIBUTION.md",
+    "licenses/distribution.json",
+    "licenses/rust/adler2-2.0.1/LICENSE-0BSD",
+    "licenses/rust/adler2-2.0.1/LICENSE-APACHE",
+    "licenses/rust/adler2-2.0.1/LICENSE-MIT",
+    "licenses/rust/aead-0.6.1/LICENSE-APACHE",
+    "licenses/rust/aead-0.6.1/LICENSE-MIT",
+    "licenses/rust/aes-0.8.4/LICENSE-APACHE",
+    "licenses/rust/aes-0.8.4/LICENSE-MIT",
+    "licenses/rust/aes-0.9.3/LICENSE-APACHE",
+    "licenses/rust/aes-0.9.3/LICENSE-MIT",
+    "licenses/rust/aes-gcm-0.11.1/LICENSE-APACHE",
+    "licenses/rust/aes-gcm-0.11.1/LICENSE-MIT",
+    "licenses/rust/anyhow-1.0.104/LICENSE-APACHE",
+    "licenses/rust/anyhow-1.0.104/LICENSE-MIT",
+    "licenses/rust/argon2-0.5.3/LICENSE-APACHE",
+    "licenses/rust/argon2-0.5.3/LICENSE-MIT",
+    "licenses/rust/async-trait-0.1.91/LICENSE-APACHE",
+    "licenses/rust/async-trait-0.1.91/LICENSE-MIT",
+    "licenses/rust/atomic-waker-1.1.2/LICENSE-APACHE",
+    "licenses/rust/atomic-waker-1.1.2/LICENSE-MIT",
+    "licenses/rust/atomic-waker-1.1.2/LICENSE-THIRD-PARTY",
+    "licenses/rust/axum-0.7.9/LICENSE",
+    "licenses/rust/axum-core-0.4.5/LICENSE",
+    "licenses/rust/base64-0.22.1/LICENSE-APACHE",
+    "licenses/rust/base64-0.22.1/LICENSE-MIT",
+    "licenses/rust/base64ct-1.8.3/LICENSE-APACHE",
+    "licenses/rust/base64ct-1.8.3/LICENSE-MIT",
+    "licenses/rust/bitflags-2.13.1/LICENSE-APACHE",
+    "licenses/rust/bitflags-2.13.1/LICENSE-MIT",
+    "licenses/rust/blake2-0.10.6/LICENSE-APACHE",
+    "licenses/rust/blake2-0.10.6/LICENSE-MIT",
+    "licenses/rust/block-buffer-0.10.4/LICENSE-APACHE",
+    "licenses/rust/block-buffer-0.10.4/LICENSE-MIT",
+    "licenses/rust/block-buffer-0.12.1/LICENSE-APACHE",
+    "licenses/rust/block-buffer-0.12.1/LICENSE-MIT",
+    "licenses/rust/bumpalo-3.20.3/LICENSE-APACHE",
+    "licenses/rust/bumpalo-3.20.3/LICENSE-MIT",
+    "licenses/rust/byteorder-1.5.0/COPYING",
+    "licenses/rust/byteorder-1.5.0/LICENSE-MIT",
+    "licenses/rust/bytes-1.12.1/LICENSE",
+    "licenses/rust/bzip2-0.5.2/LICENSE-APACHE",
+    "licenses/rust/bzip2-0.5.2/LICENSE-MIT",
+    "licenses/rust/bzip2-sys-0.1.13+1.0.8/LICENSE-APACHE",
+    "licenses/rust/bzip2-sys-0.1.13+1.0.8/LICENSE-MIT",
+    "licenses/rust/bzip2-sys-0.1.13+1.0.8/bzip2-1.0.8/LICENSE",
+    "licenses/rust/cfg-if-1.0.4/LICENSE-APACHE",
+    "licenses/rust/cfg-if-1.0.4/LICENSE-MIT",
+    "licenses/rust/cipher-0.4.4/LICENSE-APACHE",
+    "licenses/rust/cipher-0.4.4/LICENSE-MIT",
+    "licenses/rust/cipher-0.5.2/LICENSE-APACHE",
+    "licenses/rust/cipher-0.5.2/LICENSE-MIT",
+    "licenses/rust/cmov-0.5.4/LICENSE-APACHE",
+    "licenses/rust/cmov-0.5.4/LICENSE-MIT",
+    "licenses/rust/const-oid-0.10.2/LICENSE-APACHE",
+    "licenses/rust/const-oid-0.10.2/LICENSE-MIT",
+    "licenses/rust/constant_time_eq-0.3.1/LICENSE-APACHE",
+    "licenses/rust/constant_time_eq-0.3.1/LICENSE-CC0",
+    "licenses/rust/constant_time_eq-0.3.1/LICENSE-MIT0",
+    "licenses/rust/cookie-0.18.1/LICENSE-APACHE",
+    "licenses/rust/cookie-0.18.1/LICENSE-MIT",
+    "licenses/rust/cpubits-0.1.1/LICENSE-APACHE",
+    "licenses/rust/cpubits-0.1.1/LICENSE-MIT",
+    "licenses/rust/cpufeatures-0.2.17/LICENSE-APACHE",
+    "licenses/rust/cpufeatures-0.2.17/LICENSE-MIT",
+    "licenses/rust/cpufeatures-0.3.1/LICENSE-APACHE",
+    "licenses/rust/cpufeatures-0.3.1/LICENSE-MIT",
+    "licenses/rust/crc-3.4.0/LICENSE-APACHE",
+    "licenses/rust/crc-3.4.0/LICENSE-MIT",
+    "licenses/rust/crc-catalog-2.5.0/LICENSES/Apache-2.0.txt",
+    "licenses/rust/crc-catalog-2.5.0/LICENSES/MIT.txt",
+    "licenses/rust/crc32fast-1.5.0/LICENSE-APACHE",
+    "licenses/rust/crc32fast-1.5.0/LICENSE-MIT",
+    "licenses/rust/crossbeam-channel-0.5.16/LICENSE-APACHE",
+    "licenses/rust/crossbeam-channel-0.5.16/LICENSE-MIT",
+    "licenses/rust/crossbeam-channel-0.5.16/LICENSE-THIRD-PARTY",
+    "licenses/rust/crossbeam-utils-0.8.22/LICENSE-APACHE",
+    "licenses/rust/crossbeam-utils-0.8.22/LICENSE-MIT",
+    "licenses/rust/crypto-common-0.1.7/LICENSE-APACHE",
+    "licenses/rust/crypto-common-0.1.7/LICENSE-MIT",
+    "licenses/rust/crypto-common-0.2.2/LICENSE-APACHE",
+    "licenses/rust/crypto-common-0.2.2/LICENSE-MIT",
+    "licenses/rust/ctr-0.10.1/LICENSE-APACHE",
+    "licenses/rust/ctr-0.10.1/LICENSE-MIT",
+    "licenses/rust/ctutils-0.4.2/LICENSE-APACHE",
+    "licenses/rust/ctutils-0.4.2/LICENSE-MIT",
+    "licenses/rust/deflate64-0.1.12/LICENSE",
+    "licenses/rust/deranged-0.5.8/LICENSE-Apache",
+    "licenses/rust/deranged-0.5.8/LICENSE-MIT",
+    "licenses/rust/digest-0.10.7/LICENSE-APACHE",
+    "licenses/rust/digest-0.10.7/LICENSE-MIT",
+    "licenses/rust/digest-0.11.3/LICENSE-APACHE",
+    "licenses/rust/digest-0.11.3/LICENSE-MIT",
+    "licenses/rust/displaydoc-0.2.7/LICENSE-APACHE",
+    "licenses/rust/displaydoc-0.2.7/LICENSE-MIT",
+    "licenses/rust/dpi-0.1.2/LICENSE",
+    "licenses/rust/dpi-0.1.2/LICENSE-LIBM-MIT",
+    "licenses/rust/dunce-1.0.5/LICENSE",
+    "licenses/rust/encoding_rs-0.8.35/COPYRIGHT",
+    "licenses/rust/encoding_rs-0.8.35/LICENSE-APACHE",
+    "licenses/rust/encoding_rs-0.8.35/LICENSE-MIT",
+    "licenses/rust/encoding_rs-0.8.35/LICENSE-WHATWG",
+    "licenses/rust/equivalent-1.0.2/LICENSE-APACHE",
+    "licenses/rust/equivalent-1.0.2/LICENSE-MIT",
+    "licenses/rust/fallible-iterator-0.3.0/LICENSE-APACHE",
+    "licenses/rust/fallible-iterator-0.3.0/LICENSE-MIT",
+    "licenses/rust/fallible-streaming-iterator-0.1.9/LICENSE-APACHE",
+    "licenses/rust/fallible-streaming-iterator-0.1.9/LICENSE-MIT",
+    "licenses/rust/filetime-0.2.29/LICENSE-APACHE",
+    "licenses/rust/filetime-0.2.29/LICENSE-MIT",
+    "licenses/rust/flate2-1.1.9/LICENSE-APACHE",
+    "licenses/rust/flate2-1.1.9/LICENSE-MIT",
+    "licenses/rust/foldhash-0.2.0/LICENSE",
+    "licenses/rust/form_urlencoded-1.2.2/LICENSE-APACHE",
+    "licenses/rust/form_urlencoded-1.2.2/LICENSE-MIT",
+    "licenses/rust/futures-channel-0.3.33/LICENSE-APACHE",
+    "licenses/rust/futures-channel-0.3.33/LICENSE-MIT",
+    "licenses/rust/futures-core-0.3.33/LICENSE-APACHE",
+    "licenses/rust/futures-core-0.3.33/LICENSE-MIT",
+    "licenses/rust/futures-io-0.3.33/LICENSE-APACHE",
+    "licenses/rust/futures-io-0.3.33/LICENSE-MIT",
+    "licenses/rust/futures-macro-0.3.33/LICENSE-APACHE",
+    "licenses/rust/futures-macro-0.3.33/LICENSE-MIT",
+    "licenses/rust/futures-sink-0.3.33/LICENSE-APACHE",
+    "licenses/rust/futures-sink-0.3.33/LICENSE-MIT",
+    "licenses/rust/futures-task-0.3.33/LICENSE-APACHE",
+    "licenses/rust/futures-task-0.3.33/LICENSE-MIT",
+    "licenses/rust/futures-util-0.3.33/LICENSE-APACHE",
+    "licenses/rust/futures-util-0.3.33/LICENSE-MIT",
+    "licenses/rust/generic-array-0.14.7/LICENSE",
+    "licenses/rust/getrandom-0.2.17/LICENSE-APACHE",
+    "licenses/rust/getrandom-0.2.17/LICENSE-MIT",
+    "licenses/rust/getrandom-0.3.4/LICENSE-APACHE",
+    "licenses/rust/getrandom-0.3.4/LICENSE-MIT",
+    "licenses/rust/getrandom-0.4.3/LICENSE-APACHE",
+    "licenses/rust/getrandom-0.4.3/LICENSE-MIT",
+    "licenses/rust/ghash-0.6.0/LICENSE-APACHE",
+    "licenses/rust/ghash-0.6.0/LICENSE-MIT",
+    "licenses/rust/hashbrown-0.17.1/LICENSE-APACHE",
+    "licenses/rust/hashbrown-0.17.1/LICENSE-MIT",
+    "licenses/rust/hashlink-0.12.2/LICENSE-APACHE",
+    "licenses/rust/hashlink-0.12.2/LICENSE-MIT",
+    "licenses/rust/hkdf-0.12.4/LICENSE-APACHE",
+    "licenses/rust/hkdf-0.12.4/LICENSE-MIT",
+    "licenses/rust/hmac-0.12.1/LICENSE-APACHE",
+    "licenses/rust/hmac-0.12.1/LICENSE-MIT",
+    "licenses/rust/http-1.5.0/LICENSE-APACHE",
+    "licenses/rust/http-1.5.0/LICENSE-MIT",
+    "licenses/rust/http-body-1.1.0/LICENSE",
+    "licenses/rust/http-body-util-0.1.4/LICENSE",
+    "licenses/rust/http-range-header-0.4.2/LICENSE",
+    "licenses/rust/httparse-1.10.1/LICENSE-APACHE",
+    "licenses/rust/httparse-1.10.1/LICENSE-MIT",
+    "licenses/rust/httpdate-1.0.3/LICENSE-APACHE",
+    "licenses/rust/httpdate-1.0.3/LICENSE-MIT",
+    "licenses/rust/hybrid-array-0.4.14/LICENSE-APACHE",
+    "licenses/rust/hybrid-array-0.4.14/LICENSE-MIT",
+    "licenses/rust/hyper-1.11.0/LICENSE",
+    "licenses/rust/hyper-util-0.1.20/LICENSE",
+    "licenses/rust/icu_collections-2.2.0/LICENSE",
+    "licenses/rust/icu_locale_core-2.2.0/LICENSE",
+    "licenses/rust/icu_normalizer-2.2.0/LICENSE",
+    "licenses/rust/icu_normalizer_data-2.2.0/LICENSE",
+    "licenses/rust/icu_properties-2.2.0/LICENSE",
+    "licenses/rust/icu_properties_data-2.2.0/LICENSE",
+    "licenses/rust/icu_provider-2.2.0/LICENSE",
+    "licenses/rust/idna-1.1.0/LICENSE-APACHE",
+    "licenses/rust/idna-1.1.0/LICENSE-MIT",
+    "licenses/rust/idna_adapter-1.2.2/LICENSE-APACHE",
+    "licenses/rust/idna_adapter-1.2.2/LICENSE-MIT",
+    "licenses/rust/indexmap-2.14.0/LICENSE-APACHE",
+    "licenses/rust/indexmap-2.14.0/LICENSE-MIT",
+    "licenses/rust/inout-0.1.4/LICENSE-APACHE",
+    "licenses/rust/inout-0.1.4/LICENSE-MIT",
+    "licenses/rust/inout-0.2.2/LICENSE-APACHE",
+    "licenses/rust/inout-0.2.2/LICENSE-MIT",
+    "licenses/rust/instant-0.1.13/AUTHORS",
+    "licenses/rust/instant-0.1.13/LICENSE",
+    "licenses/rust/itoa-1.0.18/LICENSE-APACHE",
+    "licenses/rust/itoa-1.0.18/LICENSE-MIT",
+    "licenses/rust/lazy_static-1.5.0/LICENSE-APACHE",
+    "licenses/rust/lazy_static-1.5.0/LICENSE-MIT",
+    "licenses/rust/libc-0.2.189/LICENSE-APACHE",
+    "licenses/rust/libc-0.2.189/LICENSE-MIT",
+    "licenses/rust/libsqlite3-sys-0.38.2/LICENSE",
+    "licenses/rust/libsqlite3-sys-0.38.2/sqlcipher/LICENSE",
+    "licenses/rust/litemap-0.8.2/LICENSE",
+    "licenses/rust/lock_api-0.4.14/LICENSE-APACHE",
+    "licenses/rust/lock_api-0.4.14/LICENSE-MIT",
+    "licenses/rust/log-0.4.33/LICENSE-APACHE",
+    "licenses/rust/log-0.4.33/LICENSE-MIT",
+    "licenses/rust/lzma-rs-0.3.0/LICENSE",
+    "licenses/rust/lzma-sys-0.1.20/LICENSE-APACHE",
+    "licenses/rust/lzma-sys-0.1.20/LICENSE-MIT",
+    "licenses/rust/lzma-sys-0.1.20/xz-5.2/AUTHORS",
+    "licenses/rust/lzma-sys-0.1.20/xz-5.2/COPYING",
+    "licenses/rust/lzma-sys-0.1.20/xz-5.2/COPYING.GPLv2",
+    "licenses/rust/lzma-sys-0.1.20/xz-5.2/COPYING.GPLv3",
+    "licenses/rust/lzma-sys-0.1.20/xz-5.2/COPYING.LGPLv2.1",
+    "licenses/rust/matchit-0.7.3/LICENSE",
+    "licenses/rust/matchit-0.7.3/LICENSE.httprouter",
+    "licenses/rust/memchr-2.8.3/COPYING",
+    "licenses/rust/memchr-2.8.3/LICENSE-MIT",
+    "licenses/rust/mime-0.3.17/LICENSE-APACHE",
+    "licenses/rust/mime-0.3.17/LICENSE-MIT",
+    "licenses/rust/mime_guess-2.0.5/LICENSE",
+    "licenses/rust/miniz_oxide-0.8.9/LICENSE",
+    "licenses/rust/miniz_oxide-0.8.9/LICENSE-APACHE.md",
+    "licenses/rust/miniz_oxide-0.8.9/LICENSE-MIT.md",
+    "licenses/rust/miniz_oxide-0.8.9/LICENSE-ZLIB.md",
+    "licenses/rust/mio-1.2.2/LICENSE",
+    "licenses/rust/multer-3.1.0/LICENSE",
+    "licenses/rust/num-conv-0.2.2/LICENSE-Apache",
+    "licenses/rust/num-conv-0.2.2/LICENSE-MIT",
+    "licenses/rust/once_cell-1.21.4/LICENSE-APACHE",
+    "licenses/rust/once_cell-1.21.4/LICENSE-MIT",
+    "licenses/rust/openssl-src-300.6.1+3.6.3/openssl/LICENSE.txt",
+    "licenses/rust/openssl-sys-0.9.117/LICENSE-MIT",
+    "licenses/rust/parking_lot-0.12.5/LICENSE-APACHE",
+    "licenses/rust/parking_lot-0.12.5/LICENSE-MIT",
+    "licenses/rust/parking_lot_core-0.9.12/LICENSE-APACHE",
+    "licenses/rust/parking_lot_core-0.9.12/LICENSE-MIT",
+    "licenses/rust/password-hash-0.5.0/LICENSE-APACHE",
+    "licenses/rust/password-hash-0.5.0/LICENSE-MIT",
+    "licenses/rust/pbkdf2-0.12.2/LICENSE-APACHE",
+    "licenses/rust/pbkdf2-0.12.2/LICENSE-MIT",
+    "licenses/rust/percent-encoding-2.3.2/LICENSE-APACHE",
+    "licenses/rust/percent-encoding-2.3.2/LICENSE-MIT",
+    "licenses/rust/pin-project-lite-0.2.17/LICENSE-APACHE",
+    "licenses/rust/pin-project-lite-0.2.17/LICENSE-MIT",
+    "licenses/rust/polyval-0.7.3/LICENSE-APACHE",
+    "licenses/rust/polyval-0.7.3/LICENSE-MIT",
+    "licenses/rust/potential_utf-0.1.5/LICENSE",
+    "licenses/rust/powerfmt-0.2.0/LICENSE-Apache",
+    "licenses/rust/powerfmt-0.2.0/LICENSE-MIT",
+    "licenses/rust/rand_core-0.10.1/COPYRIGHT",
+    "licenses/rust/rand_core-0.10.1/LICENSE-APACHE",
+    "licenses/rust/rand_core-0.10.1/LICENSE-MIT",
+    "licenses/rust/rand_core-0.6.4/COPYRIGHT",
+    "licenses/rust/rand_core-0.6.4/LICENSE-APACHE",
+    "licenses/rust/rand_core-0.6.4/LICENSE-MIT",
+    "licenses/rust/raw-window-handle-0.6.2/LICENSE-APACHE.md",
+    "licenses/rust/raw-window-handle-0.6.2/LICENSE-MIT.md",
+    "licenses/rust/raw-window-handle-0.6.2/LICENSE-ZLIB.md",
+    "licenses/rust/rfd-0.15.4/LICENSE",
+    "licenses/rust/rpassword-7.5.4/LICENSE-APACHE",
+    "licenses/rust/rtoolbox-0.0.6/LICENSE-APACHE",
+    "licenses/rust/rusqlite-0.40.2/LICENSE",
+    "licenses/rust/rust-embed-8.12.0/LICENSE",
+    "licenses/rust/rust-embed-impl-8.12.0/LICENSE",
+    "licenses/rust/rust-embed-utils-8.12.0/LICENSE",
+    "licenses/rust/rustversion-1.0.23/LICENSE-APACHE",
+    "licenses/rust/rustversion-1.0.23/LICENSE-MIT",
+    "licenses/rust/ryu-1.0.23/LICENSE-APACHE",
+    "licenses/rust/ryu-1.0.23/LICENSE-BOOST",
+    "licenses/rust/same-file-1.0.6/COPYING",
+    "licenses/rust/same-file-1.0.6/LICENSE-MIT",
+    "licenses/rust/scopeguard-1.2.0/LICENSE-APACHE",
+    "licenses/rust/scopeguard-1.2.0/LICENSE-MIT",
+    "licenses/rust/serde-1.0.229/LICENSE-APACHE",
+    "licenses/rust/serde-1.0.229/LICENSE-MIT",
+    "licenses/rust/serde_core-1.0.229/LICENSE-APACHE",
+    "licenses/rust/serde_core-1.0.229/LICENSE-MIT",
+    "licenses/rust/serde_derive-1.0.229/LICENSE-APACHE",
+    "licenses/rust/serde_derive-1.0.229/LICENSE-MIT",
+    "licenses/rust/serde_json-1.0.151/LICENSE-APACHE",
+    "licenses/rust/serde_json-1.0.151/LICENSE-MIT",
+    "licenses/rust/serde_path_to_error-0.1.20/LICENSE-APACHE",
+    "licenses/rust/serde_path_to_error-0.1.20/LICENSE-MIT",
+    "licenses/rust/serde_urlencoded-0.7.1/LICENSE-APACHE",
+    "licenses/rust/serde_urlencoded-0.7.1/LICENSE-MIT",
+    "licenses/rust/sha1-0.10.7/LICENSE-APACHE",
+    "licenses/rust/sha1-0.10.7/LICENSE-MIT",
+    "licenses/rust/sha2-0.10.9/LICENSE-APACHE",
+    "licenses/rust/sha2-0.10.9/LICENSE-MIT",
+    "licenses/rust/sha2-0.11.0/LICENSE-APACHE",
+    "licenses/rust/sha2-0.11.0/LICENSE-MIT",
+    "licenses/rust/simd-adler32-0.3.10/LICENSE.md",
+    "licenses/rust/slab-0.4.12/LICENSE",
+    "licenses/rust/smallvec-1.15.2/LICENSE-APACHE",
+    "licenses/rust/smallvec-1.15.2/LICENSE-MIT",
+    "licenses/rust/socket2-0.6.5/LICENSE-APACHE",
+    "licenses/rust/socket2-0.6.5/LICENSE-MIT",
+    "licenses/rust/spin-0.9.9/LICENSE",
+    "licenses/rust/stable_deref_trait-1.2.1/LICENSE-APACHE",
+    "licenses/rust/stable_deref_trait-1.2.1/LICENSE-MIT",
+    "licenses/rust/subtle-2.6.1/LICENSE",
+    "licenses/rust/sync_wrapper-1.0.2/LICENSE",
+    "licenses/rust/tao-0.30.8/LICENSE",
+    "licenses/rust/tao-0.30.8/LICENSE.spdx",
+    "licenses/rust/tar-0.4.46/LICENSE-APACHE",
+    "licenses/rust/tar-0.4.46/LICENSE-MIT",
+    "licenses/rust/thiserror-1.0.69/LICENSE-APACHE",
+    "licenses/rust/thiserror-1.0.69/LICENSE-MIT",
+    "licenses/rust/thiserror-2.0.19/LICENSE-APACHE",
+    "licenses/rust/thiserror-2.0.19/LICENSE-MIT",
+    "licenses/rust/thiserror-impl-1.0.69/LICENSE-APACHE",
+    "licenses/rust/thiserror-impl-1.0.69/LICENSE-MIT",
+    "licenses/rust/thiserror-impl-2.0.19/LICENSE-APACHE",
+    "licenses/rust/thiserror-impl-2.0.19/LICENSE-MIT",
+    "licenses/rust/time-0.3.55/LICENSE-Apache",
+    "licenses/rust/time-0.3.55/LICENSE-MIT",
+    "licenses/rust/time-core-0.1.9/LICENSE-Apache",
+    "licenses/rust/time-core-0.1.9/LICENSE-MIT",
+    "licenses/rust/time-macros-0.2.32/LICENSE-Apache",
+    "licenses/rust/time-macros-0.2.32/LICENSE-MIT",
+    "licenses/rust/tinystr-0.8.3/LICENSE",
+    "licenses/rust/tokio-1.53.1/LICENSE",
+    "licenses/rust/tokio-macros-2.7.2/LICENSE",
+    "licenses/rust/tokio-util-0.7.19/LICENSE",
+    "licenses/rust/tower-0.5.3/LICENSE",
+    "licenses/rust/tower-http-0.5.2/LICENSE",
+    "licenses/rust/tower-layer-0.3.3/LICENSE",
+    "licenses/rust/tower-service-0.3.3/LICENSE",
+    "licenses/rust/tracing-0.1.44/LICENSE",
+    "licenses/rust/tracing-attributes-0.1.31/LICENSE",
+    "licenses/rust/tracing-core-0.1.36/LICENSE",
+    "licenses/rust/tracing-core-0.1.36/src/spin/LICENSE",
+    "licenses/rust/typenum-1.20.1/LICENSE",
+    "licenses/rust/typenum-1.20.1/LICENSE-APACHE",
+    "licenses/rust/typenum-1.20.1/LICENSE-MIT",
+    "licenses/rust/unicase-2.9.0/LICENSE-APACHE",
+    "licenses/rust/unicase-2.9.0/LICENSE-MIT",
+    "licenses/rust/unicode-segmentation-1.13.3/COPYRIGHT",
+    "licenses/rust/unicode-segmentation-1.13.3/LICENSE-APACHE",
+    "licenses/rust/unicode-segmentation-1.13.3/LICENSE-MIT",
+    "licenses/rust/universal-hash-0.6.1/LICENSE-APACHE",
+    "licenses/rust/universal-hash-0.6.1/LICENSE-MIT",
+    "licenses/rust/url-2.5.8/LICENSE-APACHE",
+    "licenses/rust/url-2.5.8/LICENSE-MIT",
+    "licenses/rust/utf8_iter-1.0.4/COPYRIGHT",
+    "licenses/rust/utf8_iter-1.0.4/LICENSE-APACHE",
+    "licenses/rust/utf8_iter-1.0.4/LICENSE-MIT",
+    "licenses/rust/walkdir-2.5.0/COPYING",
+    "licenses/rust/walkdir-2.5.0/LICENSE-MIT",
+    "licenses/rust/webview2-com-0.33.0/LICENSE",
+    "licenses/rust/webview2-com-macros-0.8.1/LICENSE",
+    "licenses/rust/webview2-com-sys-0.33.0/LICENSE",
+    "licenses/rust/winapi-util-0.1.11/COPYING",
+    "licenses/rust/winapi-util-0.1.11/LICENSE-MIT",
+    "licenses/rust/windows-0.58.0/license-apache-2.0",
+    "licenses/rust/windows-0.58.0/license-mit",
+    "licenses/rust/windows-core-0.58.0/license-apache-2.0",
+    "licenses/rust/windows-core-0.58.0/license-mit",
+    "licenses/rust/windows-implement-0.58.0/license-apache-2.0",
+    "licenses/rust/windows-implement-0.58.0/license-mit",
+    "licenses/rust/windows-interface-0.58.0/license-apache-2.0",
+    "licenses/rust/windows-interface-0.58.0/license-mit",
+    "licenses/rust/windows-link-0.2.1/license-apache-2.0",
+    "licenses/rust/windows-link-0.2.1/license-mit",
+    "licenses/rust/windows-result-0.2.0/license-apache-2.0",
+    "licenses/rust/windows-result-0.2.0/license-mit",
+    "licenses/rust/windows-strings-0.1.0/license-apache-2.0",
+    "licenses/rust/windows-strings-0.1.0/license-mit",
+    "licenses/rust/windows-sys-0.59.0/license-apache-2.0",
+    "licenses/rust/windows-sys-0.59.0/license-mit",
+    "licenses/rust/windows-sys-0.61.2/license-apache-2.0",
+    "licenses/rust/windows-sys-0.61.2/license-mit",
+    "licenses/rust/windows-targets-0.52.6/license-apache-2.0",
+    "licenses/rust/windows-targets-0.52.6/license-mit",
+    "licenses/rust/windows-version-0.1.7/license-apache-2.0",
+    "licenses/rust/windows-version-0.1.7/license-mit",
+    "licenses/rust/windows_x86_64_msvc-0.52.6/license-apache-2.0",
+    "licenses/rust/windows_x86_64_msvc-0.52.6/license-mit",
+    "licenses/rust/writeable-0.6.3/LICENSE",
+    "licenses/rust/wry-0.47.2/LICENSE-APACHE",
+    "licenses/rust/wry-0.47.2/LICENSE-MIT",
+    "licenses/rust/wry-0.47.2/LICENSE.spdx",
+    "licenses/rust/xz2-0.1.7/LICENSE-APACHE",
+    "licenses/rust/xz2-0.1.7/LICENSE-MIT",
+    "licenses/rust/yoke-0.8.3/LICENSE",
+    "licenses/rust/yoke-derive-0.8.2/LICENSE",
+    "licenses/rust/zerofrom-0.1.8/LICENSE",
+    "licenses/rust/zerofrom-derive-0.1.7/LICENSE",
+    "licenses/rust/zeroize-1.9.0/LICENSE-APACHE",
+    "licenses/rust/zeroize-1.9.0/LICENSE-MIT",
+    "licenses/rust/zeroize_derive-1.5.0/LICENSE-APACHE",
+    "licenses/rust/zeroize_derive-1.5.0/LICENSE-MIT",
+    "licenses/rust/zerotrie-0.2.4/LICENSE",
+    "licenses/rust/zerovec-0.11.6/LICENSE",
+    "licenses/rust/zerovec-derive-0.11.3/LICENSE",
+    "licenses/rust/zip-2.4.2/LICENSE",
+    "licenses/rust/zmij-1.0.23/LICENSE-MIT",
+    "licenses/rust/zopfli-0.8.3/COPYING",
+    "licenses/rust/zstd-0.13.3/LICENSE",
+    "licenses/rust/zstd-safe-7.2.4/LICENSE",
+    "licenses/rust/zstd-safe-7.2.4/LICENSE.Apache-2.0",
+    "licenses/rust/zstd-safe-7.2.4/LICENSE.Mit",
+    "licenses/rust/zstd-sys-2.0.16+zstd.1.5.7/LICENSE",
+    "licenses/rust/zstd-sys-2.0.16+zstd.1.5.7/LICENSE.Apache-2.0",
+    "licenses/rust/zstd-sys-2.0.16+zstd.1.5.7/LICENSE.BSD-3-Clause",
+    "licenses/rust/zstd-sys-2.0.16+zstd.1.5.7/LICENSE.Mit",
+    "licenses/rust/zstd-sys-2.0.16+zstd.1.5.7/zstd/COPYING",
+    "licenses/rust/zstd-sys-2.0.16+zstd.1.5.7/zstd/LICENSE",
+    "licenses/sources/README.md",
+    "licenses/sources/liberation-fonts-1.07.4.json",
+    "licenses/sources/liberation-fonts-1.07.4.tar.gz",
+    "static/vendor/pdfjs/LICENSE",
+    "static/vendor/pdfjs/cmaps/LICENSE",
+    "static/vendor/pdfjs/iccs/LICENSE",
+    "static/vendor/pdfjs/standard_fonts/LICENSE_FOXIT",
+    "static/vendor/pdfjs/standard_fonts/LICENSE_LIBERATION",
+    "static/vendor/pdfjs/wasm/LICENSE_JBIG2",
+    "static/vendor/pdfjs/wasm/LICENSE_OPENJPEG",
+    "static/vendor/pdfjs/wasm/LICENSE_PDFJS_JBIG2",
+    "static/vendor/pdfjs/wasm/LICENSE_PDFJS_OPENJPEG",
+    "static/vendor/pdfjs/wasm/LICENSE_PDFJS_QCMS",
+    "static/vendor/pdfjs/wasm/LICENSE_QCMS"
+  ]
+}

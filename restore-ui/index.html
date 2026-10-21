@@ -1,0 +1,478 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; script-src 'unsafe-inline'; img-src data:; connect-src 'none'; form-action 'none'; base-uri 'none'">
+<title>valtheum · 독립 복원 도구</title>
+<style>
+:root {
+    color-scheme: dark;
+    font-family: "Segoe UI", -apple-system, "Malgun Gothic", sans-serif;
+    background: #101418;
+    color: #ecf0f2;
+    font-size: 14px;
+    line-height: 1.5;
+}
+* { box-sizing: border-box; }
+body { margin: 0; }
+main { max-width: 920px; margin: auto; padding: 28px 32px 24px; }
+
+/* 헤더 & 브랜드 라벨 */
+header {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+.brand {
+    font-size: 11px;
+    letter-spacing: 2.5px;
+    color: #d9b66d;
+    font-weight: 700;
+    margin-bottom: 7px;
+    cursor: default;
+    user-select: none;
+}
+h1 {
+    font-size: 28px;
+    letter-spacing: -1px;
+    margin: 0 0 5px;
+    font-weight: 650;
+    color: #f1f5f8;
+}
+p { margin: 0; color: #aab5be; }
+
+/* 캡슐형 뱃지 (라벨 계층: 배경색 없음) */
+.badge {
+    color: #5eead4;
+    background: transparent;
+    border: none;
+    white-space: nowrap;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 0;
+    margin-top: 8px;
+    cursor: default;
+    user-select: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.guide {
+    border-left: 3px solid #d9b66d;
+    background: #1c1c17;
+    padding: 12px 16px;
+    margin-bottom: 18px;
+    color: #d8d1c0;
+    font-size: 13px;
+    border-radius: 0 8px 8px 0;
+}
+.guide strong { color: #eed5a3; font-weight: 600; }
+.guide p { color: #b8b1a3; font-size: 12px; margin-top: 3px; }
+
+form {
+    display: grid;
+    gap: 13px;
+    grid-template-columns: 1fr 1fr;
+}
+.field {
+    min-width: 0;
+    border: 1px solid #2d373e;
+    background: #161d22;
+    border-radius: 10px;
+    padding: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+.wide { grid-column: 1 / -1; }
+.field-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 9px;
+}
+
+/* 필드 라벨 (라벨 계층: 플랫, 배경색 없음) */
+.field label, .field h2 {
+    font-size: 13px;
+    font-weight: 600;
+    color: #dbe4ea;
+    background: transparent;
+    border: none;
+    margin: 0;
+    display: inline-flex;
+    align-items: center;
+    cursor: default;
+    user-select: none;
+    letter-spacing: -0.2px;
+}
+.step {
+    display: inline-block;
+    color: #d9b66d;
+    font-size: 14px;
+    font-weight: 800;
+    margin-right: 6px;
+    background: transparent;
+    border: none;
+    padding: 0;
+    letter-spacing: 0.5px;
+}
+
+/* 경로 및 데이터 웰 (라벨/표시 계층: 인셋 리드온리) */
+.path {
+    background: #0b0f13;
+    border: 1px dashed #243038;
+    border-radius: 6px;
+    padding: 8px 12px;
+    color: #8295a3;
+    font-family: 'Consolas', 'JetBrains Mono', monospace;
+    font-size: 11.5px;
+    min-height: 38px;
+    display: flex;
+    align-items: center;
+    margin-top: 6px;
+    overflow-wrap: anywhere;
+    box-sizing: border-box;
+    user-select: all;
+    transition: border-color 0.15s ease, background 0.15s ease, color 0.15s ease;
+}
+.hint {
+    color: #798a96;
+    font-size: 11.5px;
+    margin-top: 6px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: default;
+    user-select: none;
+    background: transparent;
+    border: none;
+}
+
+/* 드롭다운 메뉴 (셀렉트 계층: 딥 틸/에메랄드 틴트 전용 색상) */
+select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: #0b1a1c;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 24 24' fill='none' stroke='%235eead4' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    color: #e2f4f2;
+    border: 1px solid #1e3d3c;
+    border-radius: 6px;
+    padding: 7px 30px 7px 11px;
+    font: inherit;
+    font-size: 12px;
+    cursor: pointer;
+    outline: none;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+    box-sizing: border-box;
+}
+select:hover {
+    border-color: #5eead4;
+    background-color: #112528;
+}
+select:focus {
+    border-color: #5eead4;
+    box-shadow: 0 0 0 2px rgba(94, 234, 212, 0.25);
+}
+select option {
+    background: #0b1a1c;
+    color: #e2f4f2;
+    padding: 6px;
+}
+
+/* 버튼 계층: 뚜렷한 슬레이트 차콜 버튼 색상, 테두리 하이라이트, 액티브 누름 효과 */
+button {
+    font: inherit;
+    font-size: 12px;
+    font-weight: 600;
+    border: 1px solid #4a5d6c;
+    border-radius: 6px;
+    padding: 7px 13px;
+    background: #242e37;
+    color: #f0f6fa;
+    cursor: pointer;
+    white-space: nowrap;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    transition: background 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease, transform 0.08s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    user-select: none;
+    box-sizing: border-box;
+}
+button:hover:enabled {
+    background: #33424e;
+    border-color: #728b9d;
+    color: #ffffff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.14);
+}
+button:active:enabled {
+    transform: translateY(1px);
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+button:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+}
+button:focus-visible, input:focus-visible, select:focus-visible, summary:focus-visible {
+    outline: 2px solid #e1bd77;
+    outline-offset: 3px;
+}
+
+.file-list {
+    list-style: none;
+    padding: 0;
+    margin: 8px 0 0;
+    max-height: 100px;
+    overflow: auto;
+    color: #b7c2cb;
+    font-size: 11.5px;
+    font-family: 'Consolas', 'JetBrains Mono', monospace;
+}
+.file-list li {
+    padding: 3px 0;
+    overflow-wrap: anywhere;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.password-row {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+.password-row input {
+    flex: 1;
+    min-width: 0;
+    background: #10161b;
+    color: #edf2f5;
+    border: 1px solid #46545e;
+    border-radius: 6px;
+    padding: 10px 12px;
+    font: inherit;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+.password-row input:focus {
+    border-color: #d9b66d;
+    box-shadow: 0 0 0 2px rgba(217, 182, 109, 0.25);
+    outline: none;
+}
+
+/* 주요 액션 버튼 (Primary) */
+.primary {
+    background: linear-gradient(180deg, #e7c682 0%, #d4ae60 100%);
+    border: 1px solid #c9a04a;
+    color: #1a1710;
+    font-weight: 700;
+    padding: 10px 22px;
+    font-size: 13px;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(217, 182, 109, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.4);
+    transition: background 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease, transform 0.08s ease;
+}
+.primary:hover:enabled {
+    background: linear-gradient(180deg, #f0d59a 0%, #dfb96e 100%);
+    border-color: #dfb96e;
+    box-shadow: 0 3px 12px rgba(217, 182, 109, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.5);
+    color: #0e0d0a;
+}
+.primary:active:enabled {
+    transform: translateY(1px);
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.35);
+}
+
+/* 취소 버튼 (Danger) */
+#cancel {
+    padding: 10px 18px;
+    background: rgba(239, 68, 68, 0.09);
+    border: 1px solid rgba(239, 68, 68, 0.35);
+    color: #f87171;
+    font-weight: 600;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+#cancel:hover:enabled {
+    background: rgba(239, 68, 68, 0.22);
+    border-color: #ef4444;
+    color: #fca5a5;
+    box-shadow: 0 2px 6px rgba(239, 68, 68, 0.3);
+}
+
+.status-panel {
+    margin-top: 16px;
+    border: 1px solid #303c43;
+    border-radius: 10px;
+    padding: 15px;
+    background: #141c21;
+}
+#status {
+    font-size: 13px;
+    color: #b9c7d1;
+    overflow-wrap: anywhere;
+}
+#status[data-tone=error] { color: #ffb4a9; }
+#status[data-tone=success] { color: #a1dfc4; }
+
+progress {
+    width: 100%;
+    height: 6px;
+    accent-color: #d9b66d;
+    margin-top: 12px;
+}
+#progress-detail {
+    font-size: 11px;
+    color: #91a2ae;
+    margin-top: 5px;
+}
+
+.results {
+    max-height: 150px;
+    overflow: auto;
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+    font-size: 12px;
+}
+.results:empty { display: none; }
+.results li {
+    padding: 7px 0;
+    border-top: 1px solid #28343c;
+    overflow-wrap: anywhere;
+    color: #a4d6c1;
+}
+.results li.error { color: #edb0a5; }
+.results small {
+    display: block;
+    color: #a3afb7;
+    font-size: 11px;
+}
+.results .error small { color: #edb0a5; }
+
+details { margin-top: 16px; color: #a6b2bb; font-size: 12px; }
+summary { cursor: pointer; color: #c7d1d8; padding: 4px 0; }
+details ul { padding-left: 20px; margin: 8px 0; }
+details li { margin: 6px 0; }
+code { color: #decda9; }
+footer { margin-top: 14px; font-size: 11px; color: #748690; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+footer [data-open-licenses] { width: 24px; height: 24px; padding: 0; font-size: 12px; display: inline-flex; align-items: center; justify-content: center; border-radius: 4px; }
+[hidden] { display: none !important; }
+
+@media (max-width: 650px) {
+    main { padding: 22px 18px; }
+    header { gap: 10px; }
+    h1 { font-size: 24px; }
+    .badge { font-size: 10px; }
+    form { grid-template-columns: 1fr; }
+    .field { grid-column: 1; }
+    .password-row { flex-wrap: wrap; }
+    .password-row input { flex-basis: 100%; }
+}
+</style>
+<!--i18n-runtime-->
+<!--caps-lock-style-->
+<!--license-style-->
+</head>
+<body><main><label data-no-i18n style="display:block;text-align:right;margin-bottom:12px">🌐 <select id="restore-language" data-language-select aria-label="Language / 언어 / 言語"><option value="ko">한국어</option><option value="en">English</option><option value="ja">日本語</option></select></label>
+<header><div><div class="brand">VALTHEUM / RECOVERY</div><h1>암호화 파일 복원</h1><p>암호화된 영상과 이미지 묶음을 원래 영상·ZIP·tar.zst 파일로 되돌립니다.</p></div><span class="badge">오프라인 · DB 불필요</span></header>
+<section class="guide" aria-label="준비물"><strong>키 백업 + 암호화 파일 + 기존 비밀번호가 필요합니다.</strong><p>vtbackup을 그대로 선택해도 됩니다. 백업 안의 vault.key를 자동으로 읽으며, 미디어 파일은 별도로 선택해야 합니다.</p></section>
+<form id="restore-form" autocomplete="off">
+<section class="field"><div class="field-head"><h2><span class="step">01</span>키 파일 또는 DB·키 백업</h2><button type="button" id="pick-key">🔑 키 / 백업 선택</button></div><div class="path" id="key-path">vault.key 또는 .vtbackup</div><p class="hint">암호화에 사용한 라이브러리의 키를 선택하세요.</p></section>
+<section class="field"><div class="field-head"><h2><span class="step">02</span>복원 결과 저장 폴더</h2><button type="button" id="pick-folder">📁 폴더 선택</button></div><div class="path" id="folder-path">새 폴더를 준비해 선택하세요.</div><p class="hint">기존 파일을 덮어쓰지 않습니다.</p></section>
+<section class="field wide"><div class="field-head"><h2><span class="step">03</span>암호화된 미디어 파일</h2><button type="button" id="pick-files">📦 .vta · .vtv · .vti · .vtn 파일 선택</button></div><div class="path" id="file-count">.valtheum의 .vta · .vtv · .vti · .vtn 파일 · 여러 개 선택 가능</div><ul class="file-list" id="file-list" aria-label="선택한 암호화 파일"></ul></section>
+<section class="field wide"><div class="field-head"><label for="password"><span class="step">04</span>암호화할 때 사용한 비밀번호</label></div><div class="password-row"><input type="password" id="password" placeholder="기존 비밀번호 입력" autocomplete="off" spellcheck="false" maxlength="1024"><button class="primary" type="submit" id="start" disabled>🚀 복원 시작</button><button type="button" id="cancel" hidden>⛔ 취소</button></div><p class="hint">비밀번호는 저장하지 않습니다. 복원된 미디어와 내보낸 메모 JSON은 암호화되지 않은 파일입니다.</p></section>
+</form>
+<section class="status-panel" aria-label="복원 진행 상태"><div id="status" role="status" aria-live="polite">파일과 폴더를 선택한 뒤 비밀번호를 입력하세요.</div><progress id="progress" max="1" value="0" aria-label="현재 파일 복원 진행률"></progress><div id="progress-detail">암호화 파일과 키 백업은 그대로 보존됩니다.</div><ul id="results" class="results" aria-label="파일별 복원 결과"></ul></section>
+<details><summary>복원 방법과 자주 묻는 질문</summary><ul>
+<li><strong>vtbackup만 있으면 되나요?</strong> DB·키 백업에는 미디어가 없습니다. 별도 보관한 <code>.valtheum/archives/*.vta</code> 또는 <code>.valtheum/videos/*.vtv</code>, <code>.valtheum/images/*.vti</code>, <code>.valtheum/notes/*.vtn</code>도 필요합니다. 키를 포함하지 않은 오래된 백업은 사용할 수 없습니다.</li>
+<li><strong>이 도구는 무엇을 복원하나요?</strong> 영상과 이미지 압축 파일의 원본 바이트를 복원합니다. 태그·별점·시리즈 등 DB 정보는 valtheum에서 DB 백업을 복원해야 합니다.</li>
+<li><strong>파일 이름과 폴더는 어떻게 되나요?</strong> 원래 파일명으로 선택한 폴더에 저장합니다. 하위 폴더는 재생성하지 않습니다. 같은 이름의 파일은 덮어쓰지 않고 실패로 표시하므로 다른 폴더에 복원하세요.</li>
+<li><strong>검증이나 복원에 실패하면요?</strong> 비밀번호와 라이브러리의 키가 맞는지 확인하세요. 손상된 파일은 성공으로 처리하지 않습니다. 실패한 항목과 이유를 표시하고 다음 파일을 계속합니다.</li>
+<li><strong>취소하면 어떻게 되나요?</strong> 완료된 파일은 유지하고 진행 중인 임시 파일은 정리합니다. 원본 암호문은 삭제하지 않습니다. 복원 중 창을 닫아도 정리 후 종료합니다.</li>
+<li><strong>키나 비밀번호를 잃었다면요?</strong> 해당 키 파일과 비밀번호가 모두 있어야 합니다. 이 도구에는 분실한 키·비밀번호를 대신하는 기능이 없습니다.</li>
+</ul><p>독립 메모(.vtn)는 일반 복원으로 제목과 본문이 담긴 평문 JSON을 만듭니다.</p></details>
+<footer><span>전체 구간 인증 · 원본 SHA-256 검증 후 저장 · 외부 서버 연결 없음</span> <button data-open-licenses type="button" title="정보·라이선스" aria-label="정보·라이선스">ℹ️</button></footer>
+</main>
+<script>
+(() => {
+    window.VaultI18n.captureStatic();
+    const el = id => document.getElementById(id);
+    let selection = {key:null,files:[],folder:null}, busy = false;
+    const results=[];
+    const send = value => {
+        if (!window.ipc) { status(window.vt("데스크톱 복원 도구를 실행해 파일을 선택해 주세요."), 'error'); return false; }
+        window.ipc.postMessage(JSON.stringify(value)); return true;
+    };
+    function status(message, tone='') { el('status').textContent=window.VaultI18n.message(message); el('status').dataset.tone=tone; }
+    function controls() {
+        for (const id of ['pick-key','pick-folder','pick-files','password','restore-language']) el(id).disabled=busy;
+        el('start').disabled=busy||!selection.key||!selection.folder||!selection.files.length||!el('password').value;
+        el('cancel').hidden=!busy;
+    }
+    function result(value) {
+        const row=document.createElement('li'); row.className=value.error?'error':'';
+        row.textContent=`${value.error?window.vt("실패"):window.vt("완료")} · ${value.source}`;
+        const detail=document.createElement('small'); detail.textContent=value.error?window.VaultI18n.message(value.error):value.output;
+        row.append(detail); el('results').append(row);
+        if(el('results').children.length>300) el('results').firstElementChild.remove();
+        row.scrollIntoView({block:'nearest'});
+    }
+    window.restoreUI={receive(message) {
+        switch(message.type) {
+            case 'language':
+                window.VaultI18n.set(message.language);
+                window.restoreUI.receive({...selection,type:'selection'});
+                el('results').replaceChildren();for(const value of results)result(value);
+                status(window.vt('파일과 폴더를 선택한 뒤 비밀번호를 입력하세요.'));
+                break;
+            case 'selection':
+                selection=message; el('key-path').textContent=message.key||window.vt("vault.key 또는 .vtbackup");
+                el('folder-path').textContent=message.folder||window.vt("새 폴더를 준비해 선택하세요.");
+                el('file-count').textContent=message.files.length?window.vt("{0}개 선택됨{1}", message.files.length, message.files.length>200?window.vt(" · 아래 목록은 200개까지 표시"):''):window.vt(".valtheum의 .vta · .vtv · .vti · .vtn 파일 · 여러 개 선택 가능");
+                el('file-list').replaceChildren();
+                for(const name of message.files.slice(0,200)){const row=document.createElement('li');row.textContent=name;el('file-list').append(row);}
+                break;
+            case 'started':
+                busy=true;results.length=0;el('password').value='';el('results').replaceChildren();el('cancel').disabled=false;
+                el('progress').removeAttribute('value');el('progress-detail').textContent=window.vt("키와 비밀번호를 확인하고 있습니다.");
+                status(window.vt("복원 준비 중…"));break;
+            case 'status':status(message.message);break;
+            case 'progress': {
+                const p=message.value;el('progress').max=p.bytes||1;el('progress').value=p.done;
+                status(`${p.index} / ${p.total} · ${p.name}`);
+                el('progress-detail').textContent=window.vt("{0} / {1} MiB · 복호화 및 원본 검증 중", (p.done/1048576).toFixed(1), (p.bytes/1048576).toFixed(1));
+                break;
+            }
+            case 'file':results.push(message.value);if(results.length>300)results.shift();result(message.value);break;
+            case 'finished': {
+                busy=false;const s=message.value;el('progress').max=1;el('progress').value=s.cancelled?0:1;
+                status(window.vt("{0} · 성공 {1}개{2}", s.cancelled?window.vt("취소됨"):window.vt("복원 작업 완료"), s.success, s.failed?window.vt(" · 실패 {0}개", s.failed):''),s.failed?'error':s.cancelled?'':'success');
+                el('progress-detail').textContent=s.cancelled?window.vt("이미 완료된 파일은 저장 폴더에 남아 있습니다."):window.vt("파일별 결과를 확인하세요. 복원된 파일은 일반 압축 프로그램으로 열 수 있습니다.");
+                break;
+            }
+            case 'error':busy=false;el('password').value='';el('progress').value=0;status(message.message,'error');el('progress-detail').textContent=window.vt("키 백업과 비밀번호를 확인한 뒤 다시 시도해 주세요.");break;
+        }
+        controls();
+    }};
+    for(const [id,action] of [['pick-key','key'],['pick-files','files'],['pick-folder','folder']]) el(id).addEventListener('click',()=>send({action}));
+    el('password').addEventListener('input',controls);
+    el('restore-form').addEventListener('submit',e=>{
+        e.preventDefault();if(el('start').disabled)return;
+        const password=el('password').value;el('password').value='';busy=true;controls();
+        if(!send({action:'start',password})){busy=false;controls();}
+    });
+    el('cancel').addEventListener('click',()=>{el('cancel').disabled=true;send({action:'cancel'});});
+    el('restore-language').addEventListener('change',()=>{if(!busy){el('restore-language').disabled=true;send({action:'language',language:el('restore-language').value});}});
+    controls();if(window.ipc)send({action:'ready'});
+})();
+</script>
+<!--caps-lock-script-->
+<script type="application/json" id="embedded-licenses"><!--license-data--></script>
+<!--license-script-->
+</body></html>
